@@ -1,3 +1,3 @@
 import streamlit as st
 
-st.title(':blue:underline[SISTEM PERIODIK UNSUR]')
+st.title(':blue[SISTEM PERIODIK UNSUR]')
