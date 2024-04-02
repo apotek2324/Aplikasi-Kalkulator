@@ -152,3 +152,15 @@ nilai   = [['Wasserstoff',1,'Nichtmetalle',1,1,'s',1.01,'gasförmig',0.08,2.2],#
           ['Tenness',117,'Unbekannt',17,7,'p',292,'n.A','n.A','n.A'],#Ts
           ['Oganesson',118,'Unbekannt',18,7,'p',294,'fest',6.6,'n.A']#Og
           ]
+
+kategorie_farben = {'Alkalimetalle' : '#fe6f61',
+                    'Erdalkalimetalle':'#6791a7',
+                    'Übergangsmetalle':'#83b8d0',
+                    'Metalle':'#cae2ed',
+                    'Halbmetalle':'#a7d6bc',
+                    'Nichtmetalle':'#ffde66',
+                    'Halogene':'#e9aa63',
+                    'Edelgase':'#e29136',
+                    'Unbekannt':'#cec0bf',
+                    'Lanthanoide':'#696071',
+                    'Actinoide':'#5b4c68'}
