@@ -1,6 +1,9 @@
 import streamlit as st
+import pandas as pd
 
 st.title(':blue[SISTEM PERIODIK UNSUR]')
 
-st.write(data_frame({
-           'IA': ['H', 'Li', 'Na', 'K', 'Rb' ,'Cs' ,'Fr']
+st.write('Tabel periodik unsur dibawah ini:')
+st.write(pd.DataFrame({
+           'IA': ['H', 'Li', 'Na', 'K', 'Rb' ,'Cs' ,'Fr'],
+}))
