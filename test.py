@@ -15,4 +15,4 @@ simbol = [
 golongan = ['IA', 'IIA', 'IIIB', 'IVB', 'VB', 'VIB', 'VIIB', 'VIIIB', 'VIIIB', 'IB', 'IB', 'IIB', 'IIIA', 'IVA', 'VA', 'VIA', 'VIIA', 'VIIIA']
 
 # display table
-print(tabulate(simbol, headers=golongan, tablefmt="grid"))
+print(tabulate(simbol, header=golongan, tablefmt="grid"))
