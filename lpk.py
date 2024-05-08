@@ -121,7 +121,7 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
         "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0000)
 
     # Tombol hitung
-    if st.button("Hitung"):
+    if st.button("Hitung pH"):
         H_plus, pH = perhitungan_pH_asam_kuat(konsentrasi, a)
         st.write("[H+] =", round(H_plus, 4))
         st.write("pH =", round(pH, 2))
@@ -138,8 +138,7 @@ elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
     st.write("konsentrasi = ", konsentrasi)
     
     # Tombol hitung
-    hitung = st.button('Hitung pH')
-    if st.button ("Hitung"):
+    if st.button ("Hitung pH"):
         H_plus, pH = perhitungan_pH_asam_lemah(konsentrasi, Ka)
         st.write("[H+] =", round(H_plus, 4))
         st.write("pH =", round(pH, 2))
@@ -171,7 +170,7 @@ elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
         "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0000)
 
     # Tombol hitung
-    if st.button("Hitung"):
+    if st.button("Hitung pH"):
         OH_minus, pOH, pH = perhitungan_pH_basa_kuat(konsentrasi, a)
         st.write("[OH-] =", round(OH_minus, 5))
         st.write("pOH =", round(pOH, 2))
@@ -189,8 +188,7 @@ elif choice == "Menghitung dengan Konsentrasi Basa Lemah":
     st.write("konsentrasi = ", konsentrasi)
     
     # Tombol hitung
-    hitung = st.button('Hitung pH')
-    if st.button ("Hitung"):
+    if st.button ("Hitung pH"):
         OH_minus, pH = perhitungan_pH_basa_lemah(konsentrasi, Kb)
         st.write("[OH-] =", round(OH_minus, 4))
         st.write("pOH =", round(pOH, 2))
