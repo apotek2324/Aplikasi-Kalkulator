@@ -38,7 +38,7 @@ def perhitungan_pH_basa_lemah(Kb, Konsentrasi):
 def perhitungan_konsentrasi_dengan_massa_volume_BM_asam(massa, volume, BM):
     H_plus = massa / (volume * BM)
     pH = -math.log10(H_plus)
-    return H_plus, pHOH_minus = massa / (volume * BM)
+    return H_plus, pH
 
 # Fungsi untuk menghitung konsentrasi dengan massa, volume, dan BM untuk basa
 
