@@ -92,13 +92,14 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
 
     # Masukkan konsentrasi
     concentration = st.number_input(
-        "Masukkan konsentrasi (M)", min_value=0.000, step=0.010)
+        "Masukkan konsentrasi (M)", min_value=0.00, step=0.01)
 
     # Tombol hitung
     if st.button("Hitung"):
         H_plus, pH = calculate_strong_acid_pH(concentration, a)
-        st.write("pH =", round(pH, 2))
         st.write("[H+] =", round(H_plus, 5))
+        st.write("pH =", round(pH, 2))
+        st.success(f'pH asam adalah {pH:.2f}')
 
 
 elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
@@ -117,7 +118,7 @@ elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
         log = math.log10(akar)
         pH = log * -1
         st.write('pH = ', pH)
-        st.success(f'pH Asam adalah {pH:.2f}')
+        st.success(f'pH asam adalah {pH:.2f}')
 
 
 elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
@@ -147,9 +148,11 @@ elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
     # Tombol hitung
     if st.button("Hitung"):
         OH_minus, pOH, pH = calculate_strong_base_pH(concentration, a)
-        st.write("pH =", round(pH, 2))
-        st.write("pOH =", round(pOH, 2))
         st.write("[OH-] =", round(OH_minus, 5))
+        st.write("pOH =", round(pOH, 2))
+        st.write("pH =", round(pH, 2))
+        st.success(f'pH basa adalah {pH:.2f}')
+        
 
 elif choice == "Menghitung dengan Konsentrasi Basa Lemah":
     st.subheader("Menghitung pH, pOH, dan [OH-] dari Konsentrasi Basa Lemah")
@@ -195,8 +198,10 @@ elif choice == "Menghitung dengan Massa dan Volume asam":
         # Konversi volume dari mL ke L
         volume_in_liters = volume / 1000
         H_plus, pH = calculate_strong_acid_mass_pH(mass, volume_in_liters, a)
-        st.write("pH =", round(pH, 2))
         st.write("[H+] =", round(H_plus, 5))
+        st.write("pH =", round(pH, 2))
+        st.success(f'pH asam adalah {pH:.2f}')
+
 
 elif choice == "Menghitung dengan Massa dan Volume Basa":
     st.subheader(
@@ -213,10 +218,10 @@ elif choice == "Menghitung dengan Massa dan Volume Basa":
     a = strong_bases[selected_base]
 
     # Masukkan massa
-    mass = st.number_input("Masukkan massa (mg)", min_value=0.0, step=0.1)
+    mass = st.number_input("Masukkan massa (mg)", min_value=0.00, step=0.10)
 
     # Masukkan volume
-    volume = st.number_input("Masukkan volume (mL)", min_value=0.0, step=0.1)
+    volume = st.number_input("Masukkan volume (mL)", min_value=0.00, step=0.10)
 
     # Tombol hitung
     if st.button("Hitung"):
@@ -224,9 +229,10 @@ elif choice == "Menghitung dengan Massa dan Volume Basa":
         volume_in_liters = volume / 1000
         OH_minus, pOH, pH = calculate_strong_base_mass_pH(
             mass, volume_in_liters, a)
-        st.write("pH =", round(pH, 2))
-        st.write("pOH =", round(pOH, 2))
         st.write("[OH-] =", round(OH_minus, 5))
+        st.write("pOH =", round(pOH, 2))
+        st.write("pH =", round(pH, 2))
+        st.success(f'pH basa adalah {pH:.2f}')
 
 elif choice == "Menghitung dengan Massa dan Volume basa":
     st.subheader(
