@@ -23,8 +23,8 @@ def perhitungan_pH_basa_kuat(konsentrasi, a):
 
 # Fungsi untuk menghitung pH untuk asam lemah
 
-def perhitungan_pH_asam_lemah(ka, konsentrasi):
-    H_plus = math.sqrt(ka * konsentrasi)
+def perhitungan_pH_asam_lemah(Ka, konsentrasi):
+    H_plus = math.sqrt(Ka * konsentrasi)
     pH = -math.log10(H_plus)
     return H_plus, pH
 
