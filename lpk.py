@@ -86,7 +86,7 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
         "Asam Periodat (HIO4)": 1
     }
 
-    pilih_senyawa_asam_kuat = st.selectbox(
+    selected_asam = st.selectbox(
         "Pilih senyawa asam", list(asam_kuat.keys()))
     a = asam_kuat[selected_asam]
 
