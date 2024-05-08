@@ -119,9 +119,9 @@ elif choice == "Menghitung dengan Massa dan Volume asam":
     st.subheader("Menghitung pH dari Massa dan Volume Asam Kuat")
 
     strong_acids = {
-        "Asam klorida (HCl) = 36,5": 1,
-        "Asam nitrat (HNO3) = 63,02": 1,
-        "Asam sulfat (H2SO4) = 98": 2
+        "Asam klorida (HCl) = 36,5 mg/mmol": 1,
+        "Asam nitrat (HNO3) = 63,02 mg/mmol": 1,
+        "Asam sulfat (H2SO4) = 98 mg/mmol": 2
     }
 
     selected_acid = st.selectbox(
@@ -178,9 +178,9 @@ elif choice == "Menghitung dengan Massa dan Volume basa":
 
     # Pilih senyawa basa
     strong_bases = {
-        "NaOH = 40": 1,
-        "Li(OH) = 259,47": 1,
-        "KOH = 56": 1
+        "NaOH = 40 mg/mmol": 1,
+        "Li(OH) = 259,47 mg/mmol": 1,
+        "KOH = 56 mg/mmol": 1
     }
 
     selected_base = st.selectbox(
