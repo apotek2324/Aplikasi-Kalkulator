@@ -66,10 +66,10 @@ options = ["Menghitung dengan konsentrasi asam",
 
 choice = st.sidebar.radio("Pilih Metode", options)
 
-if choice == "Menghitung dengan konsentrasi asam":
+if choice == "Menghitung dengan Konsentrasi Asam Kuat":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Kuat")
 
-    # Pilih senyawa asam
+    # Pilih senyawa asam kuat
     strong_acids = {
         "Asam Klorida (HCl)": 1,
         "Asam Nitrat (HNO3)": 1,
@@ -97,8 +97,9 @@ if choice == "Menghitung dengan konsentrasi asam":
         H_plus, pH = calculate_strong_acid_pH(concentration, a)
         st.write("pH =", round(pH, 2))
         st.write("[H+] =", round(H_plus, 5))
+        st.success(f"pH asam sebesar {pH:.2f}")
 
-elif choice == "Menghitung dengan konsentrasi basa":
+elif choice == "Menghitung dengan Konsentrasi Basa":
     st.subheader("Menghitung pH, pOH, dan [OH-] dari Konsentrasi Basa Kuat")
 
     # Pilih senyawa basa
