@@ -81,7 +81,7 @@ if choice == "Menghitung dengan konsentrasi asam":
         "Asam Perklorat (HClO4)": 1,
         "Asam Iodida (HI)": 1,
         "Asam Iodit (HIO3)": 1,
-        "Asam Periodat (HIO4)" 1
+        "Asam Periodat (HIO4)": 1
     }
 
     selected_acid = st.selectbox(
