@@ -67,9 +67,9 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
         "Asam Periodat (HIO4)": 1
     }
 
-    selected_asam = st.selectbox(
-        "Pilih senyawa asam", list(asam_kuat.keys()))
-    a = asam_kuat[selected_asam]
+    selected_asam_kuat = st.selectbox(
+        "Pilih senyawa asam kuat", list(asam_kuat.keys()))
+    a = asam_kuat[selected_asam_kuat]
 
     # Masukkan konsentrasi
     konsentrasi = st.number_input(
@@ -82,7 +82,6 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
 
-
 elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Lemah")
 
@@ -90,7 +89,7 @@ elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
     konstanta_asam = st.number_input('Masukkan Ka')
     st.write("Ka = ", konstanta_asam)
     konsentrasi = st.number_input('Masukkan konsentrasi')
-    st.write("konsentrasi = ", konsentrasi)
+    st.write("Konsentrasi = ", konsentrasi)
     
     # Tombol hitung
     if st.button ("Hitung pH"):
@@ -98,7 +97,6 @@ elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
         st.write("[H+] =", round(H_plus, 4))
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
-
 
 elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
     st.subheader("Menghitung [OH-], pOH, dan pH dari Konsentrasi Basa Kuat")
@@ -116,9 +114,9 @@ elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
         "Magnesium Hidroksida (Mg(OH)2)": 2
     }
 
-    selected_basa = st.selectbox(
-        "Pilih senyawa basa", list(basa_kuat.keys()))
-    a = basa_kuat[selected_basa]
+    selected_basa_kuat = st.selectbox(
+        "Pilih senyawa basa kuat", list(basa_kuat.keys()))
+    a = basa_kuat[selected_basa_kuat]
 
     # Masukkan konsentrasi
     konsentrasi = st.number_input(
@@ -131,7 +129,6 @@ elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
         st.write("pOH =", round(pOH, 2))
         st.write("pH =", round(pH, 2))
         st.success(f'pH basa adalah {pH:.2f}')
-        
 
 elif choice == "Menghitung dengan Konsentrasi Basa Lemah":
     st.subheader("Menghitung pH, pOH, dan [OH-] dari Konsentrasi Basa Lemah")
@@ -140,7 +137,7 @@ elif choice == "Menghitung dengan Konsentrasi Basa Lemah":
     konstanta_basa = st.number_input('Masukkan Kb')
     st.write("Kb = ", konstanta_basa)
     konsentrasi = st.number_input('Masukkan konsentrasi')
-    st.write("konsentrasi = ", konsentrasi)
+    st.write("Konsentrasi = ", konsentrasi)
     
     # Tombol hitung
     if st.button ("Hitung pH"):
@@ -168,12 +165,8 @@ elif choice == "Menghitung dengan Massa dan Volume asam kuat":
         "Asam Periodat (HIO4) = 192 g/mol"
     }
 
-    selected_acid = st.selectbox(
-        "Pilih senyawa asam", list(strong_acids.keys()))
-    a = strong_acids[selected_acid]
-
     # Masukkan massa
-    mass = st.number_input("Masukkan massa (mg)", min_value=0.00, step=0.10)
+    mass = st.number_input("Masukkan massa (g)", min_value=0.00, step=0.10)
 
     # Masukkan volume
     volume = st.number_input("Masukkan volume (mL)", min_value=0.00, step=0.10)
@@ -182,11 +175,10 @@ elif choice == "Menghitung dengan Massa dan Volume asam kuat":
     if st.button("Hitung"):
         # Konversi volume dari mL ke L
         volume_dalam_liter = volume / 1000
-        H_plus, pH = perhitungan_pH_asam_kuat_dengan_massa_dan_volume(massa, volume_dalam_liter, a)
+        H_plus, pH = perhitungan_pH_asam_kuat_dengan_massa_dan_volume(massa, volume_dalam_liter, BM)
         st.write("[H+] =", round(H_plus, 4))
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
-
 
 elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
     st.subheader(
@@ -215,7 +207,7 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
         # Konversi volume dari mL ke L
         volume_dalam_liter = volume / 1000
         OH_minus, pOH, pH = perhitungan_pH_basa_kuat_dengan_massa_dan_volume(
-            massa, volume_dalam_liter, a)
+            massa, volume_dalam_liter, BM)
         st.write("[OH-] =", round(OH_minus, 5))
         st.write("pOH =", round(pOH, 2))
         st.write("pH =", round(pH, 2))
