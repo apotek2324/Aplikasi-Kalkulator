@@ -232,8 +232,8 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
         OH_minus, pOH, pH = perhitungan_konsentrasi_dengan_massa_volume_BM_basa(
             massa, volume_dalam_liter, BM)
         st.write("[OH-] =", round(OH_minus, 5))
-        st.write("pOH =", round(pOH, 2))
-        st.write("pH =", round(pH, 2))
+        st.write("pOH =", round(pOH, 3))
+        st.write("pH =", round(pH, 3))
         st.success(f'pH basa adalah {pH:.2f}')
 
 
