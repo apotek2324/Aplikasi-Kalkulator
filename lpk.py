@@ -3,53 +3,53 @@
 import streamlit as st
 import math
 
+
 # Fungsi untuk menghitung pH untuk asam kuat
 
-
-def calculate_strong_acid_pH(concentration, a):
-    H_plus = concentration * a
+def perhitungan_pH_asam_kuat(konsentrasi, a):
+    H_plus = konsentrasi * a
     pH = -math.log10(H_plus)
     return H_plus, pH
+
 
 # Fungsi untuk menghitung pH untuk basa kuat
 
-
-def calculate_strong_base_pH(concentration, a):
-    OH_minus = concentration * a
+def perhitungan_pH_basa_kuat(konsentrasi, a):
+    OH_minus = konsentrasi * a
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
     return OH_minus, pOH, pH
+
 
 # Fungsi untuk menghitung pH untuk asam lemah
 
-
-def calculate_weak_acid_pH(ka, concentration):
-    H_plus = math.sqrt(ka * concentration)
+def perhitungan_pH_asam_lemah(ka, konsentrasi):
+    H_plus = math.sqrt(ka * konsentrasi)
     pH = -math.log10(H_plus)
     return H_plus, pH
 
+
 # Fungsi untuk menghitung pH untuk basa lemah
 
-
-def calculate_weak_base_pH(kb, concentration):
-    OH_minus = math.sqrt(kb * concentration)
+def perhitungan_pH_basa_lemah(kb, konsentrasi):
+    OH_minus = math.sqrt(kb * konsentrasi)
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
     return OH_minus, pOH, pH
 
+
 # Fungsi untuk menghitung pH dari massa dan volume untuk asam kuat
 
-
-def calculate_strong_acid_mass_pH(mass, volume, bm):
-    H_plus = (mass / volume) * bm
+def perhitungan_pH_asam_kuat(massa, volume, bm):
+    H_plus = (massa / volume) * bm
     pH = -math.log10(H_plus)
     return H_plus, pH
 
+
 # Fungsi untuk menghitung pH dari massa dan volume untuk basa kuat
 
-
-def calculate_strong_base_mass_pH(mass, volume, bm):
-    OH_minus = (mass / volume) * bm
+def perhitungan_pH_basa_kuat(massa, volume, bm):
+    OH_minus = (massa / volume) * bm
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
     return OH_minus, pOH, pH
@@ -72,7 +72,7 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Kuat")
 
     # Pilih senyawa asam kuat
-    strong_acids = {
+    asam_kuat = {
         "Asam Klorida (HCl)": 1,
         "Asam Nitrat (HNO3)": 1,
         "Asam Sulfat (H2SO4)": 2,
@@ -86,20 +86,20 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
         "Asam Periodat (HIO4)": 1
     }
 
-    selected_acid = st.selectbox(
-        "Pilih senyawa asam", list(strong_acids.keys()))
-    a = strong_acids[selected_acid]
+    pilih_senyawa_asam_kuat = st.selectbox(
+        "Pilih senyawa asam", list(asam_kuat.keys()))
+    a = asam_kuat[selected_asam]
 
     # Masukkan konsentrasi
-    concentration = st.number_input(
+    konsentrasi = st.number_input(
         "Masukkan konsentrasi (M)", min_value=0.00, step=0.01)
 
     # Tombol hitung
     if st.button("Hitung"):
-        H_plus, pH = calculate_strong_acid_pH(concentration, a)
+        H_plus, pH = perhitungan_pH_asam_kuat(konsentrasi, a)
         st.write("[H+] =", round(H_plus, 5))
         st.write("pH =", round(pH, 2))
-        st.success(f'pH asam adalah {pH:.2f}')
+        st.success('pH asam adalah' round(pH asam adalah, 2))
 
 
 elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
@@ -111,7 +111,10 @@ elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
     st.write("konsentrasi = ", konsentrasi)
     hitung = st.button('Hitung pH')
 
-    if hitung:
+    # Tombol hitung
+    if st.button ("Hitung"):
+        H_plus, pH = perhitungan_pH_asam_lemah(konsentrasi, Ka)
+        st.write("[H+] =")
         asam = konstanta * konsentrasi
         akar = asam ** 0.50
         st.write('[H+] = ', akar)
