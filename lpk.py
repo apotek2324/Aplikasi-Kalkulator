@@ -56,13 +56,15 @@ def calculate_strong_base_mass_pH(mass, volume, bm):
 
 
 # Judul aplikasi
-st.title("Penghitung pH dan Konsentrasi")
+st.title("Kalkulator Perhitungan pH Larutan")
 
 # Halaman utama untuk pilihan
-options = ["Menghitung dengan konsentrasi asam",
-           "Menghitung dengan konsentrasi basa",
-           "Menghitung dengan Massa dan Volume asam",
-           "Menghitung dengan Massa dan Volume basa"]
+options = ["Menghitung dengan Konsentrasi Asam Kuat",
+           "Menghitung dengan Konsentrasi Asam Lemah",
+           "Menghitung dengan Konsentrasi Basa Kuat",
+           "Menghitung dengan Konsentrasi Basa Lemah",
+           "Menghitung dengan Massa dan Volume Asam",
+           "Menghitung dengan Massa dan Volume Basa"]
 
 choice = st.sidebar.radio("Pilih Metode", options)
 
@@ -90,7 +92,7 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
 
     # Masukkan konsentrasi
     concentration = st.number_input(
-        "Masukkan konsentrasi (M)", min_value=0.0, step=0.01)
+        "Masukkan konsentrasi (M)", min_value=0.000, step=0.010)
 
     # Tombol hitung
     if st.button("Hitung"):
@@ -98,7 +100,27 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
         st.write("pH =", round(pH, 2))
         st.write("[H+] =", round(H_plus, 5))
 
-elif choice == "Menghitung dengan Konsentrasi Basa":
+
+elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
+    st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Lemah")
+    
+    konstanta = st.number_input('Masukkan Ka')
+    st.write("Ka = ", konstanta)
+    konsentrasi = st.number_input('Masukkan konsentrasi')
+    st.write("konsentrasi = ", konsentrasi)
+    hitung = st.button('Hitung pH')
+
+    if hitung:
+        asam = konstanta * konsentrasi
+        akar = asam ** 0.5
+        st.write('[H+] = ', akar)
+        log = math.log10(akar)
+        pH = log * -1
+        st.write('pH = ', pH)
+        st.success(f'pH Asam adalah {pH:.2f}')
+
+
+elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
     st.subheader("Menghitung pH, pOH, dan [OH-] dari Konsentrasi Basa Kuat")
 
     # Pilih senyawa basa
@@ -129,13 +151,33 @@ elif choice == "Menghitung dengan Konsentrasi Basa":
         st.write("pOH =", round(pOH, 2))
         st.write("[OH-] =", round(OH_minus, 5))
 
+elif choice == "Menghitung dengan Konsentrasi Basa Lemah":
+    st.subheader("Menghitung pH, pOH, dan [OH-] dari Konsentrasi Basa Lemah")
+
+    konstanta = st.number_input('Masukkan Kb')
+    st.write("Kb = ", konstanta)
+    konsentrasi = st.number_input('Masukkan konsentrasi')
+    st.write("konsentrasi = ", konsentrasi)
+    hitung = st.button('Hitung pH')
+
+    if hitung:
+        basa = konstanta * konsentrasi
+        akar = basa ** 0.5
+        st.write('[OH-] = ', akar)
+        log = math.log10(akar)
+        pOH = log * -1
+        pH = 14-pOH
+        st.write('pOH = ', pOH)
+        st.success(f'pH Basa adalah {pH:.2f}')
+    
+
 elif choice == "Menghitung dengan Massa dan Volume asam":
-    st.subheader("Menghitung pH dari Massa dan Volume Asam Kuat")
+    st.subheader("Menghitung pH dari Massa dan Volume Asam")
 
     strong_acids = {
-        "Asam klorida (HCl) = 36,5 mg/mmol": 1,
-        "Asam nitrat (HNO3) = 63,02 mg/mmol": 1,
-        "Asam sulfat (H2SO4) = 98 mg/mmol": 2
+        "Asam klorida (HCl) = 36,5 mg/mmol",
+        "Asam nitrat (HNO3) = 63,02 mg/mmol",
+        "Asam sulfat (H2SO4) = 98 mg/mmol"
     }
 
     selected_acid = st.selectbox(
