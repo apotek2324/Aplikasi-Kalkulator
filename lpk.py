@@ -3,80 +3,35 @@
 import streamlit as st
 import math
 
-
 # Fungsi untuk menghitung pH asam kuat
 
-def perhitungan_pH_asam_kuat(konsentrasi, a):
-    H_plus = konsentrasi * a
+def perhitungan_pH_asam_kuat(Konsentrasi, a):
+    H_plus = Konsentrasi * a
     pH = -math.log10(H_plus)
     return H_plus, pH
-
 
 # Fungsi untuk menghitung pH basa kuat
 
-def perhitungan_pH_basa_kuat(konsentrasi, a):
-    OH_minus = konsentrasi * a
+def perhitungan_pH_basa_kuat(Konsentrasi, a):
+    OH_minus = Konsentrasi * a
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
     return OH_minus, pOH, pH
-
 
 # Fungsi untuk menghitung pH asam lemah
 
-def perhitungan_pH_asam_lemah(Ka, konsentrasi):
-    H_plus = math.sqrt(Ka * konsentrasi)
+def perhitungan_pH_asam_lemah(Ka,Kkonsentrasi):
+    H_plus = math.sqrt(Ka * Konsentrasi)
     pH = -math.log10(H_plus)
     return H_plus, pH
-
 
 # Fungsi untuk menghitung pH basa lemah
 
-def perhitungan_pH_basa_lemah(kb, konsentrasi):
-    OH_minus = math.sqrt(kb * konsentrasi)
+def perhitungan_pH_basa_lemah(Kb, Konsentrasi):
+    OH_minus = math.sqrt(Kb * Konsentrasi)
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
     return OH_minus, pOH, pH
-
-
-# Fungsi untuk menghitung pH dari massa dan volume untuk asam kuat
-
-def perhitungan_pH_asam_kuat_dengan_massa_dan_volume(massa, volume, bm):
-    H_plus = (massa / volume) * bm
-    pH = -math.log10(H_plus)
-    return H_plus, pH
-
-
-# Fungsi untuk menghitung pH dari massa dan volume untuk asam lemah
-
-def perhitungan_pH_asam_lemah_dengan_massa_dan_volume(massa, volume):
-    konsentrasi = (massa / volume)
-    H_plus = Ka * konsentrasi
-    akar = H_plus ** 0.5
-    st.write('[H+] = ', akar)
-    pH = -math.log10(H_plus)
-    return H_plus, pH
-
-
-# Fungsi untuk menghitung pH dari massa dan volume untuk basa kuat
-
-def perhitungan_pH_basa_kuat_dengan_massa_dan_volume(massa, volume, bm):
-    OH_minus = (massa / volume) * bm
-    pOH = -math.log10(OH_minus)
-    pH = 14 - pOH
-    return OH_minus, pOH, pH
-
-
-# Fungsi untuk menghitung pH dari massa dan volume untuk basa lemah
-
-def perhitungan_pH_basa_lemah_dengan_massa_dan_volume(massa, volume):
-    konsentrasi = (massa / volume)
-    OH_minus = Kb * konsentrasi
-    akar = OH_minus ** 0.5
-    st.write('[OH-] = ', akar)
-    pOH = -math.log10(OH_minus)
-    pH = 14 - pOH
-    return OH_minus, pOH, pH
-
 
 # Judul aplikasi
 st.title("Kalkulator Perhitungan pH Larutan")
