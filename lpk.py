@@ -112,7 +112,7 @@ elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
 
     if hitung:
         asam = konstanta * konsentrasi
-        akar = asam ** 0.5
+        akar = asam ** 0.50
         st.write('[H+] = ', akar)
         log = math.log10(akar)
         pH = log * -1
@@ -142,7 +142,7 @@ elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
 
     # Masukkan konsentrasi
     concentration = st.number_input(
-        "Masukkan konsentrasi (M)", min_value=0.0, step=0.01)
+        "Masukkan konsentrasi (M)", min_value=0.00, step=0.010)
 
     # Tombol hitung
     if st.button("Hitung"):
