@@ -92,7 +92,7 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
 
     # Masukkan konsentrasi
     konsentrasi = st.number_input(
-        "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0100)
+        "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0000)
 
     # Tombol hitung
     if st.button("Hitung"):
@@ -142,7 +142,7 @@ elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
 
     # Masukkan konsentrasi
     konsentrasi = st.number_input(
-        "Masukkan konsentrasi (M)", min_value=0.00, step=0.010)
+        "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0000)
 
     # Tombol hitung
     if st.button("Hitung"):
