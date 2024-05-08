@@ -97,7 +97,7 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
         H_plus, pH = calculate_strong_acid_pH(concentration, a)
         st.write("pH =", round(pH, 2))
         st.write("[H+] =", round(H_plus, 5))
-        st.success(f"pH asam sebesar {pH:.2f}")
+        st.success(f"pH asam sebesar {pH}")
 
 elif choice == "Menghitung dengan Konsentrasi Basa":
     st.subheader("Menghitung pH, pOH, dan [OH-] dari Konsentrasi Basa Kuat")
