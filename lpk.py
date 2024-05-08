@@ -46,10 +46,33 @@ def perhitungan_pH_asam_kuat_dengan_massa_dan_volume(massa, volume, bm):
     return H_plus, pH
 
 
+# Fungsi untuk menghitung pH dari massa dan volume untuk asam lemah
+
+def perhitungan_pH_asam_lemah_dengan_massa_dan_volume(massa dan volume):
+    konsentrasi = (massa / volume)
+    H_plus = Ka * konsentrasi
+    akar = H_plus ** 0.5
+    st.write('[H+] = ', akar)
+    pH = -math.log10(H_plus)
+    return H_plus, pH
+
+
 # Fungsi untuk menghitung pH dari massa dan volume untuk basa kuat
 
 def perhitungan_pH_basa_kuat_dengan_massa_dan_volume(massa, volume, bm):
     OH_minus = (massa / volume) * bm
+    pOH = -math.log10(OH_minus)
+    pH = 14 - pOH
+    return OH_minus, pOH, pH
+
+
+# Fungsi untuk menghitung pH dari massa dan volume untuk basa lemah
+
+def perhitungan_pH_basa_lemah_dengan_massa_dan_volume(massa dan volume):
+    konsentrasi = (massa / volume)
+    OH_minus = Kb * konsentrasi
+    akar = OH_minus ** 0.5
+    st.write('[OH-] = ', akar)
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
     return OH_minus, pOH, pH
@@ -63,8 +86,11 @@ options = ["Menghitung dengan Konsentrasi Asam Kuat",
            "Menghitung dengan Konsentrasi Asam Lemah",
            "Menghitung dengan Konsentrasi Basa Kuat",
            "Menghitung dengan Konsentrasi Basa Lemah",
-           "Menghitung dengan Massa dan Volume Asam",
-           "Menghitung dengan Massa dan Volume Basa"]
+           "Menghitung dengan Massa dan Volume Asam Kuat",
+           "Menghitung dengan Massa dan Volume Asam Lemah",
+           "Menghitung dengan Massa dan Volume Basa Kuat",
+           "Menghitung dengan Massa dan Volume Basa Lemah"
+          ]
 
 choice = st.sidebar.radio("Pilih Metode", options)
 
