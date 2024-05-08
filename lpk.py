@@ -48,7 +48,7 @@ def perhitungan_pH_asam_kuat_dengan_massa_dan_volume(massa, volume, bm):
 
 # Fungsi untuk menghitung pH dari massa dan volume untuk asam lemah
 
-def perhitungan_pH_asam_lemah_dengan_massa_dan_volume(massa dan volume):
+def perhitungan_pH_asam_lemah_dengan_massa_dan_volume(massa, volume):
     konsentrasi = (massa / volume)
     H_plus = Ka * konsentrasi
     akar = H_plus ** 0.5
