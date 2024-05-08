@@ -20,7 +20,7 @@ def perhitungan_pH_basa_kuat(Konsentrasi, a):
 
 # Fungsi untuk menghitung pH asam lemah
 
-def perhitungan_pH_asam_lemah(Ka,Kkonsentrasi):
+def perhitungan_pH_asam_lemah(Ka, Konsentrasi):
     H_plus = math.sqrt(Ka * Konsentrasi)
     pH = -math.log10(H_plus)
     return H_plus, pH
@@ -72,7 +72,7 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
     a = asam_kuat[selected_asam_kuat]
 
     # Masukkan konsentrasi
-    konsentrasi = st.number_input(
+    Konsentrasi = st.number_input(
         "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0000)
 
     # Tombol hitung
@@ -86,10 +86,10 @@ elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Lemah")
 
     # Masukkan konsentrasi dan Ka
-    konstanta_asam = st.number_input('Masukkan Ka')
-    st.write("Ka = ", konstanta_asam)
-    konsentrasi = st.number_input('Masukkan konsentrasi')
-    st.write("Konsentrasi = ", konsentrasi)
+    Konstanta_asam = st.number_input('Masukkan Ka')
+    st.write("Ka = ", Konstanta_asam)
+    Konsentrasi = st.number_input('Masukkan konsentrasi')
+    st.write("Konsentrasi = ", Konsentrasi)
     
     # Tombol hitung
     if st.button ("Hitung pH"):
@@ -134,14 +134,14 @@ elif choice == "Menghitung dengan Konsentrasi Basa Lemah":
     st.subheader("Menghitung pH, pOH, dan [OH-] dari Konsentrasi Basa Lemah")
 
     # Masukkan konsentrasi dan Kb
-    konstanta_basa = st.number_input('Masukkan Kb')
-    st.write("Kb = ", konstanta_basa)
-    konsentrasi = st.number_input('Masukkan konsentrasi')
-    st.write("Konsentrasi = ", konsentrasi)
+    Konstanta_basa = st.number_input('Masukkan Kb')
+    st.write("Kb = ", Konstanta_basa)
+    Konsentrasi = st.number_input('Masukkan konsentrasi')
+    st.write("Konsentrasi = ", Konsentrasi)
     
     # Tombol hitung
     if st.button ("Hitung pH"):
-        OH_minus, pH = perhitungan_pH_basa_lemah(konsentrasi, Kb)
+        OH_minus, pH = perhitungan_pH_basa_lemah(Konsentrasi, Kb)
         st.write("[OH-] =", round(OH_minus, 4))
         st.write("pOH =", round(pOH, 2))
         st.write("pH =", round(pH, 2))
@@ -152,21 +152,25 @@ elif choice == "Menghitung dengan Massa dan Volume asam kuat":
     st.subheader("Menghitung pH dari Massa dan Volume Asam Kuat")
 
     asam_kuat = {
-        "Asam Klorida (HCl) = 36,5 g/mol",
-        "Asam Nitrat (HNO3) = 63,02 g/mol",
-        "Asam Sulfat (H2SO4) = 98 g/mol"
-        "Asam Bromida (HBr) = 81 g/mol",
-        "Asam Bromit (HBrO3) = 128,9 g/mol",
-        "Asam Perbromat (HBrO4) = 146 g/mol",
-        "Asam Klorat (HClO3) = 84,5 g/mol", 
-        "Asam Perklorat (HClO4) = 100,5 g/mol",
-        "Asam Iodida (HI) = 128 g/mol",
-        "Asam Iodit (HIO3) = 176 g/mol",
-        "Asam Periodat (HIO4) = 192 g/mol"
+        "Asam Klorida (HCl) = 36,5 g/mol": 36,5,
+        "Asam Nitrat (HNO3) = 63,02 g/mol": 63,02,
+        "Asam Sulfat (H2SO4) = 98 g/mol": 98,
+        "Asam Bromida (HBr) = 81 g/mol": 81,
+        "Asam Bromit (HBrO3) = 128,9 g/mol": 128,9,
+        "Asam Perbromat (HBrO4) = 146 g/mol": 146,
+        "Asam Klorat (HClO3) = 84,5 g/mol": 84,5, 
+        "Asam Perklorat (HClO4) = 100,5 g/mol": 100,5,
+        "Asam Iodida (HI) = 128 g/mol": 128,
+        "Asam Iodit (HIO3) = 176 g/mol": 176,
+        "Asam Periodat (HIO4) = 192 g/mol": 192
     }
 
+    selected_asam_kuat = st.selectbox(
+        "Pilih senyawa asam kuat", list(asam_kuat.keys()))
+    BM = asam_kuat[selected_asam_kuat]
+
     # Masukkan massa
-    mass = st.number_input("Masukkan massa (g)", min_value=0.00, step=0.10)
+    massa = st.number_input("Masukkan massa (g)", min_value=0.00, step=0.10)
 
     # Masukkan volume
     volume = st.number_input("Masukkan volume (mL)", min_value=0.00, step=0.10)
@@ -185,19 +189,23 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
         "Menghitung pH, pOH, dan [OH-] dari Massa dan Volume Basa Kuat")
 
     basa_kuat = {
-        "Natrium Hidroksida (NaOH) = 40 g/mol",
-        "Litium Hidroksida (LiOH) = 259,47 g/mol",
-        "Kalium Hidroksida (KOH) = 56 g/mol",
-        "Rubidium Hidroksida (RbOH) =",
-        "Cesium Hidroksida (CsOH) =",
-        "Kalsium Hidroksida (Ca(OH)2) =",
-        "Barium Hidroksida (Ba(OH)2) =",
-        "Stronsium Hidroksida (Sr(OH)2) =",
-        "Magnesium Hidroksida (Mg(OH)2) ="
+        "Natrium Hidroksida (NaOH) = 40 g/mol": 40,
+        "Litium Hidroksida (LiOH) = 259,47 g/mol": 259,47,
+        "Kalium Hidroksida (KOH) = 56 g/mol": 56,
+        "Rubidium Hidroksida (RbOH) =": ,
+        "Cesium Hidroksida (CsOH) =": ,
+        "Kalsium Hidroksida (Ca(OH)2) =": ,
+        "Barium Hidroksida (Ba(OH)2) =": ,
+        "Stronsium Hidroksida (Sr(OH)2) =": ,
+        "Magnesium Hidroksida (Mg(OH)2) =": 
     }
-
+    
+    selected_basa_kuat = st.selectbox(
+        "Pilih senyawa basa kuat", list(basa_kuat.keys()))
+    BM = basa_kuat[selected_basa_kuat]
+    
     # Masukkan massa
-    massa = st.number_input("Masukkan massa (mg)", min_value=0.00, step=0.10)
+    massa = st.number_input("Masukkan massa (g)", min_value=0.00, step=0.10)
 
     # Masukkan volume
     volume = st.number_input("Masukkan volume (mL)", min_value=0.00, step=0.10)
