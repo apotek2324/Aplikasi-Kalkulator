@@ -68,7 +68,7 @@ def perhitungan_pH_basa_kuat_dengan_massa_dan_volume(massa, volume, bm):
 
 # Fungsi untuk menghitung pH dari massa dan volume untuk basa lemah
 
-def perhitungan_pH_basa_lemah_dengan_massa_dan_volume(massa dan volume):
+def perhitungan_pH_basa_lemah_dengan_massa_dan_volume(massa, volume):
     konsentrasi = (massa / volume)
     OH_minus = Kb * konsentrasi
     akar = OH_minus ** 0.5
