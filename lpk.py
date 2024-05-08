@@ -204,10 +204,6 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
         "Magnesium Hidroksida (Mg(OH)2) ="
     }
 
-    selected_basa = st.selectbox(
-        "Pilih senyawa basa kuat", list(basa_kuat.keys()))
-    a = basa_kuat[selected_basa]
-
     # Masukkan massa
     massa = st.number_input("Masukkan massa (mg)", min_value=0.00, step=0.10)
 
