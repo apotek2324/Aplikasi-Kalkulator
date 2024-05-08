@@ -192,12 +192,12 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
         "Natrium Hidroksida (NaOH) = 40 g/mol": 40,
         "Litium Hidroksida (LiOH) = 259,47 g/mol": 259.47,
         "Kalium Hidroksida (KOH) = 56 g/mol": 56,
-        "Rubidium Hidroksida (RbOH) =": ,
-        "Cesium Hidroksida (CsOH) =": ,
-        "Kalsium Hidroksida (Ca(OH)2) =": ,
-        "Barium Hidroksida (Ba(OH)2) =": ,
-        "Stronsium Hidroksida (Sr(OH)2) =": ,
-        "Magnesium Hidroksida (Mg(OH)2) =": 
+        "Rubidium Hidroksida (RbOH) =": 32,
+        "Cesium Hidroksida (CsOH) =":45 ,
+        "Kalsium Hidroksida (Ca(OH)2) =": 35,
+        "Barium Hidroksida (Ba(OH)2) =": 12,
+        "Stronsium Hidroksida (Sr(OH)2) =": 21,
+        "Magnesium Hidroksida (Mg(OH)2) =": 20 
     }
     
     selected_basa_kuat = st.selectbox(
