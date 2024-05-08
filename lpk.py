@@ -4,7 +4,7 @@ import streamlit as st
 import math
 
 
-# Fungsi untuk menghitung pH untuk asam kuat
+# Fungsi untuk menghitung pH asam kuat
 
 def perhitungan_pH_asam_kuat(konsentrasi, a):
     H_plus = konsentrasi * a
@@ -12,7 +12,7 @@ def perhitungan_pH_asam_kuat(konsentrasi, a):
     return H_plus, pH
 
 
-# Fungsi untuk menghitung pH untuk basa kuat
+# Fungsi untuk menghitung pH basa kuat
 
 def perhitungan_pH_basa_kuat(konsentrasi, a):
     OH_minus = konsentrasi * a
@@ -21,7 +21,7 @@ def perhitungan_pH_basa_kuat(konsentrasi, a):
     return OH_minus, pOH, pH
 
 
-# Fungsi untuk menghitung pH untuk asam lemah
+# Fungsi untuk menghitung pH asam lemah
 
 def perhitungan_pH_asam_lemah(Ka, konsentrasi):
     H_plus = math.sqrt(Ka * konsentrasi)
@@ -29,7 +29,7 @@ def perhitungan_pH_asam_lemah(Ka, konsentrasi):
     return H_plus, pH
 
 
-# Fungsi untuk menghitung pH untuk basa lemah
+# Fungsi untuk menghitung pH basa lemah
 
 def perhitungan_pH_basa_lemah(kb, konsentrasi):
     OH_minus = math.sqrt(kb * konsentrasi)
