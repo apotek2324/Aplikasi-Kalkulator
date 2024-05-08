@@ -33,6 +33,14 @@ def perhitungan_pH_basa_lemah(Kb, Konsentrasi):
     pH = 14 - pOH
     return OH_minus, pOH, pH
 
+# Fungsi untuk menghitung pH dari massa dan volume untuk basa kuat
+
+def perhitungan_konsentrasi_dengan_massa_volume_BM(massa, volume, BM):
+    OH_minus = massa / (volume * BM)
+    pOH = -math.log10(OH_minus)
+    pH = 14 - pOH
+    return OH_minus, pOH, pH
+
 # Judul aplikasi
 st.title("Kalkulator Perhitungan pH Larutan")
 
@@ -179,7 +187,7 @@ elif choice == "Menghitung dengan Massa dan Volume asam kuat":
     if st.button("Hitung"):
         # Konversi volume dari mL ke L
         volume_dalam_liter = volume / 1000
-        H_plus, pH = perhitungan_pH_asam_kuat_dengan_massa_dan_volume(massa, volume_dalam_liter, BM)
+        H_plus, pH = perhitungan_konsentrasi_dengan_massa_volume_BM(massa, volume_dalam_liter, BM)
         st.write("[H+] =", round(H_plus, 4))
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
@@ -214,7 +222,7 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
     if st.button("Hitung"):
         # Konversi volume dari mL ke L
         volume_dalam_liter = volume / 1000
-        OH_minus, pOH, pH = perhitungan_pH_basa_kuat_dengan_massa_dan_volume(
+        OH_minus, pOH, pH = perhitungan_konsentrasi_dengan_massa_volume_BM(
             massa, volume_dalam_liter, BM)
         st.write("[OH-] =", round(OH_minus, 5))
         st.write("pOH =", round(pOH, 2))
