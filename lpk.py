@@ -71,9 +71,17 @@ if choice == "Menghitung dengan konsentrasi asam":
 
     # Pilih senyawa asam
     strong_acids = {
-        "Asam klorida (HCl)": 1,
-        "Asam nitrat (HNO3)": 1,
-        "Asam sulfat (H2SO4)": 2
+        "Asam Klorida (HCl)": 1,
+        "Asam Nitrat (HNO3)": 1,
+        "Asam Sulfat (H2SO4)": 2,
+        "Asam Bromida (HBr)": 1,
+        "Asam Bromit (HBrO3)": 1,
+        "Asam Perbromat (HBrO4)": 1,
+        "Asam Klorat (HClO3)": 1, 
+        "Asam Perklorat (HClO4)": 1,
+        "Asam Iodida (HI)": 1,
+        "Asam Iodit (HIO3)": 1,
+        "Asam Periodat (HIO4)" 1
     }
 
     selected_acid = st.selectbox(
@@ -95,9 +103,15 @@ elif choice == "Menghitung dengan konsentrasi basa":
 
     # Pilih senyawa basa
     strong_bases = {
-        "Natrium hidroksida (NaOH)": 1,
-        "Litium hidroksida (LiOH)": 1,
-        "Kalium hidroksida (KOH)": 1
+        "Natrium Hidroksida (NaOH)": 1,
+        "Litium Hidroksida (LiOH)": 1,
+        "Kalium Hidroksida (KOH)": 1,
+        "Rubidium Hidroksida (RbOH)": 1,
+        "Cesium Hidroksida (CsOH)": 1,
+        "Kalsium Hidroksida (Ca(OH)2)": 2,
+        "Barium Hidroksida (Ba(OH)2)": 2,
+        "Stronsium Hidroksida (Sr(OH)2)": 2,
+        "Magnesium Hidroksida (Mg(OH)2)": 2
     }
 
     selected_base = st.selectbox(
