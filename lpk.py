@@ -163,7 +163,7 @@ elif choice == "Menghitung dengan Konsentrasi Basa Lemah":
         st.success(f'pH basa adalah {pH:.2f}')
 
 
-elif choice == "Menghitung dengan Massa dan Volume asam kuat":
+elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
     st.subheader("Menghitung pH dari Massa dan Volume Asam Kuat")
 
     asam_kuat = {
