@@ -24,7 +24,7 @@ def perhitungan_pH_asam_lemah(Konstanta_asam, Konsentrasi):
     H_plus = math.sqrt(Konstanta_asam * Konsentrasi)
     pH = -math.log10(H_plus)
     return H_plus, pH
-
+    
 # Fungsi untuk menghitung pH basa lemah
 
 def perhitungan_pH_basa_lemah(Konstanta_basa, Konsentrasi):
@@ -100,7 +100,7 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
         "Asam Iodit (HIO3)": 1,
         "Asam Periodat (HIO4)": 1] + ["Custom"]
 
-    selected_asam_kuat = st.selectbox("Pilih senyawa asam kuat", asam_kuat=asam_kuat)
+    selected_asam_kuat = st.selectbox("Pilih senyawa asam kuat", asam_kuat.keys())
     a = asam_kuat[selected_asam_kuat]
     st.write("a = ", a)
 
