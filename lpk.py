@@ -194,8 +194,8 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
         "Asam Perbromat (HBrO4) = 146 g/mol": 146,
         "Asam Klorat (HClO3) = 84,5 g/mol": 84.5, 
         "Asam Perklorat (HClO4) = 100,5 g/mol": 100.5,
-        "Asam Iodida (HI) = 128 g/mol": 128 :,
-        "Asam Iodit (HIO3) = 176 g/mol": 176 :,
+        "Asam Iodida (HI) = 128 g/mol": 128,
+        "Asam Iodit (HIO3) = 176 g/mol": 176,
         "Asam Periodat (HIO4) = 192 g/mol": 192
     }
 
