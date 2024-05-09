@@ -107,7 +107,7 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
     a = asam_kuat[selected_asam_kuat]
     st.write("a = ", a)
 
-    if selected_asam_kuat == list(asam_kuat.keys())):
+    if selected_asam_kuat == list(asam_kuat.keys()):
 
       # Masukkan konsentrasi
         Konsentrasi = st.number_input(
