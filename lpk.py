@@ -87,7 +87,7 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Kuat")
 
     # Pilih senyawa asam kuat
-    asam_kuat = {
+    asam_kuat = [
         "Asam Klorida (HCl)": 1,
         "Asam Nitrat (HNO3)": 1,
         "Asam Sulfat (H2SO4)": 2,
@@ -98,30 +98,13 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
         "Asam Perklorat (HClO4)": 1,
         "Asam Iodida (HI)": 1,
         "Asam Iodit (HIO3)": 1,
-        "Asam Periodat (HIO4)": 1,
-        "Custom": 1
-    }
+        "Asam Periodat (HIO4)": 1] + ["Custom"]
 
-    selected_asam_kuat = st.selectbox(
-        "Pilih senyawa asam kuat", list(asam_kuat))
+    selected_asam_kuat = st.selectbox("Pilih senyawa asam kuat", asam_kuat=asam_kuat)
     a = asam_kuat[selected_asam_kuat]
     st.write("a = ", a)
 
-    if selected_asam_kuat == list(asam_kuat.keys()):
-
-      # Masukkan konsentrasi
-        Konsentrasi = st.number_input(
-            "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0000)
-        st.write("Konsentrasi = ", Konsentrasi)
-
-     # Tombol hitung
-        if st.button("Hitung pH"):
-            H_plus, pH = perhitungan_pH_asam_kuat(Konsentrasi, a)
-            st.write("[H+] =", round(H_plus, 4))
-            st.write("pH =", round(pH, 2))
-            st.success(f'pH asam adalah {pH:.2f}')
-
-    elif selected_asam_kuat == "Custom":
+    if selected_asam_kuat == "Custom":
         # Masukkan konsentrasi
         Konsentrasi = st.number_input(
             "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0000)
