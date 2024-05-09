@@ -115,7 +115,19 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
             "Masukkan Valensi", min_value=0.0, step=1)
         st.write("a = ", Valensi)
 
-    # Tombol hitung
+    if selected != "Custom":
+        # Masukkan konsentrasi
+        Konsentrasi = st.number_input(
+            "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0000)
+        st.write("Konsentrasi = ", Konsentrasi)
+
+    else:
+        # Masukkan konsentrasi
+        Konsentrasi = st.number_input(
+            "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0000)
+        st.write("Konsentrasi = ", Konsentrasi)
+
+ # Tombol hitung
     if st.button("Hitung pH"):
         H_plus, pH = perhitungan_pH_asam_kuat(Konsentrasi, a)
         st.write("[H+] =", round(H_plus, 4))
