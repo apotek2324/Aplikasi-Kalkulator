@@ -68,7 +68,7 @@ def perhitungan_pH_basa_lemah_dengan_massa_volume_BM(massa, volume_dalam_liter, 
     return OH_minus, pOH, pH
     
 # Judul aplikasi
-st.title("Kalkulator Perhitungan pH Larutan")
+st.title("Kalkulator pH Larutan")
 
 # Halaman utama untuk pilihan
 options = ["Menghitung dengan Konsentrasi Asam Kuat",
@@ -219,51 +219,13 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
     volume = st.number_input("Masukkan volume (mL)", min_value=0.000, step=0.001)
 
     # Tombol hitung
-    if st.button("Hitung"):
+    if st.button("Hitung pH"):
         # Konversi volume dari mL ke L
         volume_dalam_liter = volume / 1000
         H_plus, pH = perhitungan_pH_asam_kuat_dengan_massa_volume_BM(massa, volume_dalam_liter, BM)
         st.write("[H+] =", round(H_plus, 4))
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
-
-elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
-    st.subheader(
-        "Menghitung pH, pOH, dan [OH-] dari Massa dan Volume Basa Kuat")
-
-    basa_kuat = {
-        "Natrium Hidroksida (NaOH)": 40,
-        "Litium Hidroksida (LiOH)": 259.47,
-        "Kalium Hidroksida (KOH)": 56,
-        "Rubidium Hidroksida (RbOH)": 32,
-        "Cesium Hidroksida (CsOH)":45 ,
-        "Kalsium Hidroksida (Ca(OH)2)": 35,
-        "Barium Hidroksida (Ba(OH)2)": 12,
-        "Stronsium Hidroksida (Sr(OH)2)": 21,
-        "Magnesium Hidroksida (Mg(OH)2)": 20 
-    }
-    
-    selected_basa_kuat = st.selectbox(
-        "Pilih senyawa basa kuat", list(basa_kuat.keys()))
-    BM = basa_kuat[selected_basa_kuat]
-    st.write("BM = ", BM, "g/mol") 
-    
-    # Masukkan massa
-    massa = st.number_input("Masukkan massa (g)", min_value=0.000, step=0.001)
-
-    # Masukkan volume
-    volume = st.number_input("Masukkan volume (mL)", min_value=0.000, step=0.001)
-
-    # Tombol hitung
-    if st.button("Hitung"):
-        # Konversi volume dari mL ke L
-        volume_dalam_liter = volume / 1000
-        OH_minus, pOH, pH = perhitungan_pH_basa_kuat_dengan_massa_volume_BM(
-            massa, volume_dalam_liter, BM)
-        st.write("[OH-] =", round(OH_minus, 5))
-        st.write("pOH =", round(pOH, 2))
-        st.write("pH =", round(pH, 2))
-        st.success(f'pH basa adalah {pH:.2f}')
 
 elif choice == "Menghitung dengan Massa dan Volume Asam Lemah":
     st.subheader("Menghitung pH dari Massa dan Volume Asam Lemah")
@@ -298,13 +260,51 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Lemah":
     volume = st.number_input("Masukkan volume (mL)", min_value=0.00, step=0.10)
 
     # Tombol hitung
-    if st.button("Hitung"):
+    if st.button("Hitung pH"):
         # Konversi volume dari mL ke L
         volume_dalam_liter = volume / 1000
         H_plus, pH = perhitungan_pH_asam_lemah_dengan_massa_volume_BM(massa, volume_dalam_liter, BM, Konstanta_asam)
         st.write("[H+] =", round(H_plus, 4))
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
+
+elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
+    st.subheader(
+        "Menghitung pH, pOH, dan [OH-] dari Massa dan Volume Basa Kuat")
+
+    basa_kuat = {
+        "Natrium Hidroksida (NaOH)": 40,
+        "Litium Hidroksida (LiOH)": 259.47,
+        "Kalium Hidroksida (KOH)": 56,
+        "Rubidium Hidroksida (RbOH)": 32,
+        "Cesium Hidroksida (CsOH)":45 ,
+        "Kalsium Hidroksida (Ca(OH)2)": 35,
+        "Barium Hidroksida (Ba(OH)2)": 12,
+        "Stronsium Hidroksida (Sr(OH)2)": 21,
+        "Magnesium Hidroksida (Mg(OH)2)": 20 
+    }
+    
+    selected_basa_kuat = st.selectbox(
+        "Pilih senyawa basa kuat", list(basa_kuat.keys()))
+    BM = basa_kuat[selected_basa_kuat]
+    st.write("BM = ", BM, "g/mol") 
+    
+    # Masukkan massa
+    massa = st.number_input("Masukkan massa (g)", min_value=0.000, step=0.001)
+
+    # Masukkan volume
+    volume = st.number_input("Masukkan volume (mL)", min_value=0.000, step=0.001)
+
+    # Tombol hitung
+    if st.button("Hitung pH"):
+        # Konversi volume dari mL ke L
+        volume_dalam_liter = volume / 1000
+        OH_minus, pOH, pH = perhitungan_pH_basa_kuat_dengan_massa_volume_BM(
+            massa, volume_dalam_liter, BM)
+        st.write("[OH-] =", round(OH_minus, 5))
+        st.write("pOH =", round(pOH, 2))
+        st.write("pH =", round(pH, 2))
+        st.success(f'pH basa adalah {pH:.2f}')
 
 elif choice == "Menghitung dengan Massa dan Volume Basa Lemah":
     st.subheader(
@@ -338,7 +338,7 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Lemah":
     volume = st.number_input("Masukkan volume (mL)", min_value=0.000, step=0.001)
 
     # Tombol hitung
-    if st.button("Hitung"):
+    if st.button("Hitung pH"):
         # Konversi volume dari mL ke L
         volume_dalam_liter = volume / 1000
         OH_minus, pOH, pH = perhitungan_pH_basa_lemah_dengan_massa_volume_BM(
