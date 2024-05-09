@@ -220,10 +220,10 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
     BM = basa_kuat[selected_basa_kuat]
     
     # Masukkan massa
-    massa = st.number_input("Masukkan massa (g)", min_value=0.00, step=0.10)
+    massa = st.number_input("Masukkan massa (g)", min_value=0.000, step=0.001)
 
     # Masukkan volume
-    volume = st.number_input("Masukkan volume (mL)", min_value=0.00, step=0.10)
+    volume = st.number_input("Masukkan volume (mL)", min_value=0.000, step=0.001)
 
     # Tombol hitung
     if st.button("Hitung"):
@@ -232,8 +232,8 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
         OH_minus, pOH, pH = perhitungan_konsentrasi_dengan_massa_volume_BM_basa(
             massa, volume_dalam_liter, BM)
         st.write("[OH-] =", round(OH_minus, 5))
-        st.write("pOH =", round(pOH, 3))
-        st.write("pH =", round(pH, 3))
+        st.write("pOH =", round(pOH, 2))
+        st.write("pH =", round(pH, 2))
         st.success(f'pH basa adalah {pH:.2f}')
 
 
