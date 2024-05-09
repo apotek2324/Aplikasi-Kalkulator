@@ -120,9 +120,11 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
 elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Lemah")
 
-    # Masukkan konsentrasi dan Ka
+    # Masukkan Ka
     Konstanta_asam = st.number_input('Masukkan Ka')
     st.write("Ka = ", Konstanta_asam)
+
+    # Masukkan konsentrasi
     Konsentrasi = st.number_input('Masukkan konsentrasi')
     st.write("Konsentrasi = ", Konsentrasi)
     
@@ -152,6 +154,7 @@ elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
     selected_basa_kuat = st.selectbox(
         "Pilih senyawa basa kuat", list(basa_kuat.keys()))
     a = basa_kuat[selected_basa_kuat]
+    st.write("a = ", a)
 
     # Masukkan konsentrasi
     konsentrasi = st.number_input(
@@ -168,9 +171,11 @@ elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
 elif choice == "Menghitung dengan Konsentrasi Basa Lemah":
     st.subheader("Menghitung pH, pOH, dan [OH-] dari Konsentrasi Basa Lemah")
 
-    # Masukkan konsentrasi dan Kb
+    # Masukkan Kb
     Konstanta_basa = st.number_input('Masukkan Kb')
     st.write("Kb = ", Konstanta_basa)
+
+    # Masukkan konsentrasi
     Konsentrasi = st.number_input('Masukkan konsentrasi')
     st.write("Konsentrasi = ", Konsentrasi)
     
@@ -203,7 +208,7 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
     selected_asam_kuat = st.selectbox(
         "Pilih senyawa asam kuat", list(asam_kuat.keys()))
     BM = asam_kuat[selected_asam_kuat]
-    a = asam_kuat[selected_asam_kuat]
+    st.write("BM = ", BM) "g/mol"
 
     # Masukkan massa
     massa = st.number_input("Masukkan massa (g)", min_value=0.00, step=0.10)
