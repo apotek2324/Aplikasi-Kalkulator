@@ -223,7 +223,7 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
     st.write("BM = ", BM, "g/mol") 
 
     # Masukkan massa
-    massa = st.number_input("Masukkan massa (g)", format="%.4f)
+    massa = st.number_input("Masukkan massa (g)", min_value=0.000, step=0.001)
 
     # Masukkan volume
     volume = st.number_input("Masukkan volume (mL)", min_value=0.000, step=0.001)
