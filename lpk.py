@@ -106,9 +106,6 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
         "Pilih senyawa asam kuat", list(asam_kuat.keys()))
     a = asam_kuat[selected_asam_kuat]
     st.write("a = ", a)
-
-    selected_asam_kuat = st.selectbox(
-        "Pilih senyawa asam kuat", list(asam_kuat()))
     if selected_asam_kuat == "Custom":
         # Masukkan konsentrasi
         Konsentrasi = st.number_input(
