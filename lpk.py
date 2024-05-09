@@ -35,7 +35,7 @@ def perhitungan_pH_basa_lemah(Konstanta_basa, Konsentrasi):
 
 # Fungsi untuk menghitung pH asam kuat dengan massa, volume, dan BM 
 
-def perhitungan_pH_asam_kuat_dengan_massa_volume_BM(massa, volume, BM):
+def perhitungan_pH_asam_kuat_dengan_massa_volume_BM(massa, volume, BM, a):
     Konsentrasi = massa / (volume * BM)
     H_plus = Konsentrasi * a
     pH = -math.log10(H_plus)
@@ -43,7 +43,7 @@ def perhitungan_pH_asam_kuat_dengan_massa_volume_BM(massa, volume, BM):
     
 # Fungsi untuk menghitung pH basa kuat dengan massa, volume, dan BM 
 
-def perhitungan_pH_basa_kuat_dengan_massa_volume_BM(massa, volume, BM):
+def perhitungan_pH_basa_kuat_dengan_massa_volume_BM(massa, volume, BM, a):
     Konsentrasi = massa / (volume * BM)
     OH_minus = Konsentrasi * a
     pOH = -math.log10(OH_minus)
@@ -233,23 +233,24 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Lemah":
     st.subheader("Menghitung pH dari Massa dan Volume Asam Lemah")
 
     asam_lemah = {
-        "Asam Klorida (HCl)": 36.5,
-        "Asam Nitrat (HNO3)": 63.02,
-        "Asam Sulfat (H2SO4)": 98,
-        "Asam Bromida (HBr)": 81,
-        "Asam Bromit (HBrO3)": 128.9,
-        "Asam Perbromat (HBrO4)": 146,
-        "Asam Klorat (HClO3)": 84.5, 
-        "Asam Perklorat (HClO4)": 100.5,
-        "Asam Iodida (HI)": 128,
-        "Asam Iodit (HIO3)": 176,
-        "Asam Periodat (HIO4)": 192
+        "Asam Klorida (HCl)": 36.5 : 1,
+        "Asam Nitrat (HNO3)": 63.02 : 1,
+        "Asam Sulfat (H2SO4)": 98 : 1,
+        "Asam Bromida (HBr)": 81 : 1,
+        "Asam Bromit (HBrO3)": 128.9 : 1,
+        "Asam Perbromat (HBrO4)": 146 : 1,
+        "Asam Klorat (HClO3)": 84.5 : 1, 
+        "Asam Perklorat (HClO4)": 100.5 : 1,
+        "Asam Iodida (HI)": 128 : 1,
+        "Asam Iodit (HIO3)": 176 : 1,
+        "Asam Periodat (HIO4)": 192 : 1
     }
 
     selected_asam_lemah = st.selectbox(
         "Pilih senyawa asam lemah", list(asam_lemah.keys()))
     BM = asam_lemah[selected_asam_lemah]
-    st.write("BM = ", BM, "g/mol") 
+    st.write("BM = ", BM, "g/mol")
+    st.write("a = ", a)
 
     # Masukkan Ka
     Konstanta_asam = st.number_input('Masukkan Ka')
