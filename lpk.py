@@ -52,7 +52,7 @@ def perhitungan_pH_basa_kuat_dengan_massa_volume_BM(massa, volume, BM):
     
 # Fungsi untuk menghitung pH asam lemah dengan massa, volume, dan BM 
 
-def perhitungan_pH_asam_lemah_dengan_massa_volume_BM(massa, volume, BM):
+def perhitungan_pH_asam_lemah_dengan_massa_volume_BM(massa, volume_dalam_liter, BM, Konstanta_asam):
     Konsentrasi = massa / (volume * BM)
     H_plus = math.sqrt(Konstanta_asam * Konsentrasi)
     pH = -math.log10(H_plus)
@@ -60,7 +60,7 @@ def perhitungan_pH_asam_lemah_dengan_massa_volume_BM(massa, volume, BM):
 
 # Fungsi untuk menghitung pH basa lemah dengan massa, volume, dan BM 
 
-def perhitungan_pH_basa_lemah_dengan_massa_volume_BM(massa, volume, BM):
+def perhitungan_pH_basa_lemah_dengan_massa_volume_BM(massa, volume_dalam_liter, BM, Konstanta_basa):
     Konsentrasi = (massa / (volume * BM)) 
     OH_minus = math.sqrt(Konstanta_basa * Konsentrasi)
     pOH = -math.log10(OH_minus)
