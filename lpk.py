@@ -208,7 +208,7 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
     selected_asam_kuat = st.selectbox(
         "Pilih senyawa asam kuat", list(asam_kuat.keys()))
     BM = asam_kuat[selected_asam_kuat]
-    st.write("BM = ", BM) "g/mol"
+    st.write("BM = ", BM, "g/mol") 
 
     # Masukkan massa
     massa = st.number_input("Masukkan massa (g)", min_value=0.00, step=0.10)
