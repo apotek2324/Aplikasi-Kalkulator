@@ -124,11 +124,6 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
 
-    # Masukkan konsentrasi
-    Konsentrasi = st.number_input(
-        "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0000)
-    st.write("Konsentrasi = ", Konsentrasi)
-
 elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Lemah")
 
