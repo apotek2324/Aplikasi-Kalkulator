@@ -20,8 +20,8 @@ def perhitungan_pH_basa_kuat(Konsentrasi, a):
 
 # Fungsi untuk menghitung pH asam lemah
 
-def perhitungan_pH_asam_lemah(Ka, Konsentrasi):
-    H_plus = math.sqrt(Ka * Konsentrasi)
+def perhitungan_pH_asam_lemah(Konstanta_asam, Konsentrasi):
+    H_plus = math.sqrt(Konstanta_asam * Konsentrasi)
     pH = -math.log10(H_plus)
     return H_plus, pH
 
@@ -131,7 +131,7 @@ elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
     
     # Tombol hitung
     if st.button ("Hitung pH"):
-        H_plus, pH = perhitungan_pH_asam_lemah(Konsentrasi, Ka)
+        H_plus, pH = perhitungan_pH_asam_lemah(Konsentrasi, Konstanta_asam)
         st.write("[H+] =", round(H_plus, 4))
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
@@ -159,7 +159,7 @@ elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
 
     # Masukkan konsentrasi
     konsentrasi = st.number_input(
-        "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0000)
+        "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0001)
     st.write("Konsentrasi = ", Konsentrasi)
 
     # Tombol hitung
@@ -213,10 +213,10 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
     st.write("BM = ", BM, "g/mol") 
 
     # Masukkan massa
-    massa = st.number_input("Masukkan massa (g)", min_value=0.00, step=0.10)
+    massa = st.number_input("Masukkan massa (g)", min_value=0.000, step=0.001)
 
     # Masukkan volume
-    volume = st.number_input("Masukkan volume (mL)", min_value=0.00, step=0.10)
+    volume = st.number_input("Masukkan volume (mL)", min_value=0.000, step=0.001)
 
     # Tombol hitung
     if st.button("Hitung"):
