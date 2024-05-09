@@ -348,7 +348,7 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Lemah":
     st.write("Kb = ", Konstanta_basa)
     
     # Masukkan massa
-    massa = st.number_input("Masukkan massa (g)", format="%.4f)
+    massa = st.number_input("Masukkan massa (g)", format="%.4f")
 
     # Masukkan volume
     volume = st.number_input("Masukkan volume (mL)", min_value=0.000, step=0.001)
