@@ -108,8 +108,8 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
 
     # Masukkan konsentrasi
     Konsentrasi = st.number_input(
-        "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0000)
-    st.write("Konsentrasi = ", Konsentrasi)
+        "Masukkan konsentrasi (M)", format= "%.4f")
+    st.write("Konsentrasi = ", format= "%.4f")
 
  # Tombol hitung
     if st.button("Hitung pH"):
