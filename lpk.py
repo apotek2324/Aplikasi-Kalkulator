@@ -27,8 +27,8 @@ def perhitungan_pH_asam_lemah(Konstanta_asam, Konsentrasi):
 
 # Fungsi untuk menghitung pH basa lemah
 
-def perhitungan_pH_basa_lemah(Kb, Konsentrasi):
-    OH_minus = math.sqrt(Kb * Konsentrasi)
+def perhitungan_pH_basa_lemah(Konstanta_basa, Konsentrasi):
+    OH_minus = math.sqrt(Konstanta_basa * Konsentrasi)
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
     return OH_minus, pOH, pH
@@ -158,7 +158,7 @@ elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
     st.write("a = ", a)
 
     # Masukkan konsentrasi
-    konsentrasi = st.number_input(
+    Konsentrasi = st.number_input(
         "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0001)
     st.write("Konsentrasi = ", Konsentrasi)
 
