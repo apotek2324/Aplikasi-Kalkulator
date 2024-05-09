@@ -37,7 +37,7 @@ def perhitungan_pH_basa_lemah(Konstanta_basa, Konsentrasi):
 
 def perhitungan_pH_asam_kuat_dengan_massa_volume_BM(massa, volume, BM):
     Konsentrasi = massa / (volume * BM)
-    H_plus = Ka * Konsentrasi 
+    H_plus = Konstanta_asam * Konsentrasi 
     pH = -math.log10(H_plus)
     return H_plus, pH
     
@@ -45,7 +45,7 @@ def perhitungan_pH_asam_kuat_dengan_massa_volume_BM(massa, volume, BM):
 
 def perhitungan_pH_basa_kuat_dengan_massa_volume_BM(massa, volume, BM):
     Konsentrasi = massa / (volume * BM)
-    OH_minus =  Kb * Konsentrasi 
+    OH_minus = Konstanta_basa * Konsentrasi 
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
     return OH_minus, pOH, pH
