@@ -99,15 +99,15 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
         "Asam Iodida (HI)": 1,
         "Asam Iodit (HIO3)": 1,
         "Asam Periodat (HIO4)": 1,
-        "Custom": 0
+        "Custom": 1
     }
 
     selected_asam_kuat = st.selectbox(
-        "Pilih senyawa asam kuat", list(asam_kuat.keys()))
+        "Pilih senyawa asam kuat", list(asam_kuat))
     a = asam_kuat[selected_asam_kuat]
     st.write("a = ", a)
 
-    if selected_asam_kuat == "Asam Klorida (HCl)", "Asam Nitrat (HNO3)", "Asam Sulfat (H2SO4)" :
+    if selected_asam_kuat == list(asam_kuat.keys())):
 
       # Masukkan konsentrasi
         Konsentrasi = st.number_input(
@@ -127,7 +127,7 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
             "Masukkan konsentrasi (M)", min_value=0.0000, step=0.0000)
         st.write("Konsentrasi = ", Konsentrasi)
 
-     # Masukkan valensi
+        # Masukkan valensi
         Valensi = st.number_input(
             "Masukkan Valensi", min_value=0.0, step=1)
         st.write("a = ", Valensi)
