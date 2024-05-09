@@ -99,7 +99,7 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
         "Asam Iodida (HI)": 1,
         "Asam Iodit (HIO3)": 1,
         "Asam Periodat (HIO4)": 1,
-        "Custom"
+        "Custom":
     }
 
     selected_asam_kuat = st.selectbox(
