@@ -54,7 +54,7 @@ def perhitungan_pH_basa_kuat_dengan_massa_volume_BM(massa, volume, BM):
 
 def perhitungan_pH_asam_lemah_dengan_massa_volume_BM(massa, volume, BM):
     Konsentrasi = massa / (volume * BM)
-    H_plus = math.sqrt(Ka * Konsentrasi)
+    H_plus = math.sqrt(Konstanta_asam * Konsentrasi)
     pH = -math.log10(H_plus)
     return H_plus, pH
 
@@ -62,7 +62,7 @@ def perhitungan_pH_asam_lemah_dengan_massa_volume_BM(massa, volume, BM):
 
 def perhitungan_pH_basa_lemah_dengan_massa_volume_BM(massa, volume, BM):
     Konsentrasi = (massa / (volume * BM)) 
-    OH_minus = math.sqrt(Kb * Konsentrasi)
+    OH_minus = math.sqrt(Konstanta_basa * Konsentrasi)
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
     return OH_minus, pOH, pH
@@ -342,7 +342,7 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Lemah":
         # Konversi volume dari mL ke L
         volume_dalam_liter = volume / 1000
         OH_minus, pOH, pH = perhitungan_pH_basa_lemah_dengan_massa_volume_BM(
-            massa, volume_dalam_liter, BM, Kb)
+            massa, volume_dalam_liter, BM, Konstanta_basa)
         st.write("[OH-] =", round(OH_minus, 5))
         st.write("pOH =", round(pOH, 2))
         st.write("pH =", round(pH, 2))
