@@ -183,7 +183,7 @@ elif choice == "Menghitung dengan Konsentrasi Basa Lemah":
     
     # Tombol hitung
     if st.button ("Hitung pH"):
-        OH_minus, pH = perhitungan_pH_basa_lemah(Konsentrasi, Kb)
+        OH_minus, pH = perhitungan_pH_basa_lemah(Konsentrasi, Konstanta_basa)
         st.write("[OH-] =", round(OH_minus, 4))
         st.write("pOH =", round(pOH, 2))
         st.write("pH =", round(pH, 2))
