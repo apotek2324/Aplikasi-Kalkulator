@@ -194,23 +194,25 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
     st.subheader("Menghitung pH dari Massa dan Volume Asam Kuat")
 
     asam_kuat = {
-        "Asam Klorida (HCl)": 36.5,
-        "Asam Nitrat (HNO3)": 63.02,
-        "Asam Sulfat (H2SO4)": 98,
-        "Asam Bromida (HBr)": 81,
-        "Asam Bromit (HBrO3)": 128.9,
-        "Asam Perbromat (HBrO4)": 146,
-        "Asam Klorat (HClO3)": 84.5, 
-        "Asam Perklorat (HClO4)": 100.5,
-        "Asam Iodida (HI)": 128,
-        "Asam Iodit (HIO3)": 176,
-        "Asam Periodat (HIO4)": 192
+        "Asam Klorida (HCl)": 36.5, : 1,
+        "Asam Nitrat (HNO3)": 63.02, : 1,
+        "Asam Sulfat (H2SO4)": 98, : 1,
+        "Asam Bromida (HBr)": 81, : 1,
+        "Asam Bromit (HBrO3)": 128.9, : 1,
+        "Asam Perbromat (HBrO4)": 146, : 1,
+        "Asam Klorat (HClO3)": 84.5, : 1,
+        "Asam Perklorat (HClO4)": 100.5, : 1,
+        "Asam Iodida (HI)": 128, : 1,
+        "Asam Iodit (HIO3)": 176, : 1,
+        "Asam Periodat (HIO4)": 192 : 1
     }
 
     selected_asam_kuat = st.selectbox(
         "Pilih senyawa asam kuat", list(asam_kuat.keys()))
     BM = asam_kuat[selected_asam_kuat]
+    a = asam_kuat[selected_asam_kuat]
     st.write("BM = ", BM, "g/mol") 
+    st.write("a = ", a) 
 
     # Masukkan massa
     massa = st.number_input("Masukkan massa (g)", format= "%.4f")
