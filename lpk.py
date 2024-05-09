@@ -111,7 +111,7 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
 
     # Tombol hitung
     if st.button("Hitung pH"):
-        H_plus, pH = perhitungan_pH_asam_kuat(konsentrasi, a)
+        H_plus, pH = perhitungan_pH_asam_kuat(Konsentrasi, a)
         st.write("[H+] =", round(H_plus, 4))
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
@@ -127,7 +127,7 @@ elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
     
     # Tombol hitung
     if st.button ("Hitung pH"):
-        H_plus, pH = perhitungan_pH_asam_lemah(konsentrasi, Ka)
+        H_plus, pH = perhitungan_pH_asam_lemah(Konsentrasi, Ka)
         st.write("[H+] =", round(H_plus, 4))
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
@@ -158,7 +158,7 @@ elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
 
     # Tombol hitung
     if st.button("Hitung pH"):
-        OH_minus, pOH, pH = perhitungan_pH_basa_kuat(konsentrasi, a)
+        OH_minus, pOH, pH = perhitungan_pH_basa_kuat(Konsentrasi, a)
         st.write("[OH-] =", round(OH_minus, 5))
         st.write("pOH =", round(pOH, 2))
         st.write("pH =", round(pH, 2))
@@ -300,7 +300,7 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Lemah":
     st.subheader(
         "Menghitung pH, pOH, dan [OH-] dari Massa dan Volume Basa Lemah")
 
-    basa_kuat = {
+    basa_lemah = {
         "Natrium Hidroksida (NaOH) = 40 g/mol": 40,
         "Litium Hidroksida (LiOH) = 259,47 g/mol": 259.47,
         "Kalium Hidroksida (KOH) = 56 g/mol": 56,
