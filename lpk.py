@@ -37,7 +37,7 @@ def perhitungan_pH_basa_lemah(Konstanta_basa, Konsentrasi):
 
 def perhitungan_pH_asam_kuat_dengan_massa_volume_BM(massa, volume, BM):
     Konsentrasi = massa / (volume * BM)
-    H_plus = Konstanta_asam * Konsentrasi 
+    H_plus = Konsentrasi * a
     pH = -math.log10(H_plus)
     return H_plus, pH
     
@@ -45,7 +45,7 @@ def perhitungan_pH_asam_kuat_dengan_massa_volume_BM(massa, volume, BM):
 
 def perhitungan_pH_basa_kuat_dengan_massa_volume_BM(massa, volume, BM):
     Konsentrasi = massa / (volume * BM)
-    OH_minus = Konstanta_basa * Konsentrasi 
+    OH_minus = Konsentrasi * a
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
     return OH_minus, pOH, pH
@@ -301,7 +301,7 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Lemah":
     if st.button("Hitung"):
         # Konversi volume dari mL ke L
         volume_dalam_liter = volume / 1000
-        H_plus, pH = perhitungan_pH_asam_lemah_dengan_massa_volume_BM(massa, volume_dalam_liter, BM, Ka)
+        H_plus, pH = perhitungan_pH_asam_lemah_dengan_massa_volume_BM(massa, volume_dalam_liter, BM, Konstanta_asam)
         st.write("[H+] =", round(H_plus, 4))
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
