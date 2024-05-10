@@ -121,7 +121,7 @@ if choice == "Konsentrasi Asam Kuat":
 
  # Tombol hapus
     if st.button("Hapus"):
-        del konsentrasi, selected_asam_kuat
+        del Konsentrasi, selected_asam_kuat
         
 elif choice == "Konsentrasi Asam Lemah":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Lemah")
