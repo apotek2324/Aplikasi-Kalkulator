@@ -88,7 +88,7 @@ if choice == "Konsentrasi Asam Kuat":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Kuat")
 
     # Pilih senyawa asam kuat
-    asam_kuat = [f{
+    asam_kuat = [{
         "Asam Klorida (HCl)": 1,
         "Asam Nitrat (HNO3)": 1,
         "Asam Sulfat (H2SO4)": 2,
@@ -103,7 +103,7 @@ if choice == "Konsentrasi Asam Kuat":
     }] + ["Custom"]
 
     selected_asam_kuat = st.selectbox(
-        "Pilih senyawa asam kuat", list(asam_kuat.keys(), asam_kuat))
+        "Pilih senyawa asam kuat", list(asam_kuat.keys() = asam_kuat))
     a = asam_kuat[selected_asam_kuat]
     st.write("a = ", a)
 
