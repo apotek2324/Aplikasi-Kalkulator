@@ -88,26 +88,11 @@ if choice == "Konsentrasi Asam Kuat":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Kuat")
 
     # Pilih senyawa asam kuat
-    asam_kuat = [{
-        "Asam Klorida (HCl)": 1,
-        "Asam Nitrat (HNO3)": 1,
-        "Asam Sulfat (H2SO4)": 2,
-        "Asam Bromida (HBr)": 1,
-        "Asam Bromit (HBrO3)": 1,
-        "Asam Perbromat (HBrO4)": 1,
-        "Asam Klorat (HClO3)": 1, 
-        "Asam Perklorat (HClO4)": 1,
-        "Asam Iodida (HI)": 1,
-        "Asam Iodit (HIO3)": 1,
-        "Asam Periodat (HIO4)": 1,
-    }] + ["Custom"]
+    options = [f"Option #{i}" for i in range(3)] + ["Another option..."]
+    selection = st.selectbox("Select option", options=options)
 
-    selected_asam_kuat = st.selectbox(
-        "Pilih senyawa asam kuat", list(asam_kuat.keys()))
-    a = asam_kuat[selected_asam_kuat]
-    st.write("a = ", a)
-
-    if selected == "Custom":
+    # Create text input for user entry
+    if selection == "Another option...": 
         # Masukkan konsentrasi
         Konsentrasi = st.number_input(
             "Masukkan konsentrasi (M)", format = "%.4f")
@@ -117,6 +102,7 @@ if choice == "Konsentrasi Asam Kuat":
         Valensi = st.number_input(
             "Masukkan konsentrasi (M)", format = "%.4f")
         st.write("Valensi = ",  Valensi)
+
 
     # Masukkan konsentrasi
     Konsentrasi = st.number_input(
