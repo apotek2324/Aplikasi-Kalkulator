@@ -112,12 +112,12 @@ if choice == "Konsentrasi Asam Kuat":
         "Masukkan konsentrasi (M)", format = "%.4f", step=0.0001)
     st.write("Konsentrasi = ", Konsentrasi)
     
-     # Tombol hitung
-        if st.button("Hitung pH"):
-            H_plus, pH = perhitungan_pH_asam_kuat(Konsentrasi, a)
-            st.write("[H+] =", round(H_plus, 4))
-            st.write("pH =", round(pH, 2))
-            st.success(f'pH asam adalah {pH:.2f}')
+    # Tombol hitung
+    if st.button("Hitung pH"):
+        H_plus, pH = perhitungan_pH_asam_kuat(Konsentrasi, a)
+        st.write("[H+] =", round(H_plus, 4))
+        st.write("pH =", round(pH, 2))            
+        st.success(f'pH asam adalah {pH:.2f}')
         
 elif choice == "Konsentrasi Asam Lemah":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Lemah")
