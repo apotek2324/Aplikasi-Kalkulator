@@ -1,9 +1,9 @@
 import streamlit as st
 import base64
 
-def render_image(filepath: str):
+def render_image:
    """
-   filepath: path to the image. Must have a valid file extension.
+   filepath= (skala_pH.py)
    """
    mime_type = filepath.split('.')[-1:][0].lower()
    with open(filepath, "rb") as f:
