@@ -119,9 +119,11 @@ if choice == "Konsentrasi Asam Kuat":
             st.write("[H+] =", round(H_plus, 4))
             st.write("pH =", round(pH, 2))
             st.success(f'pH asam adalah {pH:.2f}')
-
- # Tombol hapus
-    if st.button("Clear all", on_click=clear_all):
+        
+        return
+        
+     # Tombol hapus
+        st.button("Clear all", on_click=clear_all):
         
 elif choice == "Konsentrasi Asam Lemah":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Lemah")
