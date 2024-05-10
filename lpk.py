@@ -84,7 +84,7 @@ options = ["Konsentrasi Asam Kuat",
 
 choice = st.sidebar.radio("Pilih Metode", options)
 
-if choice == "Menghitung dengan Konsentrasi Asam Kuat":
+if choice == "Konsentrasi Asam Kuat":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Kuat")
 
     # Pilih senyawa asam kuat
@@ -119,7 +119,7 @@ if choice == "Menghitung dengan Konsentrasi Asam Kuat":
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
 
-elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
+elif choice == "Konsentrasi Asam Lemah":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Lemah")
 
     # Masukkan Ka
@@ -137,7 +137,7 @@ elif choice == "Menghitung dengan Konsentrasi Asam Lemah":
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
 
-elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
+elif choice == "Konsentrasi Basa Kuat":
     st.subheader("Menghitung [OH-], pOH, dan pH dari Konsentrasi Basa Kuat")
 
     # Pilih senyawa basa kuat
@@ -171,7 +171,7 @@ elif choice == "Menghitung dengan Konsentrasi Basa Kuat":
         st.write("pH =", round(pH, 2))
         st.success(f'pH basa adalah {pH:.2f}')
 
-elif choice == "Menghitung dengan Konsentrasi Basa Lemah":
+elif choice == "Konsentrasi Basa Lemah":
     st.subheader("Menghitung pH, pOH, dan [OH-] dari Konsentrasi Basa Lemah")
 
     # Masukkan Kb
@@ -191,7 +191,7 @@ elif choice == "Menghitung dengan Konsentrasi Basa Lemah":
         st.success(f'pH basa adalah {pH:.2f}')
 
 
-elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
+elif choice == "Massa dan Volume Asam Kuat":
     st.subheader("Menghitung pH dari Massa dan Volume Asam Kuat")
 
     asam_kuat = {
@@ -230,7 +230,7 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
 
-elif choice == "Menghitung dengan Massa dan Volume Asam Lemah":
+elif choice == "Massa dan Volume Asam Lemah":
     st.subheader("Menghitung pH dari Massa dan Volume Asam Lemah")
 
     asam_lemah = {
@@ -269,7 +269,7 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Lemah":
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
 
-elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
+elif choice == "Massa dan Volume Basa Kuat":
     st.subheader(
         "Menghitung pH, pOH, dan [OH-] dari Massa dan Volume Basa Kuat")
 
@@ -309,7 +309,7 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
         st.write("pH =", round(pH, 2))
         st.success(f'pH basa adalah {pH:.2f}')
 
-elif choice == "Menghitung dengan Massa dan Volume Basa Lemah":
+elif choice == "Massa dan Volume Basa Lemah":
     st.subheader(
         "Menghitung pH, pOH, dan [OH-] dari Massa dan Volume Basa Lemah")
 
