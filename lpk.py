@@ -35,16 +35,16 @@ def perhitungan_pH_basa_lemah(Konstanta_basa, Konsentrasi):
 
 # Fungsi untuk menghitung pH asam kuat dengan massa, volume, dan BM 
 
-def perhitungan_pH_asam_kuat_dengan_massa_volume_BM(massa, volume, BM, a):
-    Konsentrasi = massa / (volume * BM)
+def perhitungan_pH_asam_kuat_dengan_massa_volume_BM(massa, volume_dalam_liter, BM, a):
+    Konsentrasi = massa / (volume_dalam_liter * BM)
     H_plus = Konsentrasi * a
     pH = -math.log10(H_plus)
     return H_plus, pH
     
 # Fungsi untuk menghitung pH basa kuat dengan massa, volume, dan BM 
 
-def perhitungan_pH_basa_kuat_dengan_massa_volume_BM(massa, volume, BM, a):
-    Konsentrasi = massa / (volume * BM)
+def perhitungan_pH_basa_kuat_dengan_massa_volume_BM(massa, volume_dalam_liter, BM, a):
+    Konsentrasi = massa / (volume_dalam_liter * BM)
     OH_minus = Konsentrasi * a
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
@@ -121,7 +121,7 @@ if choice == "Konsentrasi Asam Kuat":
 
  # Tombol hapus
     if st.button("Hapus"):
-        del Konsentrasi, selected_asam_kuat
+        del Konsentrasi
         
 elif choice == "Konsentrasi Asam Lemah":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Lemah")
