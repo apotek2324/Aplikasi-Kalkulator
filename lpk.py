@@ -109,7 +109,7 @@ if choice == "Konsentrasi Asam Kuat":
 
     # Masukkan konsentrasi
     Konsentrasi = st.number_input(
-        "Masukkan konsentrasi (M)", format = "%.4f", step = 0,0001)
+        "Masukkan konsentrasi (M)", format = "%.4f", step=0.0001)
     st.write("Konsentrasi = ", Konsentrasi)
 
  # Tombol hitung
