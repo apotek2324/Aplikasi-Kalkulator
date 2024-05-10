@@ -319,7 +319,7 @@ elif choice == "Massa dan Volume Basa Lemah":
 
     basa_lemah = {
         "Ammonium Hidroksida (NH4OH)" : (35 g/mol, 1), 
-        "Besi (III) Hidroksida (Fe(OH)3)" : (107 g/mol, 3) 
+        "Besi (III) Hidroksida (Fe(OH)3)" : (107 g/mol, 3), 
         "Alluminium (III) Hidroksida (Al(OH)3)" (78 g/mol, 3) 
     }
     
