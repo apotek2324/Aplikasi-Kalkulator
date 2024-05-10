@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 
-def render_image:
+def render_image():
    """
    filepath= (skala_pH.py)
    """
