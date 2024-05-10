@@ -221,9 +221,11 @@ elif choice == "Massa dan Volume Asam Kuat":
     
     # Masukkan massa
     massa = st.number_input("Masukkan massa (g)", format= "%.4f")
+    st.write("Massa = ", massa)
 
     # Masukkan volume
     volume = st.number_input("Masukkan volume (mL)")
+    st.write("Volume = ", volume)
 
     # Tombol hitung
     if st.button("Hitung pH"):
@@ -259,10 +261,12 @@ elif choice == "Massa dan Volume Asam Lemah":
     st.write("Ka = ", Konstanta_asam)
     
     # Masukkan massa
-    massa = st.number_input("Masukkan massa (g)", format = "%.4f")
+    massa = st.number_input("Masukkan massa (g)", format= "%.4f")
+    st.write("Massa = ", massa)
 
     # Masukkan volume
     volume = st.number_input("Masukkan volume (mL)")
+    st.write("Volume = ", volume)
 
     # Tombol hitung
     if st.button("Hitung pH"):
@@ -297,10 +301,12 @@ elif choice == "Massa dan Volume Basa Kuat":
     st.write("a = ", a) 
     
     # Masukkan massa
-    massa = st.number_input("Masukkan massa (g)",format = "%.4f")
+    massa = st.number_input("Masukkan massa (g)", format= "%.4f")
+    st.write("Massa = ", massa)
 
     # Masukkan volume
     volume = st.number_input("Masukkan volume (mL)")
+    st.write("Volume = ", volume)
 
     # Tombol hitung
     if st.button("Hitung pH"):
@@ -344,11 +350,13 @@ elif choice == "Massa dan Volume Basa Lemah":
     st.write("Kb = ", Konstanta_basa)
     
     # Masukkan massa
-    massa = st.number_input("Masukkan massa (g)", format = "%.4f")
+    massa = st.number_input("Masukkan massa (g)", format= "%.4f")
+    st.write("Massa = ", massa)
 
     # Masukkan volume
-    volume = st.number_input("Masukkan volume (mL)",)
-
+    volume = st.number_input("Masukkan volume (mL)")
+    st.write("Volume = ", volume)
+    
     # Tombol hitung
     if st.button("Hitung pH"):
         # Konversi volume dari mL ke L
