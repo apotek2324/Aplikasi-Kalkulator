@@ -320,9 +320,8 @@ elif choice == "Massa dan Volume Basa Lemah":
     basa_lemah = {
         "Ammonium Hidroksida (NH4OH)": (35, 1),
         "Perak Hidroksida (AgOH)": (125, 1),
-        "Seng Hidroksida (Zn(OH)2)": (), 
-        "Nikel Hidroksida (Ni(OH)2)": (),
-
+        "Seng Hidroksida (Zn(OH)2)": (99.42, 2), 
+        "Nikel Hidroksida (Ni(OH)2)": (91, 2),
         "Alluminium (III) Hidroksida (Al(OH)3)": (78, 3),  
         "Bismuth Hidroksida (Bi(OH)3)": (260, 3),
         "Besi (II) Hidroksida (Fe(OH)2)": (89.86, 2),
