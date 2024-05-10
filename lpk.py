@@ -121,7 +121,7 @@ def clear_all():
         st.success(f'pH asam adalah {pH:.2f}')
 
  # Tombol hapus
-    if st.button("Clear all", on_click=clear_all)
+    if st.button("Clear all", on_click=clear_all):
         
 elif choice == "Konsentrasi Asam Lemah":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Lemah")
