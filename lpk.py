@@ -246,7 +246,7 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Lemah":
     
     selected_asam_lemah = st.selectbox(
         "Pilih senyawa asam lemah", list(asam_lemah.keys()))
-    BM = basa_lemah[selected_basa_lemah]
+    BM = asam_lemah[selected_asam_lemah]
     st.write("BM = ", BM, "g/mol") 
 
     # Masukkan Ka
