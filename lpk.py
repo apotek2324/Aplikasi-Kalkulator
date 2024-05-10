@@ -318,15 +318,9 @@ elif choice == "Massa dan Volume Basa Lemah":
         "Menghitung pH, pOH, dan [OH-] dari Massa dan Volume Basa Lemah")
 
     basa_lemah = {
-        "Natrium Hidroksida (NaOH)": 40,
-        "Litium Hidroksida (LiOH)": 259.47,
-        "Kalium Hidroksida (KOH)": 56,
-        "Rubidium Hidroksida (RbOH)": 32,
-        "Cesium Hidroksida (CsOH)": 45 ,
-        "Kalsium Hidroksida (Ca(OH)2)": 35,
-        "Barium Hidroksida (Ba(OH)2)": 12,
-        "Stronsium Hidroksida (Sr(OH)2)": 21,
-        "Magnesium Hidroksida (Mg(OH)2)": 20 
+        "Ammonium Hidroksida (NH4OH)" : (35 g/mol, 1), 
+        "Besi (III) Hidroksida (Fe(OH)3)" : (107 g/mol, 3) 
+        "Alluminium (III) Hidroksida (Al(OH)3)" (78 g/mol, 3) 
     }
     
     selected_basa_lemah = st.selectbox(
