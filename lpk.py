@@ -103,7 +103,7 @@ if choice == "Konsentrasi Asam Kuat":
     }
 
     selected_asam_kuat = st.selectbox(
-        "Pilih senyawa basa kuat", list(asam_kuat.keys()))
+        "Pilih senyawa asam kuat", list(asam_kuat.keys()))
     a = asam_kuat[selected_asam_kuat]
     st.write("a = ", a)
 
@@ -170,7 +170,7 @@ elif choice == "Konsentrasi Basa Kuat":
     # Tombol hitung
     if st.button("Hitung pH"):
         OH_minus, pOH, pH = perhitungan_pH_basa_kuat(Konsentrasi, a)
-        st.write("[OH-] =", round(OH_minus, 5))
+        st.write("[OH-] =", round(OH_minus, 4))
         st.write("pOH =", round(pOH, 2))
         st.write("pH =", round(pH, 2))
         st.success(f'pH basa adalah {pH:.2f}')
@@ -183,7 +183,7 @@ elif choice == "Konsentrasi Basa Lemah":
     st.write("Kb = ", Konstanta_basa)
 
     # Masukkan konsentrasi
-    Konsentrasi = st.number_input('Masukkan konsentrasi')
+    Konsentrasi = st.number_input('Masukkan konsentrasi', format = "%.4f")
     st.write("Konsentrasi = ", Konsentrasi)
     
     # Tombol hitung
@@ -203,13 +203,13 @@ elif choice == "Massa dan Volume Asam Kuat":
         "Asam Nitrat (HNO3)":(63, 1),
         "Asam Sulfat (H2SO4)":(98, 2),
         "Asam Bromida (HBr)":(81, 1),
-        "Asam Bromit (HBrO3)":(6, 1),
-        "Asam Perbromat (HBrO4)":(36.5, 1),
-        "Asam Klorat (HClO3)":(36.5, 1),
-        "Asam Perklorat (HClO4)":(36.5, 1),
-        "Asam Iodida (HI)":(36.5, 1),
-        "Asam Iodit (HIO3)":(36.5, 1),
-        "Asam Periodat (HIO4)":(36.5, 1)
+        "Asam Bromit (HBrO3)":(129, 1),
+        "Asam Perbromat (HBrO4)":(145, 1),
+        "Asam Klorat (HClO3)":(84.5, 1),
+        "Asam Perklorat (HClO4)":(100.46, 1),
+        "Asam Iodida (HI)":(127.91, 1),
+        "Asam Iodit (HIO3)":(175.91, 1),
+        "Asam Periodat (HIO4)":(191.91, 1)
     }
 
     selected_asam_kuat = st.selectbox(
@@ -238,15 +238,15 @@ elif choice == "Massa dan Volume Asam Lemah":
     st.subheader("Menghitung pH dari Massa dan Volume Asam Lemah")
 
     asam_lemah = {
-        "Natrium Hidroksida (NaOH)": 40,
-        "Litium Hidroksida (LiOH)": 259.47,
-        "Kalium Hidroksida (KOH)": 56,
-        "Rubidium Hidroksida (RbOH)": 32,
-        "Cesium Hidroksida (CsOH)": 45 ,
-        "Kalsium Hidroksida (Ca(OH)2)": 35,
-        "Barium Hidroksida (Ba(OH)2)": 12,
-        "Stronsium Hidroksida (Sr(OH)2)": 21,
-        "Magnesium Hidroksida (Mg(OH)2)": 20 
+        "Asam Asetat (CH3COOH)": 60,
+        "Asam Fluorida (HF)": 20,
+        "Asam Sianida (HCN)": 27,
+        "Asam Sulfida (H2S)": 32,
+        "Asam Sulfit (H2SO3)": 82.1,
+        "Asam Fosfat (H3PO4)": 98,
+        "Asam Karbonat (H2CO3)": 62,
+        "Asam Hipoklorit (HClO)": 52.5,
+        "Asam Nitrit (HNO2)": 47 
     }
     
     selected_asam_lemah = st.selectbox(
