@@ -318,9 +318,9 @@ elif choice == "Massa dan Volume Basa Lemah":
         "Menghitung pH, pOH, dan [OH-] dari Massa dan Volume Basa Lemah")
 
     basa_lemah = {
-        "Ammonium Hidroksida (NH4OH)" : (35, 1), 
-        "Besi (III) Hidroksida (Fe(OH)3)" : (107, 3), 
-        "Alluminium (III) Hidroksida (Al(OH)3)" (78, 3) 
+        "Ammonium Hidroksida (NH4OH)": (35, 1), 
+        "Besi (III) Hidroksida (Fe(OH)3)": (107, 3), 
+        "Alluminium (III) Hidroksida (Al(OH)3)": (78, 3) 
     }
     
     selected_basa_lemah = st.selectbox(
