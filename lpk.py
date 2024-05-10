@@ -233,55 +233,15 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Lemah":
     st.subheader("Menghitung pH dari Massa dan Volume Asam Lemah")
 
     asam_lemah = {
-        "Asam Klorida (HCl)":{
-            "BM": 36.5,
-            "a": 1
-        }
-        
-        "Asam Nitrat (HNO3)":{
-            "BM": 36.5,
-            "a": 1
-        }
-        "Asam Sulfat (H2SO4)":{
-            "BM": 36.5,
-            "a": 1
-        }
-        "Asam Bromida (HBr)":{
-            "BM": 36.5,
-            "a": 1
-        }
-        "Asam Bromit (HBrO3)":{
-            "BM": 36.5,
-            "a": 1
-        }
-        "Asam Perbromat (HBrO4)":{
-            "BM": 36.5,
-            "a": 1
-        }
-        "Asam Klorat (HClO3)":{
-            "BM": 36.5,
-            "a": 1
-        }
-        "Asam Perklorat (HClO4)":{
-            "BM": 36.5,
-            "a": 1
-        }
-        "Asam Iodida (HI)":{
-            "BM": 36.5,
-            "a": 1
-        }
-        "Asam Iodit (HIO3)":{
-            "BM": 36.5,
-            "a": 1
-        }
-        "Asam Periodat (HIO4)":{
-            "BM": 36.5,
-            "a": 1
-        }
+        "Asam Klorida (HCl)":(36.5, 1)
+        "Asam Nitrat (HNO3)":(37.5, 1)
+        "Asam Sulfat (H2SO4)":(66.5, 2)
     }
 
-    print (asam_lemah["Asam Klorida (HCl)"]["BM"]) 
-    print (my_dict["Asam Klorida (HCl)"]["a"])
+    selected_asam_lemah = st.selectbox(
+        "Pilih senyawa asam lemah", list(asam_lemah.keys()))
+    BM = asam_lemah[selected_asam_lemah][0]
+    a = asam_lemah[selected_asam_lemah][1]
 
     # Masukkan Ka
     Konstanta_asam = st.number_input('Masukkan Ka')
