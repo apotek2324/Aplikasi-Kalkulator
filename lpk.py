@@ -318,20 +318,20 @@ elif choice == "Massa dan Volume Basa Lemah":
         "Menghitung pH, pOH, dan [OH-] dari Massa dan Volume Basa Lemah")
 
     basa_lemah = {
-        "Ammonium Hidroksida (NH4OH)": (35, 1),
-        "Perak Hidroksida (AgOH)": (125, 1),
-        "Seng Hidroksida (Zn(OH)2)": (99.42, 2), 
-        "Nikel Hidroksida (Ni(OH)2)": (91, 2),
-        "Alluminium (III) Hidroksida (Al(OH)3)": (78, 3),  
-        "Bismuth Hidroksida (Bi(OH)3)": (260, 3),
-        "Besi (II) Hidroksida (Fe(OH)2)": (89.86, 2),
-        "Besi (III) Hidroksida (Fe(OH)3)": (107, 3),
-        "Kobalt (II) Hidroksida (Co(OH)2)": (92.95, 2), 
-        "Kobalt (III) Hidroksida (Co(OH)3)": (109.96, 3), 
-        "Raksa (I) Hidroksida (HgoH)": (218, 1),
-        "Raksa (II) Hidroksida (Hg(OH)2)": (252, 2),
-        "Tembaga (I) Hidroksida (CuOH)": (80.5, 1), 
-        "Tembaga (II) Hidroksida (Cu(OH)2)": (44.01, 2)
+        "Ammonium Hidroksida (NH4OH)": 35,
+        "Perak Hidroksida (AgOH)": 125,
+        "Seng Hidroksida (Zn(OH)2)": 99.42, 
+        "Nikel Hidroksida (Ni(OH)2)": 91,
+        "Alluminium (III) Hidroksida (Al(OH)3)": 78,  
+        "Bismuth Hidroksida (Bi(OH)3)": 260,
+        "Besi (II) Hidroksida (Fe(OH)2)": 89.86,
+        "Besi (III) Hidroksida (Fe(OH)3)": 107,
+        "Kobalt (II) Hidroksida (Co(OH)2)": 92.95,
+        "Kobalt (III) Hidroksida (Co(OH)3)": 109.96, 
+        "Raksa (I) Hidroksida (HgoH)": 218,
+        "Raksa (II) Hidroksida (Hg(OH)2)": 252,
+        "Tembaga (I) Hidroksida (CuOH)": 80.5,
+        "Tembaga (II) Hidroksida (Cu(OH)2)": 44.01
     }
     
     selected_basa_lemah = st.selectbox(
