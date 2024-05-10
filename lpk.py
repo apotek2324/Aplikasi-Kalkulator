@@ -319,8 +319,12 @@ elif choice == "Massa dan Volume Basa Lemah":
 
     basa_lemah = {
         "Ammonium Hidroksida (NH4OH)": (35, 1), 
-        "Besi (III) Hidroksida (Fe(OH)3)": (107, 3), 
+        "Besi (II) Hidroksida (Fe(OH)2)": (89.86, 2), 
+        "Besi (III) Hidroksida (Fe(OH)3)": (107, 3),
+        "Bismuth Hidroksida (Bi(OH)3)": (260, 3),
         "Alluminium (III) Hidroksida (Al(OH)3)": (78, 3) 
+        "Perak Hidroksida (AgOH)": (125, 1)
+
     }
     
     selected_basa_lemah = st.selectbox(
