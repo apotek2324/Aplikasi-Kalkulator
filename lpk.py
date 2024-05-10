@@ -88,7 +88,7 @@ if choice == "Konsentrasi Asam Kuat":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Kuat")
 
     # Pilih senyawa asam kuat
-   asam_kuat = {
+    asam_kuat = {
         "Asam Klorida (HCl)": 1,
         "Asam Nitrat (HNO3)": 1,
         "Asam Sulfat (H2SO4)": 2,
