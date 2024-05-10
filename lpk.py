@@ -324,7 +324,6 @@ elif choice == "Massa dan Volume Basa Lemah":
         "Bismuth Hidroksida (Bi(OH)3)": (260, 3),
         "Alluminium (III) Hidroksida (Al(OH)3)": (78, 3) 
         "Perak Hidroksida (AgOH)": (125, 1)
-
     }
     
     selected_basa_lemah = st.selectbox(
