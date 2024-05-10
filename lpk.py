@@ -233,8 +233,8 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Lemah":
     st.subheader("Menghitung pH dari Massa dan Volume Asam Lemah")
 
     asam_lemah = {
-        "Asam Klorida (HCl)":(36.5, 1)
-        "Asam Nitrat (HNO3)":(37.5, 1)
+        "Asam Klorida (HCl)":(36.5, 1),
+        "Asam Nitrat (HNO3)":(37.5, 1),
         "Asam Sulfat (H2SO4)":(66.5, 2)
     }
 
