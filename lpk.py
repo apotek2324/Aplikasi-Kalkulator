@@ -119,6 +119,10 @@ if choice == "Konsentrasi Asam Kuat":
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
 
+ # Tombol hapus
+    if st.button("Hapus"):
+        del konsentrasi, selected_asam_kuat
+        
 elif choice == "Konsentrasi Asam Lemah":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Lemah")
 
@@ -352,6 +356,7 @@ elif choice == "Massa dan Volume Basa Lemah":
         st.success(f'pH basa adalah {pH:.2f}')
 
 elif choice == "About This App":
-    st.subheader(
-        "Apa itu pH?")
-    st.write('pH adalah ukuran keasaman atau kebasaan suatu larutan kimia. Ini adalah nilai numerik yang menyatakan seberapa asam atau basa suatu larutan cair.')
+    st.subheader("Apa itu pH?")
+    st.write('pH adalah ukuran keasaman atau kebasaan suatu larutan kimia. pH adalah nilai numerik yang menyatakan seberapa asam atau basa suatu larutan cair.')
+    st.subheader("Apa itu pH?")
+    st.write
