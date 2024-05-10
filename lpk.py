@@ -172,7 +172,7 @@ elif choice == "Konsentrasi Basa Kuat":
         st.success(f'pH basa adalah {pH:.2f}')
 
 elif choice == "Konsentrasi Basa Lemah":
-    st.subheader("Menghitung pH, pOH, dan [OH-] dari Konsentrasi Basa Lemah")
+    st.subheader("Menghitung [OH-], pOH, dan pH dari Konsentrasi Basa Lemah")
 
     # Masukkan Kb
     Konstanta_basa = st.number_input('Masukkan Kb')
@@ -275,7 +275,7 @@ elif choice == "Massa dan Volume Asam Lemah":
 
 elif choice == "Massa dan Volume Basa Kuat":
     st.subheader(
-        "Menghitung pH, pOH, dan [OH-] dari Massa dan Volume Basa Kuat")
+        "Menghitung [OH-], pOH, dan pH dari Massa dan Volume Basa Kuat")
 
     basa_kuat = {
         "Natrium Hidroksida (NaOH)":(36.5, 1),
@@ -309,7 +309,7 @@ elif choice == "Massa dan Volume Basa Kuat":
         # Konversi volume dari mL ke L
         volume_dalam_liter = volume / 1000
         OH_minus, pOH, pH = perhitungan_pH_basa_kuat_dengan_massa_volume_BM(
-            massa, volume_dalam_liter, BM)
+            massa, volume_dalam_liter, BM, a)
         st.write("[OH-] =", round(OH_minus, 5))
         st.write("pOH =", round(pOH, 2))
         st.write("pH =", round(pH, 2))
@@ -317,7 +317,7 @@ elif choice == "Massa dan Volume Basa Kuat":
 
 elif choice == "Massa dan Volume Basa Lemah":
     st.subheader(
-        "Menghitung pH, pOH, dan [OH-] dari Massa dan Volume Basa Lemah")
+        "Menghitung [OH-], pOH, dan pH dari Massa dan Volume Basa Lemah")
 
     basa_lemah = {
         "Ammonium Hidroksida (NH4OH)": 35,
