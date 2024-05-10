@@ -88,6 +88,7 @@ if choice == "Konsentrasi Asam Kuat":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Kuat")
 
     # Pilih senyawa asam kuat
+    def clear_all():
     asam_kuat = {
         "Asam Klorida (HCl)": 1,
         "Asam Nitrat (HNO3)": 1,
@@ -120,8 +121,7 @@ if choice == "Konsentrasi Asam Kuat":
         st.success(f'pH asam adalah {pH:.2f}')
 
  # Tombol hapus
-    if st.button("Hapus"):
-        del Konsentrasi
+    if st.button("Clear all", on_click=clear_all)
         
 elif choice == "Konsentrasi Asam Lemah":
     st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Lemah")
