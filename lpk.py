@@ -85,7 +85,7 @@ options = ["Konsentrasi Asam Kuat",
 choice = st.sidebar.radio("Pilih Metode", options)
 
 if choice == "Konsentrasi Asam Kuat":
-    st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Kuat")
+    st.subheader("Menghitung [H+] dan pH dari Konsentrasi Asam Kuat")
 
     # Pilih senyawa asam kuat
     asam_kuat = {
@@ -120,7 +120,7 @@ if choice == "Konsentrasi Asam Kuat":
         st.success(f'pH asam adalah {pH:.2f}')
         
 elif choice == "Konsentrasi Asam Lemah":
-    st.subheader("Menghitung pH dan [H+] dari Konsentrasi Asam Lemah")
+    st.subheader("Menghitung [H+] dan pH dari Konsentrasi Asam Lemah")
 
     # Masukkan Ka
     Konstanta_asam = st.number_input('Masukkan Ka')
@@ -192,7 +192,7 @@ elif choice == "Konsentrasi Basa Lemah":
 
 
 elif choice == "Massa dan Volume Asam Kuat":
-    st.subheader("Menghitung pH dari Massa dan Volume Asam Kuat")
+    st.subheader("Menghitung [H+] dan pH dari Massa dan Volume Asam Kuat")
 
     asam_kuat = {
         "Asam Klorida (HCl)":(36.5, 1),
@@ -233,7 +233,7 @@ elif choice == "Massa dan Volume Asam Kuat":
         st.success(f'pH asam adalah {pH:.2f}')
 
 elif choice == "Massa dan Volume Asam Lemah":
-    st.subheader("Menghitung pH dari Massa dan Volume Asam Lemah")
+    st.subheader("Menghitung [H+] dan pH dari Massa dan Volume Asam Lemah")
 
     asam_lemah = {
         "Asam Asetat (CH3COOH)": 60,
