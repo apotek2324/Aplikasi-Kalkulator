@@ -216,7 +216,7 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
     if st.button("Hitung pH"):
         # Konversi volume dari mL ke L
         volume_dalam_liter = volume / 1000
-        H_plus, pH = perhitungan_pH_asam_kuat_dengan_massa_volume_BM(massa, volume_dalam_liter, BM)
+        H_plus, pH = perhitungan_pH_asam_kuat_dengan_massa_volume_BM(massa, volume_dalam_liter, BM, a)
         st.write("[H+] =", round(H_plus, 4))
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
