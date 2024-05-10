@@ -379,11 +379,12 @@ elif choice == "About This App":
     st.write("Dari konsentrasi asam kuat:") 
     
     #asam kuat
-    kons_asam_kuat = [
+    kons_asam_kuat = {
         "1. Anda diberikan daftar beberapa asam umum. Silakan pilih salah satunya.",
         "2. Selanjutnya, masukkan konsentrasi dalam satuan molar.",
         "3. Klik Hitung pH. Alat ini akan segera menentukan pH dan konsentrasi ion hidrogen."
-        ]
+        }
+    
     st.write(kons_asam_kuat)
 
     st.write("Dari konsentrasi asam lemah")
