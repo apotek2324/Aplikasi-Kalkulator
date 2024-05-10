@@ -370,8 +370,14 @@ elif choice == "About This App":
     st.subheader("Skala pH")
 
     from PIL import Image
+    import cv2
     img = image.open("skala_pH.png")
-    st.image(img)
+    img = cv2.imread("skala_pH.png")
+    st.image(
+        img,
+        width = 800 ,
+        channels = "RGB"
+        )
     
     st.write('pH diukur pada skala mulai dari 0 hingga 14. PH 7 dianggap netral. Air murni, atau larutan berair yang hanya mengandung bahan kimia netral, akan memiliki pH 7. Nilai yang lebih rendah dari 7 bersifat asam, dan semakin rendah nilai pH, semakin asam larutan tersebut. Nilai yang lebih tinggi dari 7 bersifat basa, dan nilai yang lebih tinggi berarti lebih basa.'
             )
