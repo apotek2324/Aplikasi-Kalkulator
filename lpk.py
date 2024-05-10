@@ -380,10 +380,6 @@ elif choice == "About This App":
     kons_asam_kuat = [
         "1. Anda diberikan daftar beberapa asam umum. Silakan pilih salah satunya.","2. Selanjutnya, masukkan konsentrasi dalam satuan molar.","3. Klik Hitung pH. Alat ini akan segera menentukan pH dan konsentrasi ion hidrogen."
             ]
-    kode=int(input("Dari konsentrasi asam kuat(1-3):"))
-    if kode not in range (1,8):
-        st.write("Dari konsentrasi asam kuat:")
-    else:
-        st.write(kode)
+    st.write(kons_asam_kuat)
     
   
