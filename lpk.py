@@ -204,7 +204,7 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
         "Asam Perklorat (HClO4)":(36.5, 1),
         "Asam Iodida (HI)":(36.5, 1),
         "Asam Iodit (HIO3)":(36.5, 1),
-        "Asam Periodat (HIO4)":(36.5, 1),
+        "Asam Periodat (HIO4)":(36.5, 1)
     }
 
     selected_asam_kuat = st.selectbox(
@@ -281,7 +281,7 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
         "Kalsium Hidroksida (Ca(OH)2)":(36.5, 1),
         "Barium Hidroksida (Ba(OH)2)":(36.5, 1),
         "Stronsium Hidroksida (Sr(OH)2)":(36.5, 1),
-        "Magnesium Hidroksida (Mg(OH)2)":(36.5, 1),
+        "Magnesium Hidroksida (Mg(OH)2)":(36.5, 1)
     }
     
     selected_basa_kuat = st.selectbox(
