@@ -365,18 +365,19 @@ elif choice == "Massa dan Volume Basa Lemah":
         st.success(f'pH basa adalah {pH:.2f}')
 
 elif choice == "About This App":
+    #Apa itu pH
     st.subheader("Apa itu pH?")
     st.write('pH adalah ukuran keasaman atau kebasaan suatu larutan kimia. pH adalah nilai numerik yang menyatakan seberapa asam atau basa suatu larutan cair.')
+
+    #Skala pH
     st.subheader("Skala pH")
-
-    import streamlit as st
-    from image_loader import render_image
-
-    render_image("skala_pH.png")
-    
     st.write('pH diukur pada skala mulai dari 0 hingga 14. PH 7 dianggap netral. Air murni, atau larutan berair yang hanya mengandung bahan kimia netral, akan memiliki pH 7. Nilai yang lebih rendah dari 7 bersifat asam, dan semakin rendah nilai pH, semakin asam larutan tersebut. Nilai yang lebih tinggi dari 7 bersifat basa, dan nilai yang lebih tinggi berarti lebih basa.'
             )
+
+    #Cara menggunakan kalkulator pH
     st.subheader("Cara Menggunakan KaLkulator pH")
-    st.write('Dari konsentrasi asam: 1. Anda diberikan daftar beberapa asam umum. Silakan pilih salah satunya. 2. Selanjutnya, masukkan konsentrasi dalam satuan molar. 3. Klik "Hitung pH" Alat tersebut akan segera menentukan pH dan konsentrasi ion hidrogen.'
-            )
+    st.write("Dari konsentrasi asam:") 
+    kons_asam_kuat = [
+        "1. Anda diberikan daftar beberapa asam umum. Silakan pilih salah satunya.","2. Selanjutnya, masukkan konsentrasi dalam satuan molar.","3. Klik Hitung pH. Alat ini akan segera menentukan pH dan konsentrasi ion hidrogen."
+            ]
   
