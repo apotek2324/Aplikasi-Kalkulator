@@ -379,7 +379,7 @@ elif choice == "About This App":
     
     #asam kuat
     kons_asam_kuat = [
-        "Anda diberikan daftar beberapa asam umum. Silakan pilih salah satunya.",
+        "Anda diberikan daftar beberapa senyawa asam kuat umum. Silakan pilih salah satunya.",
         "Selanjutnya, masukkan konsentrasi dalam satuan molar.",
         "Klik Hitung pH. Alat ini akan segera menentukan pH dan konsentrasi dari ion Hidrogen."
         ]
@@ -388,9 +388,23 @@ elif choice == "About This App":
     #asam lemah
     kons_asam_lemah = [
         "Anda diminta untuk memasukkan nilai Ka.",
-        "Selanjutnya, masukkan konsentrasi dalam satuan molar."
+        "Selanjutnya, masukkan konsentrasi dalam satuan molar.",
         "Klik Hitung pH. Alat ini akan segera menentukan pH dan konsentrasi dari ion Hidrogen."
         ]
     st.write("Dari konsentrasi asam lemah:", kons_asam_lemah)
-    
+
+    #basa kuat
+    kons_basa_kuat = [
+        "Anda diberikan daftar beberapa senyawa basa kuat umum. Silakan pilih salah satunya.",
+        "Selanjutnya, masukkan konsentrasi dalam satuan molar.",
+        "Klik Hitung pH. Alat ini akan segera menentukan pH, pOH, dan konsentrasi dari ion Hidroksida."
+        ]
+    st.write("Dari konsentrasi basa kuat:", kons_basa_kuat)
+
+    #basa lemah
+    kons_basa_lemah = [
+         "Anda diminta untuk memasukkan nilai Kb.",
+        "Selanjutnya, masukkan konsentrasi dalam satuan molar.",
+        "Klik Hitung pH. Alat ini akan segera menentukan pH, pOH, dan konsentrasi dari ion Hidroksida."
+        ]
   
