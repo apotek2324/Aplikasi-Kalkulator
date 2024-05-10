@@ -381,7 +381,7 @@ elif choice == "About This App":
     kons_asam_kuat = [
         "Anda diberikan daftar beberapa senyawa asam kuat umum. Silakan pilih salah satunya.",
         "Selanjutnya, masukkan konsentrasi dalam satuan molar.",
-        "Klik Hitung pH. Alat ini akan segera menentukan pH dan konsentrasi dari ion Hidrogen."
+        "Klik Hitung pH. Alat ini akan segera menentukan konsentrasi dan pH dari ion Hidrogen."
         ]
     st.write("Dari konsentrasi asam kuat:", kons_asam_kuat)
 
@@ -389,7 +389,7 @@ elif choice == "About This App":
     kons_asam_lemah = [
         "Anda diminta untuk memasukkan nilai Ka.",
         "Selanjutnya, masukkan konsentrasi dalam satuan molar.",
-        "Klik Hitung pH. Alat ini akan segera menentukan pH dan konsentrasi dari ion Hidrogen."
+        "Klik Hitung pH. Alat ini akan segera menentukan konsentrasi dan pH dari ion Hidrogen."
         ]
     st.write("Dari konsentrasi asam lemah:", kons_asam_lemah)
 
@@ -397,22 +397,22 @@ elif choice == "About This App":
     kons_basa_kuat = [
         "Anda diberikan daftar beberapa senyawa basa kuat umum. Silakan pilih salah satunya.",
         "Selanjutnya, masukkan konsentrasi dalam satuan molar.",
-        "Klik Hitung pH. Alat ini akan segera menentukan pH, pOH, dan konsentrasi dari ion Hidroksida."
+        "Klik Hitung pH. Alat ini akan segera menentukan konsentrasi, pOH, dan pH dari ion Hidroksida."
         ]
     st.write("Dari konsentrasi basa kuat:", kons_basa_kuat)
 
     #basa lemah
     kons_basa_lemah = [
-         "Anda diminta untuk memasukkan nilai Kb.",
+        "Anda diminta untuk memasukkan nilai Kb.",
         "Selanjutnya, masukkan konsentrasi dalam satuan molar.",
-        "Klik Hitung pH. Alat ini akan segera menentukan pH, pOH, dan konsentrasi dari ion Hidroksida."
+        "Klik Hitung pH. Alat ini akan segera menentukan konsentrasi, pOH, dan pH dari ion Hidroksida."
         ]
 
     #massa dan volume asam kuat
     mv_asam_kuat = [
         "Anda diberikan daftar beberapa senyawa asam kuat umum. Silakan pilih salah satunya.",
         "Selanjutnya, masukkan massa senyawa dalam satuan gram dan masukkan volume dalam satuan mililiter.",
-        "Klik Hitung pH. Alat ini akan segera menentukan pH dan konsentrasi dari ion Hidrogen."
+        "Klik Hitung pH. Alat ini akan segera menentukan konsentrasi dan pH dari ion Hidrogen."
         ]
     st.write("Dari massa dan volume asam kuat:", mv_asam_kuat)
 
@@ -421,7 +421,7 @@ elif choice == "About This App":
         "Anda diberikan daftar beberapa senyawa asam lemah umum. Silakan pilih salah satunya.",
         "Masukkan nilai Ka",
         "Selanjutnya, masukkan massa senyawa dalam satuan gram dan masukkan volume dalam satuan mililiter.",
-        "Klik Hitung pH. Alat ini akan segera menentukan pH dan konsentrasi dari ion Hidrogen."
+        "Klik Hitung pH. Alat ini akan segera menentukan konsentrasi dan pH dari ion Hidrogen."
         ]
     st.write("Dari massa dan volume asam lemah:", mv_asam_lemah)
 
@@ -429,7 +429,7 @@ elif choice == "About This App":
     mv_basa_kuat = [
         "Anda diberikan daftar beberapa senyawa basa kuat umum. Silakan pilih salah satunya.",
         "Selanjutnya, masukkan massa senyawa dalam satuan gram dan masukkan volume dalam satuan mililiter.",
-        "Klik Hitung pH. Alat ini akan segera menentukan pH, pOH, dan konsentrasi dari ion Hidroksida."
+        "Klik Hitung pH. Alat ini akan segera menentukan konsentrasi, pOH, dan pH dari ion Hidroksida."
         ]
     st.write("Dari massa dan volume basa kuat:", mv_basa_kuat)
 
@@ -438,6 +438,6 @@ elif choice == "About This App":
         "Anda diberikan daftar beberapa senyawa basa lemah umum. Silakan pilih salah satunya.",
         "Masukkan nilai Kb",
         "Selanjutnya, masukkan massa senyawa dalam satuan gram dan masukkan volume dalam satuan mililiter.",
-        "Klik Hitung pH. Alat ini akan segera menentukan pH, pOH, dan konsentrasi dari ion Hidroksida."
+        "Klik Hitung pH. Alat ini akan segera menentukan konsentrasi, pOH, dan pH dari ion Hidroksida."
         ]
      st.write("Dari massa dan volume basa lemah:", mv_basa_lemah)
