@@ -354,4 +354,4 @@ elif choice == "Massa dan Volume Basa Lemah":
 elif choice == "About This App":
     st.subheader(
         "Apa itu pH?")
-    st.caption('pH adalah ukuran keasaman atau kebasaan suatu larutan kimia. Ini adalah nilai numerik yang menyatakan seberapa asam atau basa suatu larutan cair.')
+    st.write('pH adalah ukuran keasaman atau kebasaan suatu larutan kimia. Ini adalah nilai numerik yang menyatakan seberapa asam atau basa suatu larutan cair.')
