@@ -369,15 +369,10 @@ elif choice == "About This App":
     st.write('pH adalah ukuran keasaman atau kebasaan suatu larutan kimia. pH adalah nilai numerik yang menyatakan seberapa asam atau basa suatu larutan cair.')
     st.subheader("Skala pH")
 
-    from PIL import Image
-    import cv2
-    img = image.open("skala_pH.png")
-    img = cv2.imread("skala_pH.png")
-    st.image(
-        img,
-        width = 800 ,
-        channels = "RGB"
-        )
+    import streamlit as st
+    from image_loader import render_image
+
+    render_image("skala_pH.png")
     
     st.write('pH diukur pada skala mulai dari 0 hingga 14. PH 7 dianggap netral. Air murni, atau larutan berair yang hanya mengandung bahan kimia netral, akan memiliki pH 7. Nilai yang lebih rendah dari 7 bersifat asam, dan semakin rendah nilai pH, semakin asam larutan tersebut. Nilai yang lebih tinggi dari 7 bersifat basa, dan nilai yang lebih tinggi berarti lebih basa.'
             )
