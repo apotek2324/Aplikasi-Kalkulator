@@ -407,4 +407,37 @@ elif choice == "About This App":
         "Selanjutnya, masukkan konsentrasi dalam satuan molar.",
         "Klik Hitung pH. Alat ini akan segera menentukan pH, pOH, dan konsentrasi dari ion Hidroksida."
         ]
-  
+
+    #massa dan volume asam kuat
+    mv_asam_kuat = [
+        "Anda diberikan daftar beberapa senyawa asam kuat umum. Silakan pilih salah satunya.",
+        "Selanjutnya, masukkan massa senyawa dalam satuan gram dan masukkan volume dalam satuan mililiter.",
+        "Klik Hitung pH. Alat ini akan segera menentukan pH dan konsentrasi dari ion Hidrogen."
+        ]
+    st.write("Dari massa dan volume asam kuat:", mv_asam_kuat)
+
+    #massa dan volume asam lemah
+    mv_asam_lemah = [
+        "Anda diberikan daftar beberapa senyawa asam lemah umum. Silakan pilih salah satunya.",
+        "Masukkan nilai Ka",
+        "Selanjutnya, masukkan massa senyawa dalam satuan gram dan masukkan volume dalam satuan mililiter.",
+        "Klik Hitung pH. Alat ini akan segera menentukan pH dan konsentrasi dari ion Hidrogen."
+        ]
+    st.write("Dari massa dan volume asam lemah:", mv_asam_lemah)
+
+    #massa dan volume basa kuat
+    mv_basa_kuat = [
+        "Anda diberikan daftar beberapa senyawa basa kuat umum. Silakan pilih salah satunya.",
+        "Selanjutnya, masukkan massa senyawa dalam satuan gram dan masukkan volume dalam satuan mililiter.",
+        "Klik Hitung pH. Alat ini akan segera menentukan pH, pOH, dan konsentrasi dari ion Hidroksida."
+        ]
+    st.write("Dari massa dan volume basa kuat:", mv_basa_kuat)
+
+    #massa dan volume basa lemah
+    mv_basa_lemah = [
+        "Anda diberikan daftar beberapa senyawa basa lemah umum. Silakan pilih salah satunya.",
+        "Masukkan nilai Kb",
+        "Selanjutnya, masukkan massa senyawa dalam satuan gram dan masukkan volume dalam satuan mililiter.",
+        "Klik Hitung pH. Alat ini akan segera menentukan pH, pOH, dan konsentrasi dari ion Hidroksida."
+        ]
+     st.write("Dari massa dan volume basa lemah:", mv_basa_lemah)
