@@ -201,8 +201,8 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
 
     selected_asam_kuat = st.selectbox(
         "Pilih senyawa asam kuat", list(asam_kuat.keys()))
-    BM = asam_kuat[selected_asam_lemah][0]
-    a = asam_kuat[selected_asam_lemah][1]
+    BM = asam_kuat[selected_asam_kuat][0]
+    a = asam_kuat[selected_asam_kuat][1]
     st.write("BM = ", BM, "g/mol") 
     st.write("a = ", a) 
     
@@ -225,15 +225,21 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Lemah":
     st.subheader("Menghitung pH dari Massa dan Volume Asam Lemah")
 
     asam_lemah = {
-        "Asam Klorida (HCl)":(36.5, 1),
-        "Asam Nitrat (HNO3)":(37.5, 1),
-        "Asam Sulfat (H2SO4)":(66.5, 2)
+        "Natrium Hidroksida (NaOH)": 40,
+        "Litium Hidroksida (LiOH)": 259.47,
+        "Kalium Hidroksida (KOH)": 56,
+        "Rubidium Hidroksida (RbOH)": 32,
+        "Cesium Hidroksida (CsOH)": 45 ,
+        "Kalsium Hidroksida (Ca(OH)2)": 35,
+        "Barium Hidroksida (Ba(OH)2)": 12,
+        "Stronsium Hidroksida (Sr(OH)2)": 21,
+        "Magnesium Hidroksida (Mg(OH)2)": 20 
     }
-
+    
     selected_asam_lemah = st.selectbox(
         "Pilih senyawa asam lemah", list(asam_lemah.keys()))
-    BM = asam_lemah[selected_asam_lemah][0]
-    a = asam_lemah[selected_asam_lemah][1]
+    BM = basa_lemah[selected_basa_lemah]
+    st.write("BM = ", BM, "g/mol") 
 
     # Masukkan Ka
     Konstanta_asam = st.number_input('Masukkan Ka')
