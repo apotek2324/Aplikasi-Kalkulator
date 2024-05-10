@@ -103,7 +103,7 @@ if choice == "Konsentrasi Asam Kuat":
     }] + ["Custom"]
 
     selected_asam_kuat = st.selectbox(
-        "Pilih senyawa asam kuat", list(asam_kuat.keys() = asam_kuat))
+        "Pilih senyawa asam kuat", list(asam_kuat.keys() == asam_kuat))
     a = asam_kuat[selected_asam_kuat]
     st.write("a = ", a)
 
