@@ -71,14 +71,15 @@ def perhitungan_pH_basa_lemah_dengan_massa_volume_BM(massa, volume_dalam_liter, 
 st.title("Kalkulator pH Larutan")
 
 # Halaman utama untuk pilihan
-options = ["Menghitung dengan Konsentrasi Asam Kuat",
-           "Menghitung dengan Konsentrasi Asam Lemah",
-           "Menghitung dengan Konsentrasi Basa Kuat",
-           "Menghitung dengan Konsentrasi Basa Lemah",
-           "Menghitung dengan Massa dan Volume Asam Kuat",
-           "Menghitung dengan Massa dan Volume Asam Lemah",
-           "Menghitung dengan Massa dan Volume Basa Kuat",
-           "Menghitung dengan Massa dan Volume Basa Lemah"
+options = ["Konsentrasi Asam Kuat",
+           "Konsentrasi Asam Lemah",
+           "Konsentrasi Basa Kuat",
+           "Konsentrasi Basa Lemah",
+           "Massa dan Volume Asam Kuat",
+           "Massa dan Volume Asam Lemah",
+           "Massa dan Volume Basa Kuat",
+           "Massa dan Volume Basa Lemah",
+           "About This App"
           ]
 
 choice = st.sidebar.radio("Pilih Metode", options)
@@ -350,3 +351,7 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Lemah":
         st.write("pH =", round(pH, 2))
         st.success(f'pH basa adalah {pH:.2f}')
 
+elif choice == "About This App":
+    st.subheader(
+        "Apa itu pH?")
+    st.caption('pH adalah ukuran keasaman atau kebasaan suatu larutan kimia. Ini adalah nilai numerik yang menyatakan seberapa asam atau basa suatu larutan cair.')
