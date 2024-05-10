@@ -196,7 +196,7 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
     asam_kuat = {
         "Asam Klorida (HCl)":(36.5, 1),
         "Asam Nitrat (HNO3)":(63, 1),
-        "Asam Sulfat (H2SO4)":(98, 2)
+        "Asam Sulfat (H2SO4)":(98, 2),
         "Asam Bromida (HBr)":(81, 1),
         "Asam Bromit (HBrO3)":(6, 1),
         "Asam Perbromat (HBrO4)":(36.5, 1),
