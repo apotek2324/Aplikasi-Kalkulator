@@ -195,8 +195,16 @@ elif choice == "Menghitung dengan Massa dan Volume Asam Kuat":
 
     asam_kuat = {
         "Asam Klorida (HCl)":(36.5, 1),
-        "Asam Nitrat (HNO3)":(37.5, 1),
-        "Asam Sulfat (H2SO4)":(66.5, 2)
+        "Asam Nitrat (HNO3)":(63, 1),
+        "Asam Sulfat (H2SO4)":(98, 2)
+        "Asam Bromida (HBr)":(81, 1),
+        "Asam Bromit (HBrO3)":(6, 1),
+        "Asam Perbromat (HBrO4)":(36.5, 1),
+        "Asam Klorat (HClO3)":(36.5, 1),
+        "Asam Perklorat (HClO4)":(36.5, 1),
+        "Asam Iodida (HI)":(36.5, 1),
+        "Asam Iodit (HIO3)":(36.5, 1),
+        "Asam Periodat (HIO4)":(36.5, 1),
     }
 
     selected_asam_kuat = st.selectbox(
@@ -265,21 +273,23 @@ elif choice == "Menghitung dengan Massa dan Volume Basa Kuat":
         "Menghitung pH, pOH, dan [OH-] dari Massa dan Volume Basa Kuat")
 
     basa_kuat = {
-        "Natrium Hidroksida (NaOH)": 40,
-        "Litium Hidroksida (LiOH)": 259.47,
-        "Kalium Hidroksida (KOH)": 56,
-        "Rubidium Hidroksida (RbOH)": 32,
-        "Cesium Hidroksida (CsOH)":45 ,
-        "Kalsium Hidroksida (Ca(OH)2)": 35,
-        "Barium Hidroksida (Ba(OH)2)": 12,
-        "Stronsium Hidroksida (Sr(OH)2)": 21,
-        "Magnesium Hidroksida (Mg(OH)2)": 20 
+        "Natrium Hidroksida (NaOH)":(36.5, 1),
+        "Litium Hidroksida (LiOH)":(36.5, 1),
+        "Kalium Hidroksida (KOH)":(36.5, 1),
+        "Rubidium Hidroksida (RbOH)":(36.5, 1),
+        "Cesium Hidroksida (CsOH)":(36.5, 1),
+        "Kalsium Hidroksida (Ca(OH)2)":(36.5, 1),
+        "Barium Hidroksida (Ba(OH)2)":(36.5, 1),
+        "Stronsium Hidroksida (Sr(OH)2)":(36.5, 1),
+        "Magnesium Hidroksida (Mg(OH)2)":(36.5, 1),
     }
     
     selected_basa_kuat = st.selectbox(
         "Pilih senyawa basa kuat", list(basa_kuat.keys()))
-    BM = basa_kuat[selected_basa_kuat]
+    BM = basa_kuat[selected_basa_kuat][0]
+    a = basa_kuat[selected_basa_kuat][1]
     st.write("BM = ", BM, "g/mol") 
+    st.write("a = ", a) 
     
     # Masukkan massa
     massa = st.number_input("Masukkan massa (g)", min_value=0.000, step=0.001)
