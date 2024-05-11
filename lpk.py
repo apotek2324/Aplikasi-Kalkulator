@@ -400,11 +400,11 @@ elif choice == "About This App":
     #Cara Menggunakan Kalkulator pH
     st.subheader("Cara Menggunakan Kalkulator pH")
     st.write('''The member of the team :
-1. Aniyah Azzahrah Erhan    (2220446)
-2. Bima Rifqi Adjie Nugroho (2220449)
-3. Frans Samuel M           (2220455)
-4. Nazmi Nurazizah          (2220476)
-5. Verent Putri Ramandini   (2220495)
+    1. Aniyah Azzahrah Erhan    (2220446)
+    2. Bima Rifqi Adjie Nugroho (2220449)
+    3. Frans Samuel M           (2220455)
+    4. Nazmi Nurazizah          (2220476)
+    5. Verent Putri Ramandini   (2220495)
 ''')
     
     st.write('''Dari konsentrasi asam kuat : 
