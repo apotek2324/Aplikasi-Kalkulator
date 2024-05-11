@@ -86,9 +86,10 @@ choice = st.sidebar.radio("Pilih Metode", options)
 if choice == "Konsentrasi Asam":
     st.subheader("Menghitung [H+] dan pH dari Konsentrasi Asam Kuat")
 
-    tab1, tab2, tab3 = st.tabs(["Asam Kuat", "Asam Lemah"])
+    tab1, tab2 = st.tabs(["Asam Kuat", "Asam Lemah"])
 
     with tab1:
+    st.header("Asam Kuat")
     # Pilih senyawa asam kuat
     asam_kuat = {
         "Asam Klorida (HCl)": 1,
@@ -121,10 +122,8 @@ if choice == "Konsentrasi Asam":
         st.write("pH =", round(pH, 2))            
         st.success(f'pH asam adalah {pH:.2f}')
 
-
-elif choice == "Konsentrasi Asam Lemah":
-    st.subheader("Menghitung [H+] dan pH dari Konsentrasi Asam Lemah")
-
+    with tab1:
+    st.header("Asam Lemah")
     # Masukkan Ka
     Konstanta_asam = st.number_input('Masukkan Ka')
     st.write("Ka = ", Konstanta_asam)
@@ -140,7 +139,8 @@ elif choice == "Konsentrasi Asam Lemah":
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
 
-    with tab2:
+elif choice == "Konsentrasi Basa Kuat":
+    st.subheader("Menghitung [OH-], pOH, dan pH dari Konsentrasi Basa Kuat")
     # Pilih senyawa basa kuat
     basa_kuat = {
         "Natrium Hidroksida (NaOH)": 1,
