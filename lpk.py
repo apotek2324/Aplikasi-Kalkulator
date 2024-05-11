@@ -403,6 +403,11 @@ elif choice == "About This App":
 1. Anda diberikan daftar beberapa senyawa asam kuat umum. Silakan pilih salah satunya.
 2. Selanjutnya, masukkan konsentrasi dalam satuan molar (M).
 3. Klik Hitung pH, alat ini akan segera menentukan [H+] dan pH dari ion Hidrogen.
+
+Dari konsentrasi asam lemah :
+1. Anda diminta untuk memasukkan nilai konstanta asam (Ka).
+2. Selanjutnya, masukkan konsentrasi dalam satuan molar (M).
+3. Klik Hitung pH, alat ini akan segera menentukan [H+] dan pH dari ion Hidrogen.
 ''')
 
     st.write('''Dari konsentrasi asam lemah :
