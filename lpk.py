@@ -115,7 +115,7 @@ if choice == "Konsentrasi Asam":
         st.write("Konsentrasi = ", Konsentrasi)
         
         # Tombol hitung
-        if st.button("Hitung pH"):
+        if st.button("Hitung pH", key = "B1"):
             H_plus, pH = perhitungan_pH_asam_kuat(Konsentrasi, a)
             st.write("[H+] =", round(H_plus, 4))
             st.write("pH =", round(pH, 2))            
@@ -133,7 +133,7 @@ if choice == "Konsentrasi Asam":
         st.write("Konsentrasi = ", Konsentrasi_lemah)
         
         # Tombol hitung
-        if st.button ("Hitung pH"):
+        if st.button ("Hitung pH", key = "B2"):
             H_plus, pH = perhitungan_pH_asam_lemah(Konsentrasi_lemah, Konstanta_asam)
             st.write("[H+] =", round(H_plus, 4))
             st.write("pH =", round(pH, 2))
