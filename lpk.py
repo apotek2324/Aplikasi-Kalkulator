@@ -82,6 +82,7 @@ options = ["Beranda",
 choice = st.sidebar.radio("Pilih Metode", options)
 
 if choice == "Beranda":
+    st.subheader("Menghitung [H+] dan pH dari Konsentrasi Asam Kuat dan Asam Lemah")
 
 elif choice == "Konsentrasi Asam":
     st.subheader("Menghitung [H+] dan pH dari Konsentrasi Asam Kuat dan Asam Lemah")
