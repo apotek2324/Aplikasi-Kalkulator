@@ -278,15 +278,15 @@ elif choice == "Massa dan Volume Basa Kuat":
         "Menghitung [OH-], pOH, dan pH dari Massa dan Volume Basa Kuat")
 
     basa_kuat = {
-        "Natrium Hidroksida (NaOH)":(36.5, 1),
-        "Litium Hidroksida (LiOH)":(36.5, 1),
-        "Kalium Hidroksida (KOH)":(36.5, 1),
-        "Rubidium Hidroksida (RbOH)":(36.5, 1),
-        "Cesium Hidroksida (CsOH)":(36.5, 1),
-        "Kalsium Hidroksida (Ca(OH)2)":(36.5, 1),
-        "Barium Hidroksida (Ba(OH)2)":(36.5, 1),
-        "Stronsium Hidroksida (Sr(OH)2)":(36.5, 1),
-        "Magnesium Hidroksida (Mg(OH)2)":(36.5, 1)
+        "Natrium Hidroksida (NaOH)":(40, 1),
+        "Litium Hidroksida (LiOH)":(23.95, 1),
+        "Kalium Hidroksida (KOH)":(56.1, 1),
+        "Rubidium Hidroksida (RbOH)":(102.48, 1),
+        "Cesium Hidroksida (CsOH)":(149.91, 1),
+        "Kalsium Hidroksida (Ca(OH)2)":(74, 2),
+        "Barium Hidroksida (Ba(OH)2)":(171.34, 2),
+        "Stronsium Hidroksida (Sr(OH)2)":(121.63, 2),
+        "Magnesium Hidroksida (Mg(OH)2)":(58.32, 2)
     }
     
     selected_basa_kuat = st.selectbox(
