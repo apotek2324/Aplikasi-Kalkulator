@@ -3,6 +3,8 @@
 import streamlit as st
 import math
 
+st.set_page_config(page_title="Aplikasi Kalkulator Perhitungan pH") 
+
 # Fungsi untuk menghitung pH asam kuat
 
 def perhitungan_pH_asam_kuat(Konsentrasi, a):
