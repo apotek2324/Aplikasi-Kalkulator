@@ -87,6 +87,8 @@ choice = st.sidebar.radio("Pilih Metode", options)
 if choice == "Konsentrasi Asam Kuat":
     st.subheader("Menghitung [H+] dan pH dari Konsentrasi Asam Kuat")
 
+    tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
+
     # Pilih senyawa asam kuat
     asam_kuat = {
         "Asam Klorida (HCl)": 1,
