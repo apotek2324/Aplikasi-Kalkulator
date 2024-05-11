@@ -20,8 +20,8 @@ def perhitungan_pH_basa_kuat(Konsentrasi, a):
 
 # Fungsi untuk menghitung pH asam lemah
 
-def perhitungan_pH_asam_lemah(Konstanta_asam, Konsentrasi):
-    H_plus = math.sqrt(Konstanta_asam * Konsentrasi)
+def perhitungan_pH_asam_lemah(Konstanta_asam, Konsentrasi_lemah):
+    H_plus = math.sqrt(Konstanta_asam * Konsentrasi_lemah)
     pH = -math.log10(H_plus)
     return H_plus, pH
     
@@ -128,7 +128,7 @@ if choice == "Konsentrasi Asam":
         st.write("Ka = ", Konstanta_asam)
     
         # Masukkan konsentrasi
-        Konsentrasi_lemah = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001(Konsentrasi_lemah.keys()))
+        Konsentrasi_lemah = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001)
         st.write("Konsentrasi = ", Konsentrasi_lemah)
         
         # Tombol hitung
