@@ -71,8 +71,7 @@ def perhitungan_pH_basa_lemah_dengan_massa_volume_BM(massa, volume_dalam_liter, 
 st.title("Kalkulator pH Larutan")
 
 # Halaman utama untuk pilihan
-options = ["Konsentrasi Asam Kuat",
-           "Konsentrasi Asam Lemah",
+options = ["Konsentrasi Asam",
            "Konsentrasi Basa Kuat",
            "Konsentrasi Basa Lemah",
            "Massa dan Volume Asam Kuat",
@@ -84,11 +83,12 @@ options = ["Konsentrasi Asam Kuat",
 
 choice = st.sidebar.radio("Pilih Metode", options)
 
-if choice == "Konsentrasi Asam Kuat":
+if choice == "Konsentrasi Asam":
     st.subheader("Menghitung [H+] dan pH dari Konsentrasi Asam Kuat")
 
-    tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
+    tab1, tab2, tab3 = st.tabs(["Asam Kuat", "Asam Lemah"])
 
+    with tab1:
     # Pilih senyawa asam kuat
     asam_kuat = {
         "Asam Klorida (HCl)": 1,
@@ -120,7 +120,8 @@ if choice == "Konsentrasi Asam Kuat":
         st.write("[H+] =", round(H_plus, 4))
         st.write("pH =", round(pH, 2))            
         st.success(f'pH asam adalah {pH:.2f}')
-        
+
+
 elif choice == "Konsentrasi Asam Lemah":
     st.subheader("Menghitung [H+] dan pH dari Konsentrasi Asam Lemah")
 
@@ -139,9 +140,7 @@ elif choice == "Konsentrasi Asam Lemah":
         st.write("pH =", round(pH, 2))
         st.success(f'pH asam adalah {pH:.2f}')
 
-elif choice == "Konsentrasi Basa Kuat":
-    st.subheader("Menghitung [OH-], pOH, dan pH dari Konsentrasi Basa Kuat")
-
+    with tab2:
     # Pilih senyawa basa kuat
     basa_kuat = {
         "Natrium Hidroksida (NaOH)": 1,
