@@ -404,4 +404,5 @@ elif choice == "About This App":
     2. Selanjutnya, masukkan konsentrasi dalam satuan molar.
     3. Klik Hitung pH. Alat ini akan segera menentukan konsentrasi dan pH dari ion Hidrogen.
     ''')
+    st.markdown('...')
    
