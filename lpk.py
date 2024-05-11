@@ -178,7 +178,7 @@ elif choice == "Konsentrasi Basa":
             st.write("pH =", round(pH, 2))
             st.success(f'pH basa adalah {pH:.2f}')
 
-     with tab2:
+    with tab2:
         st.header("Basa Lemah")
 
         # Masukkan Kb
