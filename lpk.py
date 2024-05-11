@@ -122,7 +122,7 @@ if choice == "Konsentrasi Asam":
             st.write("pH =", round(pH, 2))            
             st.success(f'pH asam adalah {pH:.2f}')
 
-    with tab1:
+    with tab2:
         st.header("Asam Lemah")
         # Masukkan Ka
         Konstanta_asam = st.number_input('Masukkan Ka')
