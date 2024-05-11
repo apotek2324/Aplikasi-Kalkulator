@@ -3,7 +3,12 @@
 import streamlit as st
 import math
 
-st.set_page_config(page_title="Aplikasi Kalkulator Perhitungan pH") 
+st.set_page_config(page_title="Aplikasi Kalkulator Perhitungan pH")
+
+[theme]
+primaryColor = "#D7DBDD" #abu-abu muda
+backgroundColor = "#922B21" #merah bata
+secondaryBackgroundColor = "#F5B7B1" #merah muda
 
 # Fungsi untuk menghitung pH asam kuat
 
