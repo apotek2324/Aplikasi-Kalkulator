@@ -3,11 +3,6 @@
 import streamlit as st
 import math
 
-#tema base
-[theme]
-base="dark"
-primaryColor="pink"
-
 # Fungsi untuk menghitung pH asam kuat
 
 def perhitungan_pH_asam_kuat(Konsentrasi, a):
