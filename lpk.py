@@ -399,18 +399,10 @@ elif choice == "About This App":
 
     #Cara Menggunakan Kalkulator pH
     st.subheader("Cara Menggunakan Kalkulator pH")
-    st.write('''The member of the team :
-    1. Aniyah Azzahrah Erhan    (2220446)
-    2. Bima Rifqi Adjie Nugroho (2220449)
-    3. Frans Samuel M           (2220455)
-    4. Nazmi Nurazizah          (2220476)
-    5. Verent Putri Ramandini   (2220495)
-''')
-    
-    st.write('''Dari konsentrasi asam kuat : 
+        st.write('''Dari konsentrasi asam kuat :
     1. Anda diberikan daftar beberapa senyawa asam kuat umum. Silakan pilih salah satunya
     2. Selanjutnya, masukkan konsentrasi dalam satuan molar
     3. Klik Hitung pH. Alat ini akan segera menentukan konsentrasi dan pH dari ion Hidrogen
     ''')
-    st.markdown('---')
-   
+    
+
