@@ -20,8 +20,8 @@ def perhitungan_pH_basa_kuat(Konsentrasi, a):
 
 # Fungsi untuk menghitung pH asam lemah
 
-def perhitungan_pH_asam_lemah(Konstanta_asam, Konsentrasi_lemah):
-    H_plus = math.sqrt(Konstanta_asam * Konsentrasi_lemah)
+def perhitungan_pH_asam_lemah(Konstanta_asam, Konsentrasi):
+    H_plus = math.sqrt(Konstanta_asam * Konsentrasi)
     pH = -math.log10(H_plus)
     return H_plus, pH
     
@@ -83,7 +83,7 @@ options = ["Konsentrasi Asam",
 choice = st.sidebar.radio("Pilih Metode", options)
 
 if choice == "Konsentrasi Asam":
-    st.subheader("Menghitung [H+] dan pH dari Konsentrasi Asam Kuat")
+    st.subheader("Menghitung [H+] dan pH dari Konsentrasi Asam Kuat dan Asam Lemah")
 
     tab1, tab2 = st.tabs(["Asam Kuat", "Asam Lemah"])
 
@@ -129,8 +129,8 @@ if choice == "Konsentrasi Asam":
         st.write("Ka = ", Konstanta_asam)
 
         # Masukkan konsentrasi
-        Konsentrasi_lemah = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001, key = "H2")
-        st.write("Konsentrasi = ", Konsentrasi_lemah)
+        Konsentrasi = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001, key = "H2")
+        st.write("Konsentrasi = ", Konsentrasi )
         
         # Tombol hitung
         if st.button ("Hitung pH", key = "B2"):
@@ -140,13 +140,63 @@ if choice == "Konsentrasi Asam":
             st.success(f'pH asam adalah {pH:.2f}')
 
 elif choice == "Konsentrasi Basa":
-    st.subheader("Menghitung [OH-], pOH, dan pH dari Konsentrasi Basa Kuat")
+    st.subheader("Menghitung [OH-], pOH, dan pH dari Konsentrasi Basa Kuat dan Basa Lemah")
 
     tab1, tab2 = st.tabs(["Basa Kuat", "Basa Lemah"])
 
     with tab1:
         st.header("Basa Kuat")
-      
+        
+        # Pilih senyawa basa kuat
+        basa_kuat = {
+            "Natrium Hidroksida (NaOH)": 1,
+            "Litium Hidroksida (LiOH)": 1,
+            "Kalium Hidroksida (KOH)": 1,
+            "Rubidium Hidroksida (RbOH)": 1,
+            "Cesium Hidroksida (CsOH)": 1,
+            "Kalsium Hidroksida (Ca(OH)2)": 2,
+            "Barium Hidroksida (Ba(OH)2)": 2,
+            "Stronsium Hidroksida (Sr(OH)2)": 2,
+            "Magnesium Hidroksida (Mg(OH)2)": 2
+        }
+    
+        selected_basa_kuat = st.selectbox(
+            "Pilih senyawa basa kuat", list(basa_kuat.keys()))
+        a = basa_kuat[selected_basa_kuat]
+        st.write("a = ", a)
+    
+        # Masukkan konsentrasi
+        Konsentrasi = st.number_input(
+            "Masukkan konsentrasi (M)", format= "%.4f", step=0.0001, key = "H3")
+        st.write("Konsentrasi = ", Konsentrasi)
+    
+        # Tombol hitung
+        if st.button("Hitung pH", key = "B3"):
+            OH_minus, pOH, pH = perhitungan_pH_basa_kuat(Konsentrasi, a)
+            st.write("[OH-] =", round(OH_minus, 4))
+            st.write("pOH =", round(pOH, 2))
+            st.write("pH =", round(pH, 2))
+            st.success(f'pH basa adalah {pH:.2f}')
+
+     with tab2:
+        st.header("Basa Lemah")
+
+        # Masukkan Kb
+        Konstanta_basa = st.number_input('Masukkan Kb')
+        st.write("Kb = ", Konstanta_basa)
+    
+        # Masukkan konsentrasi
+        Konsentrasi = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001key = "H4")
+        st.write("Konsentrasi = ", Konsentrasi)
+        
+        # Tombol hitung
+        if st.button ("Hitung pH"key = "B4"):
+            OH_minus, pOH, pH = perhitungan_pH_basa_lemah(Konsentrasi, Konstanta_basa)
+            st.write("[OH-] =", round(OH_minus, 4))
+            st.write("pOH =", round(pOH, 2))
+            st.write("pH =", round(pH, 2))
+            st.success(f'pH basa adalah {pH:.2f}')
+
 
 elif choice == "Massa dan Volume Asam Kuat":
     st.subheader("Menghitung [H+] dan pH dari Massa dan Volume Asam Kuat")
