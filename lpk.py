@@ -128,7 +128,7 @@ if choice == "Konsentrasi Asam":
         st.write("Ka = ", Konstanta_asam)
     
         # Masukkan konsentrasi
-        Konsentrasi_lemah = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001())
+        Konsentrasi_lemah = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001.keys())
         st.write("Konsentrasi = ", Konsentrasi_lemah)
         
         # Tombol hitung
