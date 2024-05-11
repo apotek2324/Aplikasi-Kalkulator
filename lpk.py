@@ -396,3 +396,12 @@ elif choice == "About This App":
     st.write('pH diukur pada skala mulai dari 0 hingga 14. PH 7 dianggap netral. Air murni, atau larutan berair yang hanya mengandung bahan kimia netral, akan memiliki pH 7. Nilai yang lebih rendah dari 7 bersifat asam, dan semakin rendah nilai pH, semakin asam larutan tersebut. Nilai yang lebih tinggi dari 7 bersifat basa, dan nilai yang lebih tinggi berarti lebih basa.'
             )
     st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fid%2Fvektor%2Fskala-ph-ph-indikator-universal-strip-uji-gm954645674-260647627&psig=AOvVaw1kl1bznlexd8KBKTlNi_xN&ust=1715487167170000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIj8zJTehIYDFQAAAAAdAAAAABAE")
+
+    #Cara Menggunakan Kalkulator pH
+    st.subheader("Cara Menggunakan Kalkulator pH")
+    kons_asam_kuat = [
+        "Anda diberikan daftar beberapa senyawa asam kuat umum. Silakan pilih salah satunya.",
+        "Selanjutnya, masukkan konsentrasi dalam satuan molar.",
+        "Klik Hitung pH. Alat ini akan segera menentukan konsentrasi dan pH dari ion Hidrogen."
+        ]
+    st.write("Dari konsentrasi asam kuat:", kons_asam_kuat)
