@@ -3,13 +3,6 @@
 import streamlit as st
 import math
 
-st.set_page_config(page_title="Aplikasi Kalkulator Perhitungan pH")
-
-[theme]
-primaryColor = "#D7DBDD" #abu-abu muda
-backgroundColor = "#922B21" #merah bata
-secondaryBackgroundColor = "#F5B7B1" #merah muda
-
 # Fungsi untuk menghitung pH asam kuat
 
 def perhitungan_pH_asam_kuat(Konsentrasi, a):
@@ -380,6 +373,4 @@ elif choice == "About This App":
     st.subheader("Skala pH")
     st.write('pH diukur pada skala mulai dari 0 hingga 14. PH 7 dianggap netral. Air murni, atau larutan berair yang hanya mengandung bahan kimia netral, akan memiliki pH 7. Nilai yang lebih rendah dari 7 bersifat asam, dan semakin rendah nilai pH, semakin asam larutan tersebut. Nilai yang lebih tinggi dari 7 bersifat basa, dan nilai yang lebih tinggi berarti lebih basa.'
             )
-    st.image(
-        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fid%2Fvektor%2Fskala-ph-ph-indikator-universal-strip-uji-gm954645674-260647627&psig=AOvVaw1kl1bznlexd8KBKTlNi_xN&ust=1715487167170000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIj8zJTehIYDFQAAAAAdAAAAABAE", 
-    caption="Skala pH")
+    st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fid%2Fvektor%2Fskala-ph-ph-indikator-universal-strip-uji-gm954645674-260647627&psig=AOvVaw1kl1bznlexd8KBKTlNi_xN&ust=1715487167170000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIj8zJTehIYDFQAAAAAdAAAAABAE")
