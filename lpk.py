@@ -398,7 +398,7 @@ elif choice == "About This App":
     st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fid%2Fvektor%2Fskala-ph-ph-indikator-universal-strip-uji-gm954645674-260647627&psig=AOvVaw1kl1bznlexd8KBKTlNi_xN&ust=1715487167170000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIj8zJTehIYDFQAAAAAdAAAAABAE")
 
     #Cara Menggunakan Kalkulator pH
-    st.subheader("Cara Menggunakan Kalkulator pH")
+        st.subheader("Cara Menggunakan Kalkulator pH")
         st.write('''Dari konsentrasi asam kuat :
     1. Anda diberikan daftar beberapa senyawa asam kuat umum. Silakan pilih salah satunya
     2. Selanjutnya, masukkan konsentrasi dalam satuan molar
