@@ -400,9 +400,50 @@ elif choice == "About This App":
     #Cara Menggunakan Kalkulator pH
     st.subheader("Cara Menggunakan Kalkulator pH")
     st.write('''Dari konsentrasi asam kuat :
-1. Anda diberikan daftar beberapa senyawa asam kuat umum. Silakan pilih salah satunya
-2. Selanjutnya, masukkan konsentrasi dalam satuan molar
-3. Klik Hitung pH. Alat ini akan segera menentukan konsentrasi dan pH dari ion Hidrogen
+1. Anda diberikan daftar beberapa senyawa asam kuat umum. Silakan pilih salah satunya.
+2. Selanjutnya, masukkan konsentrasi dalam satuan molar (M).
+3. Klik Hitung pH, alat ini akan segera menentukan [H+] dan pH dari ion Hidrogen.
+''')
+
+    st.write('''Dari konsentrasi asam lemah :
+1. Anda diminta untuk memasukkan nilai konstanta asam (Ka).
+2. Selanjutnya, masukkan konsentrasi dalam satuan molar (M).
+3. Klik Hitung pH, alat ini akan segera menentukan [H+] dan pH dari ion Hidrogen.
+''')
+
+    st.write('''Dari konsentrasi basa kuat :
+1. Anda diberikan daftar beberapa senyawa basa kuat umum. Silakan pilih salah satunya.
+2. Selanjutnya, masukkan konsentrasi dalam satuan molar (M).
+3. Klik Hitung pH, alat ini akan segera menentukan [OH-], pOH, dan pH dari ion Hidroksida.
+''')
+
+    st.write('''Dari konsentrasi basa lemah :
+1. Anda diminta untuk memasukkan nilai konstanta basa (Kb).
+2. Selanjutnya, masukkan konsentrasi dalam satuan molar (M).
+3. Klik Hitung pH, alat ini akan segera menentukan [OH-], pOH, dan pH dari ion Hidrogen.
+''')
+
+    st.write('''Dari massa dan volume asam kuat :
+1. Anda diberikan daftar beberapa senyawa asam kuat umum. Silakan pilih salah satunya.
+2. Selanjutnya, masukkan massa dalam satuan gram (g) dan masukkan volume dalam satuan mililiter (mL).
+3. Klik Hitung pH, alat ini akan segera menentukan [H+] dan pH dari ion Hidrogen.
+''')
+
+    st.write('''Dari massa dan volume asam lemah :
+1. Anda diberikan daftar beberapa senyawa asam lemah umum. Silakan pilih salah satunya.
+2. Selanjutnya, masukkan nilai konstanta asam (Ka), masukkan massa dalam satuan gram (g) dan masukkan volume dalam satuan mililiter (mL).
+3. Klik Hitung pH, alat ini akan segera menentukan [H+] dan pH dari ion Hidrogen.
 ''')
     
+    st.write('''Dari massa dan volume basa kuat :
+1. Anda diberikan daftar beberapa senyawa basa kuat umum. Silakan pilih salah satunya.
+2. Selanjutnya, masukkan massa dalam satuan gram (g) dan masukkan volume dalam satuan mililiter (mL).
+3. Klik Hitung pH, alat ini akan segera menentukan [OH-], pOH, dan pH dari ion Hidrogen.
+''')
+
+    st.write('''Dari massa dan volume basa lemah :
+1. Anda diberikan daftar beberapa senyawa basa lemah umum. Silakan pilih salah satunya.
+2. Selanjutnya, masukkan nilai konstanta basa (Kb), masukkan massa dalam satuan gram (g) dan masukkan volume dalam satuan mililiter (mL).
+3. Klik Hitung pH, alat ini akan segera menentukan [OH-], pOH, dan pH dari ion Hidrogen.
+''')
 
