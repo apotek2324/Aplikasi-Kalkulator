@@ -100,7 +100,7 @@ if choice == "Beranda":
 elif choice == "Konsentrasi Asam":
     st.subheader("Menghitung [H+] dan pH dari Konsentrasi Asam Kuat dan Asam Lemah")
 
-    tab1, tab2 = st.tabs(["Asam Kuat", "Asam Lemah"])
+    tab1, tab2, tab3 = st.tabs(["Asam Kuat", "Asam Lemah", "Custom"])
 
     with tab1:
         st.subheader("Asam Kuat")
@@ -153,6 +153,40 @@ elif choice == "Konsentrasi Asam":
             st.write("[H+] =", round(H_plus, 4))
             st.write("pH =", round(pH, 2))
             st.success(f'pH asam adalah {pH:.2f}')
+
+    with tab3:
+        option = st.selectbox("Pilih jenis senyawa?", ("Asam Kuat", "Asam Lemah"))
+        st.write("Senyawa:", option)
+       
+        if selection == "Asam Kuat": 
+            # Masukkan konsentrasi
+            konsentrasi = st.number_input(
+                "Masukkan konsentrasi (M)", format = "%.4f", step=0.0001, key = "H")
+            st.write("Konsentrasi = ", konsentrasi)
+            
+            # Tombol hitung
+            if st.button("Hitung pH", key = "Bu"):
+                H_plus, pH = perhitungan_pH_asam_kuat(konsentrasi, a)
+                st.write("[H+] =", round(H_plus, 4))
+                st.write("pH =", round(pH, 2))            
+                st.success(f'pH asam adalah {pH:.2f}')
+
+        elif selection == "Asam Lemah":
+            # Masukkan Ka
+            konstanta_asam = st.number_input('Masukkan Ka')
+            st.write("Ka = ", konstanta_asam)
+    
+            # Masukkan konsentrasi
+            konsentrasi = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001, key = "Ho")
+            st.write("Konsentrasi = ", konsentrasi )
+            
+            # Tombol hitung
+            if st.button ("Hitung pH", key = "Bp"):
+                H_plus, pH = perhitungan_pH_asam_lemah(konsentrasi, konstanta_asam)
+                st.write("[H+] =", round(H_plus, 4))
+                st.write("pH =", round(pH, 2))
+                st.success(f'pH asam adalah {pH:.2f}')
+
 
 elif choice == "Konsentrasi Basa":
     st.subheader("Menghitung [OH-], pOH, dan pH dari Konsentrasi Basa Kuat dan Basa Lemah")
@@ -421,31 +455,31 @@ elif choice == "About This App":
     
     st.write('pH Asam Kuat')
     latex_H_plus_kuat = "[H+] = Ma * a"
-    st.write(f"${latex_H_plus_kuat}$.")
+    st.write(f"${latex_H_plus_kuat}$")
     latex_pH_asam = "pH = -log [H+]"
-    st.write(f"${latex_pH_asam}$.")
+    st.write(f"${latex_pH_asam}$")
 
     
     st.write('pH Asam Lemah')
     latex_H_plus_lemah = "[H+] = √(Ma * Ka)"
-    st.write(f"${latex_H_plus_lemah}$.")
-    st.write(f"${latex_pH_asam}$.")
+    st.write(f"${latex_H_plus_lemah}$")
+    st.write(f"${latex_pH_asam}$")
 
     
     st.write('pH Basa Kuat')
     latex_OH_plus_kuat = "[OH-] = Mb * b"
-    st.write(f"${latex_OH_plus_kuat}$.")
+    st.write(f"${latex_OH_plus_kuat}$")
     latex_pOH = "pOH = -log [OH-]"
-    st.write(f"${latex_pOH}$.")
+    st.write(f"${latex_pOH}$")
     latex_pH = "pH = 14-pOH"
-    st.write(f"${latex_pH}$.")
+    st.write(f"${latex_pH}$")
 
     
     st.write('pH Basa Lemah')
     latex_OH_plus_lemah = "[OH-] = √Mb * Kb"
-    st.write(f"${latex_OH_plus_lemah}$.")
-    st.write(f"${latex_pOH}$.")
-    st.write(f"${latex_pH}$.")
+    st.write(f"${latex_OH_plus_lemah}$")
+    st.write(f"${latex_pOH}$")
+    st.write(f"${latex_pH}$")
     
 
     #Cara Menggunakan Kalkulator pH
