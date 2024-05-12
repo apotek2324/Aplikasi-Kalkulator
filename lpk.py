@@ -254,23 +254,23 @@ elif choice == "Konsentrasi Basa":
         options = ("Basa Kuat", "Basa Lemah")
         selection = st.selectbox("Pilih jenis senyawa", options=options)
         if selection == "Basa Kuat": 
-                # Masukkan konsentrasi
-                konsentrasi = st.number_input(
-                    "Masukkan konsentrasi (M)", format = "%.4f", step=0.0001, key = "H7")
-                st.write("Konsentrasi = ", konsentrasi)
+            # Masukkan konsentrasi
+            konsentrasi = st.number_input(
+                "Masukkan konsentrasi (M)", format = "%.4f", step=0.0001, key = "H7")
+            st.write("Konsentrasi = ", konsentrasi)
     
-                 # Masukkan valensi
-                a = st.number_input(
-                    "Masukkan valensi", key = "A7")
-                st.write("Valensi = ", a)
+            # Masukkan valensi
+            a = st.number_input(
+                "Masukkan valensi", key = "A7")
+            st.write("Valensi = ", a)
                 
-                # Tombol hitung
-                if st.button("Hitung pH", key = "B7"):
-                OH_minus, pOH, pH = perhitungan_pH_basa_kuat(konsentrasi, a)
-                st.write("[OH-] =", round(OH_minus, 4))
-                st.write("pOH =", round(pOH, 2))
-                st.write("pH =", round(pH, 2))
-                st.success(f'pH basa adalah {pH:.2f}')
+            # Tombol hitung
+            if st.button("Hitung pH", key = "B7"):
+            OH_minus, pOH, pH = perhitungan_pH_basa_kuat(konsentrasi, a)
+            st.write("[OH-] =", round(OH_minus, 4))
+            st.write("pOH =", round(pOH, 2))
+            st.write("pH =", round(pH, 2))
+            st.success(f'pH basa adalah {pH:.2f}')
             
         elif selection == "Asam Lemah":
             # Masukkan Kb
