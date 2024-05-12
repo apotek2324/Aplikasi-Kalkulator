@@ -83,7 +83,7 @@ choice = st.sidebar.radio("Pilih Metode", options)
 
 if choice == "Beranda":
     st.subheader('KELOMPOK 2 (1D - ANALISIS KIMIA)')
-    st.write('''ANGGOTA KELOMPOK: :
+    st.write('''ANGGOTA KELOMPOK:
 1. Fairuz Zahrany De Shaula    (2360)
 2. Kesya Melia Adriani         (2360)
 3. Reza Imelda                 (2360) 
