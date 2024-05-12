@@ -162,6 +162,11 @@ elif choice == "Konsentrasi Asam":
             konsentrasi = st.number_input(
                 "Masukkan konsentrasi (M)", format = "%.4f", step=0.0001, key = "H")
             st.write("Konsentrasi = ", konsentrasi)
+
+             # Masukkan valensi
+            a = st.number_input(
+                "Masukkan valensi", key = "H")
+            st.write("Valensi = ", a)
             
             # Tombol hitung
             if st.button("Hitung pH", key = "Bu"):
@@ -170,21 +175,21 @@ elif choice == "Konsentrasi Asam":
                 st.write("pH =", round(pH, 2))            
                 st.success(f'pH asam adalah {pH:.2f}')
 
-            elif selection == "Asam Lemah":
-                # Masukkan Ka
-                konstanta_asam = st.number_input('Masukkan Ka')
-                st.write("Ka = ", konstanta_asam)
+        elif selection == "Asam Lemah":
+            # Masukkan Ka
+            konstanta_asam = st.number_input('Masukkan Ka')
+            st.write("Ka = ", konstanta_asam)
         
-                # Masukkan konsentrasi
-                konsentrasi = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001, key = "Ho")
-                st.write("Konsentrasi = ", konsentrasi )
+            # Masukkan konsentrasi
+            konsentrasi = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001, key = "Ho")
+            st.write("Konsentrasi = ", konsentrasi )
                 
-                # Tombol hitung
-                if st.button ("Hitung pH", key = "Bp"):
-                    H_plus, pH = perhitungan_pH_asam_lemah(konsentrasi, konstanta_asam)
-                    st.write("[H+] =", round(H_plus, 4))
-                    st.write("pH =", round(pH, 2))
-                    st.success(f'pH asam adalah {pH:.2f}')
+            # Tombol hitung
+            if st.button ("Hitung pH", key = "Bp"):
+                H_plus, pH = perhitungan_pH_asam_lemah(konsentrasi, konstanta_asam)
+                st.write("[H+] =", round(H_plus, 4))
+                st.write("pH =", round(pH, 2))
+                st.success(f'pH asam adalah {pH:.2f}')
 
 
 elif choice == "Konsentrasi Basa":
