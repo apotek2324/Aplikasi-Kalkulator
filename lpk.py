@@ -403,6 +403,16 @@ elif choice == "About This App":
     
     st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fid%2Fvektor%2Fskala-ph-ph-indikator-universal-strip-uji-gm954645674-260647627&psig=AOvVaw1kl1bznlexd8KBKTlNi_xN&ust=1715487167170000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIj8zJTehIYDFQAAAAAdAAAAABAE")
 
+    #Rumus pH
+    st.subheader("Rumus pH")
+    st.write('pH Asam Kuat')
+    st.latex(r'''
+    [H+] = M * a
+    pH = -math.log10 [H+]
+    ''')
+    
+
+    
     #Cara Menggunakan Kalkulator pH
     st.subheader("Cara Menggunakan Kalkulator pH")
     st.write('''Dari konsentrasi asam kuat :
