@@ -240,7 +240,7 @@ elif choice == "Konsentrasi Basa":
         
         # Tombol hitung
         if st.button("Hitung pH", key = "T6"):
-            OH_minus, pOH, pH = perhitungan_pH_basa_lemah(Konsentrasi, Konstanta_basa)
+            OH_minus, pOH, pH = perhitungan_pH_basa_lemah(konsentrasi, konstanta_basa)
             st.write("[OH-] =", round(OH_minus, 4))
             st.write("pOH =", round(pOH, 2))
             st.write("pH =", round(pH, 2))
@@ -277,7 +277,7 @@ elif choice == "Konsentrasi Basa":
             
             # Tombol hitung
             if st.button("Hitung pH", key = "B8"):
-                OH_minus, pOH, pH = perhitungan_pH_basa_lemah(Konsentrasi, Konstanta_basa)
+                OH_minus, pOH, pH = perhitungan_pH_basa_lemah(konsentrasi, konstanta_basa)
                 st.write("[OH-] =", round(OH_minus, 4))
                 st.write("pOH =", round(pOH, 2))
                 st.write("pH =", round(pH, 2))
@@ -432,7 +432,7 @@ elif choice == "Massa dan Volume Basa":
     st.subheader(
         "Menghitung [OH-], pOH, dan pH dari Massa dan Volume Basa Kuat dan Basa Lemah")
 
-    tab1, tab2, tab = st.tabs(["Basa Kuat", "Basa Lemah", "Custom"])
+    tab1, tab2, tab3 = st.tabs(["Basa Kuat", "Basa Lemah", "Custom"])
 
     with tab1:
         st.subheader("Basa Kuat")
