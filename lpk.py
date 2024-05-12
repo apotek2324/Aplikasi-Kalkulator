@@ -195,7 +195,7 @@ elif choice == "Konsentrasi Asam":
 elif choice == "Konsentrasi Basa":
     st.subheader("Menghitung [OH-], pOH, dan pH dari Konsentrasi Basa Kuat dan Basa Lemah")
 
-    tab1, tab2 = st.tabs(["Basa Kuat", "Basa Lemah", "Custom"])
+    tab1, tab2, tab3 = st.tabs(["Basa Kuat", "Basa Lemah", "Custom"])
 
     with tab1:
         st.subheader("Basa Kuat")
