@@ -266,11 +266,11 @@ elif choice == "Konsentrasi Basa":
                 
             # Tombol hitung
             if st.button("Hitung pH", key = "B7"):
-            OH_minus, pOH, pH = perhitungan_pH_basa_kuat(konsentrasi, a)
-            st.write("[OH-] =", round(OH_minus, 4))
-            st.write("pOH =", round(pOH, 2))
-            st.write("pH =", round(pH, 2))
-            st.success(f'pH basa adalah {pH:.2f}')
+                OH_minus, pOH, pH = perhitungan_pH_basa_kuat(konsentrasi, a)
+                st.write("[OH-] =", round(OH_minus, 4))
+                st.write("pOH =", round(pOH, 2))
+                st.write("pH =", round(pH, 2))
+                st.success(f'pH basa adalah {pH:.2f}')
             
         elif selection == "Asam Lemah":
             # Masukkan Kb
