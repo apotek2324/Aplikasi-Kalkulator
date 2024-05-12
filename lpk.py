@@ -3,7 +3,7 @@
 import streamlit as st
 import math
 
-st.set_page_config(page_title="Kalkulator pH", page_icon=":calculator:", layout="wide")
+st.set_page_config(page_title="Kalkulator pH", page_icon=":1234:", layout="wide")
 
 # Fungsi untuk menghitung pH asam kuat
 
