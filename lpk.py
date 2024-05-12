@@ -85,6 +85,9 @@ choice = st.sidebar.radio("Pilih Metode", options)
 
 if choice == "Beranda":
     st.header('👨‍🔬SELAMAT DATANG👩‍🔬')
+    st.markdown('---')
+    st.write('Aplikasi ini dibuat untuk memudahkan dalam menghitung pH suatu larutan. Silakan pilih metode perhitungan yang sesuai, kemudian ikuti perintah yang ditampilkan di layar.')
+    st.markdown('---')
     st.subheader('KELOMPOK 2 (1D - ANALISIS KIMIA)')
     st.write('''ANGGOTA KELOMPOK:
 1. Fairuz Zahrany De Shaula    (2360)
@@ -93,10 +96,7 @@ if choice == "Beranda":
 4. Riska Maulidya Ainy         (2360242) 
 5. Talitha Syahla Kurniawan    (2360)
 ''')
-    st.markdown('---')
-    st.write('Aplikasi ini dibuat untuk memudahkan dalam menghitung pH suatu larutan. Silakan pilih metode perhitungan yang sesuai, kemudian ikuti perintah yang ditampilkan di layar.')
-    st.markdown('---')
-
+    
 elif choice == "Konsentrasi Asam":
     st.subheader("Menghitung [H+] dan pH dari Konsentrasi Asam Kuat dan Asam Lemah")
 
