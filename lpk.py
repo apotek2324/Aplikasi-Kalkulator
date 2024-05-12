@@ -393,12 +393,13 @@ elif choice == "About This App":
 
     #Skala pH
     st.subheader("Skala pH")
-    st.write('Skala pH adalah skala logaritmik yang digunakan untuk menentukan keasaman atau kebasaan (alkalinitas) suatu larutan berair. Skalanya berkisar dari 0 hingga 14.
-Larutan asam memiliki pH kurang dari 7. Semakin rendah pH, ​​semakin asam larutan tersebut.
-Larutan basa atau basa memiliki pH lebih besar dari 7. Semakin tinggi pH, semakin basa larutan tersebut.
-PH 7 dianggap netral , artinya tidak bersifat asam atau basa. Air murni biasanya dianggap netral, dengan pH 7.
-Asam meningkatkan konsentrasi ion hidrogen (H+) dalam larutan, sedangkan basa menurunkannya dengan menghasilkan ion hidroksida (OH−) yang bergabung dengan ion hidrogen menghasilkan air.'
-)
+    st.write('Skala pH adalah skala logaritmik yang digunakan untuk menentukan keasaman atau kebasaan (alkalinitas) suatu larutan berair. Skalanya berkisar dari 0 hingga 14.')
+    st.write('''
+- Larutan asam memiliki pH kurang dari 7. Semakin rendah pH, ​​semakin asam larutan tersebut. 
+- Larutan basa atau basa memiliki pH lebih besar dari 7. Semakin tinggi pH, semakin basa larutan tersebut. 
+- PH 7 dianggap netral, artinya tidak bersifat asam atau basa. Air murni biasanya dianggap netral, dengan pH 7. Asam meningkatkan konsentrasi ion hidrogen (H+) dalam larutan, sedangkan basa menurunkannya dengan menghasilkan ion hidroksida (OH−) yang bergabung dengan ion hidrogen menghasilkan air.
+''')
+
     st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fid%2Fvektor%2Fskala-ph-ph-indikator-universal-strip-uji-gm954645674-260647627&psig=AOvVaw1kl1bznlexd8KBKTlNi_xN&ust=1715487167170000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIj8zJTehIYDFQAAAAAdAAAAABAE")
 
     #Cara Menggunakan Kalkulator pH
