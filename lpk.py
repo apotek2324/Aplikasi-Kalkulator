@@ -88,10 +88,10 @@ if choice == "Beranda":
     st.markdown('---')
     st.write('Aplikasi ini dibuat untuk memudahkan dalam menghitung pH suatu larutan. Silakan pilih metode perhitungan yang sesuai, kemudian ikuti perintah yang ditampilkan di layar.')
     st.markdown('---')
-    st.subheader('KELOMPOK 2 (1D - ANALISIS KIMIA)')
+    st.subheader('KELOMPOK 4 (1D - ANALISIS KIMIA)')
     st.write('''ANGGOTA KELOMPOK:
-1. Fairuz Zahrany De Shaula    (2360)
-2. Kesya Melia Adriani         (2360)
+1. Fairuz Zahrany De Shaula    (2360106)
+2. Kesya Melia Adriani         (2360156)
 3. Reza Imelda                 (2360238) 
 4. Riska Maulidya Ainy         (2360242) 
 5. Talitha Syahla Kurniawan    (2360275)
