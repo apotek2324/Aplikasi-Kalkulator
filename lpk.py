@@ -393,9 +393,9 @@ elif choice == "Massa dan Volume Asam":
             BM = st.number_input("Masukkan BM (g/mol)", key = "B10")
             st.write("BM = ", BM)
 
-            # Masukkan volume
-            = st.number_input("Masukkan volume (mL)", key = "A10")
-            st.write("Volume = ", volume)
+            # Masukkan valensi
+            a = st.number_input("Masukkan valensi", key = "A10")
+            st.write("a = ", a)
             
             # Tombol hitung
             if st.button("Hitung pH", key = "T9"):
