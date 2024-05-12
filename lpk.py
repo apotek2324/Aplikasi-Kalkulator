@@ -165,7 +165,7 @@ elif choice == "Konsentrasi Asam":
 
              # Masukkan valensi
             a = st.number_input(
-                "Masukkan valensi", key = "H")
+                "Masukkan valensi", key = "g")
             st.write("Valensi = ", a)
             
             # Tombol hitung
@@ -177,11 +177,11 @@ elif choice == "Konsentrasi Asam":
 
         elif selection == "Asam Lemah":
             # Masukkan Ka
-            konstanta_asam = st.number_input('Masukkan Ka')
+            konstanta_asam = st.number_input('Masukkan Ka', key = "s")
             st.write("Ka = ", konstanta_asam)
         
             # Masukkan konsentrasi
-            konsentrasi = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001, key = "Ho")
+            konsentrasi = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001, key = "o")
             st.write("Konsentrasi = ", konsentrasi )
                 
             # Tombol hitung
