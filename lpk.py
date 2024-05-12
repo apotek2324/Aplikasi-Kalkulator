@@ -394,12 +394,12 @@ elif choice == "Massa dan Volume Asam":
             
             # Tombol hitung
             if st.button("Hitung pH", key = "T11"):
-            # Konversi volume dari mL ke L
-            volume_dalam_liter = volume / 1000
-            H_plus, pH = perhitungan_pH_asam_lemah_dengan_massa_volume(massa, volume_dalam_liter, BM, konstanta_asam)
-            st.write("[H+] =", round(H_plus, 4))
-            st.write("pH =", round(pH, 2))
-            st.success(f'pH asam adalah {pH:.2f}')
+                # Konversi volume dari mL ke L
+                volume_dalam_liter = volume / 1000
+                H_plus, pH = perhitungan_pH_asam_lemah_dengan_massa_volume(massa, volume_dalam_liter, BM, konstanta_asam)
+                st.write("[H+] =", round(H_plus, 4))
+                st.write("pH =", round(pH, 2))
+                st.success(f'pH asam adalah {pH:.2f}')
 
         elif selection == "Asam Lemah":
             # Masukkan Ka
