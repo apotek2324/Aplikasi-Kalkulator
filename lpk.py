@@ -90,7 +90,7 @@ elif choice == "Konsentrasi Asam":
     tab1, tab2 = st.tabs(["Asam Kuat", "Asam Lemah"])
 
     with tab1:
-        st.header("Asam Kuat")
+        st.subheader("Asam Kuat")
         # Pilih senyawa asam kuat
         asam_kuat = {
             "Asam Klorida (HCl)": 1,
@@ -124,7 +124,7 @@ elif choice == "Konsentrasi Asam":
             st.success(f'pH asam adalah {pH:.2f}')
 
     with tab2:
-        st.header("Asam Lemah")
+        st.subheader("Asam Lemah")
 
         # Masukkan Ka
         Konstanta_asam = st.number_input('Masukkan Ka')
@@ -147,7 +147,7 @@ elif choice == "Konsentrasi Basa":
     tab1, tab2 = st.tabs(["Basa Kuat", "Basa Lemah"])
 
     with tab1:
-        st.header("Basa Kuat")
+        st.subheader("Basa Kuat")
         
         # Pilih senyawa basa kuat
         basa_kuat = {
@@ -181,7 +181,7 @@ elif choice == "Konsentrasi Basa":
             st.success(f'pH basa adalah {pH:.2f}')
 
     with tab2:
-        st.header("Basa Lemah")
+        st.subheader("Basa Lemah")
 
         # Masukkan Kb
         Konstanta_basa = st.number_input('Masukkan Kb')
@@ -206,7 +206,7 @@ elif choice == "Massa dan Volume Asam":
     tab1, tab2 = st.tabs(["Asam Kuat", "Asam Lemah"])
 
     with tab1:
-        st.header("Asam Kuat")
+        st.subheader("Asam Kuat")
         
         # Pilih senyawa asam kuat
         asam_kuat = {
@@ -248,7 +248,7 @@ elif choice == "Massa dan Volume Asam":
             st.success(f'pH asam adalah {pH:.2f}')
 
     with tab2:
-        st.header("Asam Lemah")
+        st.subheader("Asam Lemah")
         
         # Pilih senyawa asam lemah
         asam_lemah = {
@@ -296,7 +296,7 @@ elif choice == "Massa dan Volume Basa":
     tab1, tab2 = st.tabs(["Basa Kuat", "Basa Lemah"])
 
     with tab1:
-        st.header("Basa Kuat")
+        st.subheader("Basa Kuat")
 
         # Pilih senyawa basa kuat
         basa_kuat = {
@@ -338,7 +338,7 @@ elif choice == "Massa dan Volume Basa":
             st.success(f'pH basa adalah {pH:.2f}')
     
     with tab2:
-        st.header("Basa Lemah")
+        st.subheader("Basa Lemah")
 
         # Pilih senyawa basa lemah
         basa_lemah = {
@@ -410,18 +410,13 @@ elif choice == "About This App":
     latex_H_plus_kuat = "[H+] = M * a"
     st.write(f"${latex_H_plus_kuat}$.")
     latex_pH_asam = "pH = -log [H+]"
-    st.write(f"${latex_pH_asam }$.")
+    st.write(f"${latex_pH_asam}$.")
    
     st.write('pH Asam Lemah')
     latex_H_plus_lemah = "[H+] = √(M * Ka)"
     st.write(f"${latex_H_plus_lemah}$.")
-    st.write(f"${latex_pH_asam }$.")
+    st.write(f"${latex_pH_asam}$.")
 
-   
-  
-    
-
-    
     #Cara Menggunakan Kalkulator pH
     st.subheader("Cara Menggunakan Kalkulator pH")
     st.write('''Dari konsentrasi asam kuat :
