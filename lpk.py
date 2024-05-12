@@ -272,7 +272,7 @@ elif choice == "Konsentrasi Basa":
                 st.write("pH =", round(pH, 2))
                 st.success(f'pH basa adalah {pH:.2f}')
             
-        elif selection == "Asam Lemah":
+        elif selection == "Basa Lemah":
             # Masukkan Kb
             konstanta_basa = st.number_input('Masukkan Kb', key = "K8")
             st.write("Kb = ", konstanta_basa)
