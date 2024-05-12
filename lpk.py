@@ -417,6 +417,15 @@ elif choice == "About This App":
     st.write(f"${latex_H_plus_lemah}$.")
     st.write(f"${latex_pH_asam}$.")
 
+    st.write('pH Basa Kuat')
+    latex_OH_plus_kuat = "[OH-] = M * a"
+    st.write(f"${latex_OH_plus_kuat}$.")
+    latex_pOH = "pOH = -log [OH-]"
+    st.write(f"${latex_pOH}$.")
+    latex_pH = "pH = 14-pOH"
+    st.write(f"${latex_pH}$.")
+    
+
     #Cara Menggunakan Kalkulator pH
     st.subheader("Cara Menggunakan Kalkulator pH")
     st.write('''Dari konsentrasi asam kuat :
