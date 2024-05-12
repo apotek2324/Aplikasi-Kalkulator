@@ -528,7 +528,6 @@ elif choice == "About This App":
     #Skala pH
     st.subheader("Skala pH")
 
-    image = image.open("https://www.google.com/url?sa=i&url=https%3A%2F%2Fid.pngtree.com%2Ffreepng%2Fthe-ph-scale-on-white-background-acids-color-design-vector_10655412.html&psig=AOvVaw0voO0ZjSfexoSY2QzrIIsa&ust=1715580402268000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOjKxZm5h4YDFQAAAAAdAAAAABAE")
     
     st.write('Skala pH adalah skala logaritmik yang digunakan untuk menentukan keasaman atau kebasaan (alkalinitas) suatu larutan berair. Skalanya berkisar dari 0 hingga 14.')
     st.write('''
