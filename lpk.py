@@ -411,12 +411,14 @@ elif choice == "About This App":
     st.write(f"${latex_H_plus_kuat}$.")
     latex_pH_asam = "pH = -log [H+]"
     st.write(f"${latex_pH_asam}$.")
-   
+
+    
     st.write('pH Asam Lemah')
     latex_H_plus_lemah = "[H+] = √(Ma * Ka)"
     st.write(f"${latex_H_plus_lemah}$.")
     st.write(f"${latex_pH_asam}$.")
 
+    
     st.write('pH Basa Kuat')
     latex_OH_plus_kuat = "[OH-] = Mb * b"
     st.write(f"${latex_OH_plus_kuat}$.")
@@ -425,6 +427,7 @@ elif choice == "About This App":
     latex_pH = "pH = 14-pOH"
     st.write(f"${latex_pH}$.")
 
+    
     st.write('pH Basa Lemah')
     latex_OH_plus_lemah = "[OH-] = √Mb * Kb"
     st.write(f"${latex_OH_plus_lemah}$.")
