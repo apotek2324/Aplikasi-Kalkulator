@@ -587,14 +587,14 @@ elif choice == "About This App":
     #Skala pH
     st.subheader("Skala pH")
     st.write('Skala pH adalah skala logaritmik yang digunakan untuk menentukan keasaman atau kebasaan (alkalinitas) suatu larutan berair. Skalanya berkisar dari 0 hingga 14.')
-    st.write('''
-- Larutan asam memiliki pH kurang dari 7. Semakin rendah pH, ​​semakin asam larutan tersebut. 
-- Larutan basa atau basa memiliki pH lebih besar dari 7. Semakin tinggi pH, semakin basa larutan tersebut. 
-- PH 7 dianggap netral, artinya tidak bersifat asam atau basa. Air murni biasanya dianggap netral, dengan pH 7. 
+    st.write(''' 
+Larutan asam memiliki pH kurang dari 7. Semakin rendah pH, ​​semakin asam larutan tersebut. 
+-Larutan basa atau basa memiliki pH lebih besar dari 7. Semakin tinggi pH, semakin basa larutan tersebut. 
+-PH 7 dianggap netral, artinya tidak bersifat asam atau basa. Air murni biasanya dianggap netral, dengan pH 7. 
 ''')
     st.write('Asam meningkatkan konsentrasi ion hidrogen (H+) dalam larutan, sedangkan basa menurunkannya dengan menghasilkan ion hidroksida (OH−) yang bergabung dengan ion hidrogen menghasilkan air.')
     
-    st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fid%2Fvektor%2Fskala-ph-ph-indikator-universal-strip-uji-gm954645674-260647627&psig=AOvVaw1kl1bznlexd8KBKTlNi_xN&ust=1715487167170000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIj8zJTehIYDFQAAAAAdAAAAABAE")
+   
 
     #Rumus pH
     st.subheader("Rumus pH")
@@ -630,42 +630,42 @@ elif choice == "About This App":
 
     #Cara Menggunakan Kalkulator pH
     st.subheader("Cara Menggunakan Kalkulator pH")
-    st.write('''Dari konsentrasi asam kuat :
+    st.write('''Dari konsentrasi asam kuat:
 1. Anda diberikan daftar beberapa senyawa asam kuat umum. Silakan pilih salah satunya.
 2. Selanjutnya, masukkan konsentrasi dalam satuan molar (M).
 3. Klik Hitung pH, alat ini akan segera menentukan [H+] dan pH dari ion Hidrogen.
 
-Dari konsentrasi asam lemah :
+Dari konsentrasi asam lemah:
 1. Anda diminta untuk memasukkan nilai konstanta asam (Ka).
 2. Selanjutnya, masukkan konsentrasi dalam satuan molar (M).
 3. Klik Hitung pH, alat ini akan segera menentukan [H+] dan pH dari ion Hidrogen.
 
-Dari konsentrasi basa kuat :
+Dari konsentrasi basa kuat:
 1. Anda diberikan daftar beberapa senyawa basa kuat umum. Silakan pilih salah satunya.
 2. Selanjutnya, masukkan konsentrasi dalam satuan molar (M).
 3. Klik Hitung pH, alat ini akan segera menentukan [OH-], pOH, dan pH dari ion Hidroksida.
 
-Dari konsentrasi basa lemah :
+Dari konsentrasi basa lemah:
 1. Anda diminta untuk memasukkan nilai konstanta basa (Kb).
 2. Selanjutnya, masukkan konsentrasi dalam satuan molar (M).
 3. Klik Hitung pH, alat ini akan segera menentukan [OH-], pOH, dan pH dari ion Hidrogen.
 
-Dari massa dan volume asam kuat :
+Dari massa dan volume asam kuat:
 1. Anda diberikan daftar beberapa senyawa asam kuat umum. Silakan pilih salah satunya.
 2. Selanjutnya, masukkan massa dalam satuan gram (g) dan masukkan volume dalam satuan mililiter (mL).
 3. Klik Hitung pH, alat ini akan segera menentukan [H+] dan pH dari ion Hidrogen.
 
-Dari massa dan volume asam lemah :
+Dari massa dan volume asam lemah:
 1. Anda diberikan daftar beberapa senyawa asam lemah umum. Silakan pilih salah satunya.
 2. Selanjutnya, masukkan nilai konstanta asam (Ka), masukkan massa dalam satuan gram (g) dan masukkan volume dalam satuan mililiter (mL).
 3. Klik Hitung pH, alat ini akan segera menentukan [H+] dan pH dari ion Hidrogen.
 
-Dari massa dan volume basa kuat :
+Dari massa dan volume basa kuat:
 1. Anda diberikan daftar beberapa senyawa basa kuat umum. Silakan pilih salah satunya.
 2. Selanjutnya, masukkan massa dalam satuan gram (g) dan masukkan volume dalam satuan mililiter (mL).
 3. Klik Hitung pH, alat ini akan segera menentukan [OH-], pOH, dan pH dari ion Hidrogen.
 
-Dari massa dan volume basa lemah :
+Dari massa dan volume basa lemah:
 1. Anda diberikan daftar beberapa senyawa basa lemah umum. Silakan pilih salah satunya.
 2. Selanjutnya, masukkan nilai konstanta basa (Kb), masukkan massa dalam satuan gram (g) dan masukkan volume dalam satuan mililiter (mL).
 3. Klik Hitung pH, alat ini akan segera menentukan [OH-], pOH, dan pH dari ion Hidrogen.
