@@ -5,30 +5,30 @@ import math
 
 # Fungsi untuk menghitung pH asam kuat
 
-def perhitungan_pH_asam_kuat(Konsentrasi, a):
-    H_plus = Konsentrasi * a
+def perhitungan_pH_asam_kuat(konsentrasi, a):
+    H_plus = konsentrasi * a
     pH = -math.log10(H_plus)
     return H_plus, pH
 
 # Fungsi untuk menghitung pH basa kuat
 
-def perhitungan_pH_basa_kuat(Konsentrasi, a):
-    OH_minus = Konsentrasi * a
+def perhitungan_pH_basa_kuat(konsentrasi, a):
+    OH_minus = konsentrasi * a
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
     return OH_minus, pOH, pH
 
 # Fungsi untuk menghitung pH asam lemah
 
-def perhitungan_pH_asam_lemah(Konstanta_asam, Konsentrasi):
-    H_plus = math.sqrt(Konstanta_asam * Konsentrasi)
+def perhitungan_pH_asam_lemah(konstanta_asam, konsentrasi):
+    H_plus = math.sqrt(konstanta_asam * konsentrasi)
     pH = -math.log10(H_plus)
     return H_plus, pH
     
 # Fungsi untuk menghitung pH basa lemah
 
-def perhitungan_pH_basa_lemah(Konstanta_basa, Konsentrasi):
-    OH_minus = math.sqrt(Konstanta_basa * Konsentrasi)
+def perhitungan_pH_basa_lemah(konstanta_basa, konsentrasi):
+    OH_minus = math.sqrt(konstanta_basa * konsentrasi)
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
     return OH_minus, pOH, pH
@@ -36,16 +36,16 @@ def perhitungan_pH_basa_lemah(Konstanta_basa, Konsentrasi):
 # Fungsi untuk menghitung pH asam kuat dengan massa, volume, dan BM 
 
 def perhitungan_pH_asam_kuat_dengan_massa_volume_BM(massa, volume_dalam_liter, BM, a):
-    Konsentrasi = massa / (volume_dalam_liter * BM)
-    H_plus = Konsentrasi * a
+    konsentrasi = massa / (volume_dalam_liter * BM)
+    H_plus = konsentrasi * a
     pH = -math.log10(H_plus)
     return H_plus, pH
     
 # Fungsi untuk menghitung pH basa kuat dengan massa, volume, dan BM 
 
 def perhitungan_pH_basa_kuat_dengan_massa_volume_BM(massa, volume_dalam_liter, BM, a):
-    Konsentrasi = massa / (volume_dalam_liter * BM)
-    OH_minus = Konsentrasi * a
+    konsentrasi = massa / (volume_dalam_liter * BM)
+    OH_minus = konsentrasi * a
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
     return OH_minus, pOH, pH
@@ -53,16 +53,16 @@ def perhitungan_pH_basa_kuat_dengan_massa_volume_BM(massa, volume_dalam_liter, B
 # Fungsi untuk menghitung pH asam lemah dengan massa, volume, dan BM 
 
 def perhitungan_pH_asam_lemah_dengan_massa_volume_BM(massa, volume_dalam_liter, BM, Konstanta_asam):
-    Konsentrasi = massa / (volume_dalam_liter * BM)
-    H_plus = math.sqrt(Konstanta_asam * Konsentrasi)
+    konsentrasi = massa / (volume_dalam_liter * BM)
+    H_plus = math.sqrt(konstanta_asam * konsentrasi)
     pH = -math.log10(H_plus)
     return H_plus, pH
 
 # Fungsi untuk menghitung pH basa lemah dengan massa, volume, dan BM 
 
 def perhitungan_pH_basa_lemah_dengan_massa_volume_BM(massa, volume_dalam_liter, BM, Konstanta_basa):
-    Konsentrasi = (massa / (volume_dalam_liter * BM)) 
-    OH_minus = math.sqrt(Konstanta_basa * Konsentrasi)
+    konsentrasi = (massa / (volume_dalam_liter * BM)) 
+    OH_minus = math.sqrt(konstanta_basa * konsentrasi)
     pOH = -math.log10(OH_minus)
     pH = 14 - pOH
     return OH_minus, pOH, pH
@@ -112,13 +112,13 @@ elif choice == "Konsentrasi Asam":
         st.write("a = ", a)
         
         # Masukkan konsentrasi
-        Konsentrasi = st.number_input(
+        konsentrasi = st.number_input(
             "Masukkan konsentrasi (M)", format = "%.4f", step=0.0001, key = "H1")
-        st.write("Konsentrasi = ", Konsentrasi)
+        st.write("Konsentrasi = ", konsentrasi)
         
         # Tombol hitung
         if st.button("Hitung pH", key = "B1"):
-            H_plus, pH = perhitungan_pH_asam_kuat(Konsentrasi, a)
+            H_plus, pH = perhitungan_pH_asam_kuat(konsentrasi, a)
             st.write("[H+] =", round(H_plus, 4))
             st.write("pH =", round(pH, 2))            
             st.success(f'pH asam adalah {pH:.2f}')
@@ -127,16 +127,16 @@ elif choice == "Konsentrasi Asam":
         st.subheader("Asam Lemah")
 
         # Masukkan Ka
-        Konstanta_asam = st.number_input('Masukkan Ka')
-        st.write("Ka = ", Konstanta_asam)
+        konstanta_asam = st.number_input('Masukkan Ka')
+        st.write("Ka = ", konstanta_asam)
 
         # Masukkan konsentrasi
-        Konsentrasi = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001, key = "H2")
-        st.write("Konsentrasi = ", Konsentrasi )
+        konsentrasi = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001, key = "H2")
+        st.write("Konsentrasi = ", konsentrasi )
         
         # Tombol hitung
         if st.button ("Hitung pH", key = "B2"):
-            H_plus, pH = perhitungan_pH_asam_lemah(Konsentrasi_lemah, Konstanta_asam)
+            H_plus, pH = perhitungan_pH_asam_lemah(konsentrasi, konstanta_asam)
             st.write("[H+] =", round(H_plus, 4))
             st.write("pH =", round(pH, 2))
             st.success(f'pH asam adalah {pH:.2f}')
@@ -168,13 +168,13 @@ elif choice == "Konsentrasi Basa":
         st.write("a = ", a)
     
         # Masukkan konsentrasi
-        Konsentrasi = st.number_input(
+        konsentrasi = st.number_input(
             "Masukkan konsentrasi (M)", format= "%.4f", step=0.0001, key = "H3")
-        st.write("Konsentrasi = ", Konsentrasi)
+        st.write("Konsentrasi = ", konsentrasi)
     
         # Tombol hitung
         if st.button("Hitung pH", key = "B3"):
-            OH_minus, pOH, pH = perhitungan_pH_basa_kuat(Konsentrasi, a)
+            OH_minus, pOH, pH = perhitungan_pH_basa_kuat(konsentrasi, a)
             st.write("[OH-] =", round(OH_minus, 4))
             st.write("pOH =", round(pOH, 2))
             st.write("pH =", round(pH, 2))
@@ -184,16 +184,16 @@ elif choice == "Konsentrasi Basa":
         st.subheader("Basa Lemah")
 
         # Masukkan Kb
-        Konstanta_basa = st.number_input('Masukkan Kb')
-        st.write("Kb = ", Konstanta_basa)
+        konstanta_basa = st.number_input('Masukkan Kb')
+        st.write("Kb = ", konstanta_basa)
     
         # Masukkan konsentrasi
-        Konsentrasi = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001, key = "H4")
-        st.write("Konsentrasi = ", Konsentrasi)
+        konsentrasi = st.number_input('Masukkan konsentrasi (M)', format = "%.4f", step=0.0001, key = "H4")
+        st.write("Konsentrasi = ", konsentrasi)
         
         # Tombol hitung
         if st.button ("Hitung pH", key = "B4"):
-            OH_minus, pOH, pH = perhitungan_pH_basa_lemah(Konsentrasi, Konstanta_basa)
+            OH_minus, pOH, pH = perhitungan_pH_basa_lemah(konsentrasi, konstanta_basa)
             st.write("[OH-] =", round(OH_minus, 4))
             st.write("pOH =", round(pOH, 2))
             st.write("pH =", round(pH, 2))
@@ -269,8 +269,8 @@ elif choice == "Massa dan Volume Asam":
         st.write("BM = ", BM, "g/mol") 
     
         # Masukkan Ka
-        Konstanta_asam = st.number_input('Masukkan Ka', key = "K6")
-        st.write("Ka = ", Konstanta_asam)
+        konstanta_asam = st.number_input('Masukkan Ka', key = "K6")
+        st.write("Ka = ", konstanta_asam)
         
         # Masukkan massa
         massa = st.number_input("Masukkan massa (g)", format= "%.4f", step=0.0001, key = "M6")
@@ -284,7 +284,7 @@ elif choice == "Massa dan Volume Asam":
         if st.button("Hitung pH", key = "B6"):
             # Konversi volume dari mL ke L
             volume_dalam_liter = volume / 1000
-            H_plus, pH = perhitungan_pH_asam_lemah_dengan_massa_volume_BM(massa, volume_dalam_liter, BM, Konstanta_asam)
+            H_plus, pH = perhitungan_pH_asam_lemah_dengan_massa_volume_BM(massa, volume_dalam_liter, BM, konstanta_asam)
             st.write("[H+] =", round(H_plus, 4))
             st.write("pH =", round(pH, 2))
             st.success(f'pH asam adalah {pH:.2f}')
@@ -364,8 +364,8 @@ elif choice == "Massa dan Volume Basa":
         st.write("BM = ", BM, "g/mol") 
     
         # Masukkan Kb
-        Konstanta_basa = st.number_input('Masukkan Kb', key = "K8")
-        st.write("Kb = ", Konstanta_basa)
+        konstanta_basa = st.number_input('Masukkan Kb', key = "K8")
+        st.write("Kb = ", konstanta_basa)
         
         # Masukkan massa
         massa = st.number_input("Masukkan massa (g)", format= "%.4f", step=0.0001, key = "M8")
@@ -380,7 +380,7 @@ elif choice == "Massa dan Volume Basa":
             # Konversi volume dari mL ke L
             volume_dalam_liter = volume / 1000
             OH_minus, pOH, pH = perhitungan_pH_basa_lemah_dengan_massa_volume_BM(
-                massa, volume_dalam_liter, BM, Konstanta_basa)
+                massa, volume_dalam_liter, BM, konstanta_basa)
             st.write("[OH-] =", round(OH_minus, 5))
             st.write("pOH =", round(pOH, 2))
             st.write("pH =", round(pH, 2))
@@ -407,22 +407,28 @@ elif choice == "About This App":
     st.subheader("Rumus pH")
     
     st.write('pH Asam Kuat')
-    latex_H_plus_kuat = "[H+] = M * a"
+    latex_H_plus_kuat = "[H+] = Ma * a"
     st.write(f"${latex_H_plus_kuat}$.")
     latex_pH_asam = "pH = -log [H+]"
     st.write(f"${latex_pH_asam}$.")
    
     st.write('pH Asam Lemah')
-    latex_H_plus_lemah = "[H+] = √(M * Ka)"
+    latex_H_plus_lemah = "[H+] = √(Ma * Ka)"
     st.write(f"${latex_H_plus_lemah}$.")
     st.write(f"${latex_pH_asam}$.")
 
     st.write('pH Basa Kuat')
-    latex_OH_plus_kuat = "[OH-] = M * a"
+    latex_OH_plus_kuat = "[OH-] = Mb * b"
     st.write(f"${latex_OH_plus_kuat}$.")
     latex_pOH = "pOH = -log [OH-]"
     st.write(f"${latex_pOH}$.")
     latex_pH = "pH = 14-pOH"
+    st.write(f"${latex_pH}$.")
+
+    st.write('pH Basa Lemah')
+    latex_OH_plus_lemah = "[OH-] = √Mb * Kb"
+    st.write(f"${latex_OH_plus_lemah}$.")
+    st.write(f"${latex_pOH}$.")
     st.write(f"${latex_pH}$.")
     
 
