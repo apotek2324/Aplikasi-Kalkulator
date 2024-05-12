@@ -406,7 +406,10 @@ elif choice == "About This App":
     #Rumus pH
     st.subheader("Rumus pH")
     st.write('pH Asam Kuat')
-    st.latex(r'''[H+] = M * a''')
+    st.latex(r'''[H+] = M x a''')
+    st.latex(r'''pH = -log [H+]''')
+    st.write('pH Asam Lemah')
+    st.latex(r'''[H+] = sqrt(M x Ka)''')
     st.latex(r'''pH = -log [H+]''')
   
     
