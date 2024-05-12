@@ -90,12 +90,12 @@ if choice == "Beranda":
     st.markdown('---')
     st.subheader('KELOMPOK 4 (1D - ANALISIS KIMIA)')
     st.write('''ANGGOTA KELOMPOK:
-1. Fairuz Zahrany De Shaula    (2360106)
-2. Kesya Melia Adriani         (2360156)
-3. Reza Imelda                 (2360238) 
-4. Riska Maulidya Ainy         (2360242) 
-5. Talitha Syahla Kurniawan    (2360275)
-''')
+1. Fairuz Zahrani De Shaula (2360106)
+2. Kesya Melia Adriani      (2360156)
+3. Reza Imelda              (2360238) 
+4. Riska Maulidya Ainy      (2360242) 
+5. Talitha Syahla Kurniawan (2360275)
+
     
 elif choice == "Konsentrasi Asam":
     st.subheader("Menghitung [H+] dan pH dari Konsentrasi Asam Kuat dan Asam Lemah")
