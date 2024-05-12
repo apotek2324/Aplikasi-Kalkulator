@@ -527,6 +527,9 @@ elif choice == "About This App":
 
     #Skala pH
     st.subheader("Skala pH")
+
+    from PIL import image
+    st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fid.pngtree.com%2Ffreepng%2Fthe-ph-scale-on-white-background-acids-color-design-vector_10655412.html&psig=AOvVaw0voO0ZjSfexoSY2QzrIIsa&ust=1715580402268000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOjKxZm5h4YDFQAAAAAdAAAAABAE")
     st.write('Skala pH adalah skala logaritmik yang digunakan untuk menentukan keasaman atau kebasaan (alkalinitas) suatu larutan berair. Skalanya berkisar dari 0 hingga 14.')
     st.write('''
 - Larutan asam memiliki pH kurang dari 7. Semakin rendah pH, ​​semakin asam larutan tersebut. 
@@ -534,8 +537,6 @@ elif choice == "About This App":
 - PH 7 dianggap netral, artinya tidak bersifat asam atau basa. Air murni biasanya dianggap netral, dengan pH 7. 
 ''')
     st.write('Asam meningkatkan konsentrasi ion hidrogen (H+) dalam larutan, sedangkan basa menurunkannya dengan menghasilkan ion hidroksida (OH−) yang bergabung dengan ion hidrogen menghasilkan air.')
-    
-    st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fid%2Fvektor%2Fskala-ph-ph-indikator-universal-strip-uji-gm954645674-260647627&psig=AOvVaw1kl1bznlexd8KBKTlNi_xN&ust=1715487167170000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIj8zJTehIYDFQAAAAAdAAAAABAE")
 
     #Rumus pH
     st.subheader("Rumus pH")
