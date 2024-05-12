@@ -529,55 +529,55 @@ elif choice == "Massa dan Volume Basa":
 
         if selection == "Basa Kuat": 
 
-        # Masukkan massa
-        massa = st.number_input("Masukkan massa (g)", format= "%.4f", step=0.0001, key = "M15")
-        st.write("Massa = ", massa)
-    
-        # Masukkan volume
-        volume = st.number_input("Masukkan volume (mL)", key = "V15")
-        st.write("Volume = ", volume)
-
-        # Masukkan BM
-        BM = st.number_input("Masukkan BM (g/mol)", key = "B15")
-        st.write("BM = ", BM)
-                
-        # Tombol hitung
-        if st.button("Hitung pH", key = "T15"):
-            # Konversi volume dari mL ke L
-            volume_dalam_liter = volume / 1000
-            OH_minus, pOH, pH = perhitungan_pH_basa_kuat_dengan_massa_volume(massa, volume_dalam_liter, BM, a)
-            st.write("[OH-] =", round(OH_minus, 5))
-            st.write("pOH =", round(pOH, 2))
-            st.write("pH =", round(pH, 2))
-            st.success(f'pH basa adalah {pH:.2f}')
-            
-        elif selection == "Basa Lemah":
-
-            # Masukkan Kb
-            konstanta_basa = st.number_input("Masukkan Kb", key = "K16")
-            st.write("Kb = ", konstanta_basa)
-        
             # Masukkan massa
-            massa = st.number_input("Masukkan massa (g)", format= "%.4f", step=0.0001, key = "M16")
+            massa = st.number_input("Masukkan massa (g)", format= "%.4f", step=0.0001, key = "M15")
             st.write("Massa = ", massa)
         
             # Masukkan volume
-            volume = st.number_input("Masukkan volume (mL)", key = "V16")
+            volume = st.number_input("Masukkan volume (mL)", key = "V15")
             st.write("Volume = ", volume)
 
             # Masukkan BM
-            BM = st.number_input("Masukkan BM (g/mol)", key = "B16")
+            BM = st.number_input("Masukkan BM (g/mol)", key = "B15")
             st.write("BM = ", BM)
-            
+                    
             # Tombol hitung
-            if st.button("Hitung pH", key = "T14"):
+            if st.button("Hitung pH", key = "T15"):
                 # Konversi volume dari mL ke L
                 volume_dalam_liter = volume / 1000
-                OH_minus, pOH, pH = perhitungan_pH_basa_lemah_dengan_massa_volume(massa, volume_dalam_liter, BM, konstanta_basa)
+                OH_minus, pOH, pH = perhitungan_pH_basa_kuat_dengan_massa_volume(massa, volume_dalam_liter, BM, a)
                 st.write("[OH-] =", round(OH_minus, 5))
                 st.write("pOH =", round(pOH, 2))
                 st.write("pH =", round(pH, 2))
                 st.success(f'pH basa adalah {pH:.2f}')
+                
+            elif selection == "Basa Lemah":
+
+                # Masukkan Kb
+                konstanta_basa = st.number_input("Masukkan Kb", key = "K16")
+                st.write("Kb = ", konstanta_basa)
+            
+                # Masukkan massa
+                massa = st.number_input("Masukkan massa (g)", format= "%.4f", step=0.0001, key = "M16")
+                st.write("Massa = ", massa)
+            
+                # Masukkan volume
+                volume = st.number_input("Masukkan volume (mL)", key = "V16")
+                st.write("Volume = ", volume)
+
+                # Masukkan BM
+                BM = st.number_input("Masukkan BM (g/mol)", key = "B16")
+                st.write("BM = ", BM)
+                
+                # Tombol hitung
+                if st.button("Hitung pH", key = "T14"):
+                    # Konversi volume dari mL ke L
+                    volume_dalam_liter = volume / 1000
+                    OH_minus, pOH, pH = perhitungan_pH_basa_lemah_dengan_massa_volume(massa, volume_dalam_liter, BM, konstanta_basa)
+                    st.write("[OH-] =", round(OH_minus, 5))
+                    st.write("pOH =", round(pOH, 2))
+                    st.write("pH =", round(pH, 2))
+                    st.success(f'pH basa adalah {pH:.2f}')
 
 elif choice == "About This App":
     #Apa itu pH
